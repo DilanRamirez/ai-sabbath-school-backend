@@ -6,17 +6,13 @@ on:
       - main
       - dev
 
-  pull_request:
-    paths:
-      - "/**"
-
 jobs:
   backend-tests:
     name: Backend - Format & Test
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: backend
+        working-directory: .
 
     steps:
       - name: 🔄 Checkout code
