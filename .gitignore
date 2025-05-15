@@ -1,0 +1,56 @@
+# Python cache files
+
+**pycache**/
+\*.py\[cod]
+\*\$py.class
+
+# Virtual environment
+
+.venv/
+env/
+venv/
+
+# VSCode settings and cache
+
+.vscode/
+
+# Environment files
+
+.env
+.env.\*
+
+# MacOS files
+
+.DS\_Store
+
+# Logs and databases
+
+\*.log
+\*.sqlite3
+
+# Docker and build artifacts
+
+docker-compose.override.yml
+\*\*/lesson\_index.faiss
+\*\*/lesson\_index\_meta.json
+
+# IDE and Python artifacts
+
+\*.egg-info/
+\*.egg
+dist/
+build/
+
+# Pytest cache
+
+.pytest\_cache/
+
+# Optional coverage reports
+
+htmlcov/
+.coverage
+
+# Node modules (if any frontend in same repo)
+
+node\_modules/
+.venv

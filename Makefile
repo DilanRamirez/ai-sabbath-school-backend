@@ -2,15 +2,15 @@
 
 # Run backend unit tests
 test-backend:
-	cd backend && pytest tests --maxfail=1 --disable-warnings -q
+	pytest tests --maxfail=1 --disable-warnings -q
 
 # Format backend using black
 format-backend:
-	cd backend && black .
+	black .
 
 # Check formatting (used in GHA)
 check-format-backend:
-	cd backend && black --check .
+	black --check .
 
 # Run the GitHub Actions workflow locally
 test-gha:
@@ -28,7 +28,7 @@ index:
 
 .PHONY: serve-local
 serve-local:
-	cd backend && python -m uvicorn app.main:app \
+	python -m uvicorn app.main:app \
 		--reload \
 		--host 0.0.0.0 \
 		--port 8000
