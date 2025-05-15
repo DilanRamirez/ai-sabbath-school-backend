@@ -1,0 +1,13 @@
+services:
+  fastapi:
+    build:
+      context: .
+    container_name: sabbath-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+      - ./app/data:/app/app/data  # ✅ this is critical
+    env_file:
+      - ./app/.env
+    restart: always

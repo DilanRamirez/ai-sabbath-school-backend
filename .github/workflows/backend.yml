@@ -8,7 +8,7 @@ on:
 
   pull_request:
     paths:
-      - "backend/**"
+      - "/**"
 
 jobs:
   backend-tests:
