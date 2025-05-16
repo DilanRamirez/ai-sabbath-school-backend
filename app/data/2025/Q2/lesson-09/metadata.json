@@ -1,48 +1,48 @@
 {
-  "id": "2025-02-08",
-  "lesson_number": 8,
-  "title": "EN LOS SALMOS - PRIMERA PARTE",
-  "week_end_date": "2025-05-24",
-  "memory_verse_reference": "Apocalipsis 14:1",
+  "id": "2025-05-24-2025-05-30",
+  "lesson_number": 9,
+  "title": "EN LOS SALMOS - SEGUNDA PARTE",
+  "week_end_date": "2025-05-30",
+  "week_start_date": "2025-05-24",
+  "memory_verse_reference": "Salmos 67:3, 4",
   "daily_titles": [
     {
       "day": "Sábado",
-      "title": ""
+      "title": "EN LOS SALMOS - SEGUNDA PARTE"
     },
     {
       "day": "Domingo",
-      "title": "NUESTRO SUMO SACERDOTE"
+      "title": "UN AUXILIO MUY PRESENTE EN EL TIEMPO DE ANGUSTIA"
     },
     {
       "day": "Lunes",
-      "title": "EN EL MONTE SION"
+      "title": "ESPERANZA EN MEDIO DE LA CONFUSIÓN"
     },
     {
       "day": "Martes",
-      "title": "LA LEY EN NUESTROS CORAZONES"
+      "title": "BAJO SUS PIES"
     },
     {
       "day": "Miércoles",
-      "title": "SALMOS 5"
+      "title": "VINO Y SANGRE"
     },
     {
       "day": "Jueves",
-      "title": "ENSEÑA A LOS TRANSGRESORES TU CAMINO"
+      "title": "PARA QUE SE CONOZCA TU SALVACIÓN"
     },
     {
       "day": "Viernes",
-      "title": ""
+      "title": "Para Estudiar y Meditar"
     }
   ],
   "study_texts": [
-    "Hebreos 9:11-15",
-    "Salmos 122",
-    "Salmos 15",
-    "Salmos 24",
-    "Éxodo 33:18-23",
-    "Salmos 5",
-    "Salmos 51:7-15"
+    "Salmos 46",
+    "Jeremías 4:23-26",
+    "Salmos 47:1-4",
+    "1 Tesalonicenses 4:13-17",
+    "Salmos 75",
+    "Apocalipsis 14:6-12"
   ],
-  "discussion_question_count": 4,
+  "discussion_question_count": 3,
   "has_egw_quotes": true
 }

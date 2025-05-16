@@ -1,13 +1,10 @@
 {
   "lesson": {
-    "id": "2025-02-08",
+    "id": "2025-05-17-2025-05-23",
     "lesson_number": 8,
     "title": "EN LOS SALMOS - PRIMERA PARTE",
-    "week_end_date": "2025-05-24",
+    "week_end_date": "2025-05-23",
     "week_start_date": "2025-05-17",
-    "study_texts": "Hebreos 9:11-15; Salmos 122; Salmos\n15; Salmos 24; Éxodo 33:18-23; Salmos 5; Salmos 51:7-15.",
-    "memory_verse": "“Entonces miré y vi al Cordero de pie sobre el monte Sion, y con él ciento cuarenta\ny cuatro mil que tenían el nombre del Cordero y el nombre de su Padre escrito en\nsus frentes” (Apoc. 14:1).",
-
     "daily_sections": [
       {
         "filename": "8_sabado_17_de_mayo.md",
