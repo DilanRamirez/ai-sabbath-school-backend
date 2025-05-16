@@ -39,12 +39,12 @@ modelos que nos ayudan a entender mejor el ministerio de Jesús, las experien­
 cias de quienes comprendieron lo que Dios enseñaba por medio del Santuario
 contienen valiosas lecciones para nosotros y para nuestra relación con Dios.
 
-### Preguntas
+### Reflexionar:
 
-- Lee el Salmo 122. Aunque no podemos ir literalmente a esa “casa del Señor” (ya
-  no está allí y no tendría sentido construir otra en la Tierra), ¿qué elementos con­
-  tiene este salmo que nos animan en relación con lo que Cristo hizo por nosotros?
-  Observa los temas de la paz, la seguridad, la alabanza y el juicio.
+Lee el Salmo 122. Aunque no podemos ir literalmente a esa “casa del Señor” (ya
+no está allí y no tendría sentido construir otra en la Tierra), ¿qué elementos con­
+tiene este salmo que nos animan en relación con lo que Cristo hizo por nosotros?
+Observa los temas de la paz, la seguridad, la alabanza y el juicio.
 
 ### Página:
 

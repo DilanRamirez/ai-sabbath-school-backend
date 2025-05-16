@@ -30,7 +30,8 @@ def parse_toc_format_2(pdf_path):
 
     def roman_to_int(r):
         return (
-            int(r) if r.isdigit() else pd.to_numeric(pd.Series([r]), errors="coerce")[0]
+            int(r) if r.isdigit() else pd.to_numeric(
+                pd.Series([r]), errors="coerce")[0]
         )
 
     entries = []
@@ -61,7 +62,8 @@ def parse_toc_auto(pdf_path):
     combined_text = "\n".join(
         reader.pages[i].extract_text() or "" for i in range(toc_start, end_page)
     )
-    pattern = re.compile(r"^(.*?)\s*(?:\.\s*){3,}(\d+|[IVXLCDM]+)\s*$", re.MULTILINE)
+    pattern = re.compile(
+        r"^(.*?)\s*(?:\.\s*){3,}(\d+|[IVXLCDM]+)\s*$", re.MULTILINE)
 
     def roman_to_int(r):
         r = r.upper()
@@ -105,7 +107,8 @@ def extract_chapters(pdf_path, toc_entries):
     toc_entries = sorted(toc_entries, key=lambda x: x[1])
     chapters = []
     for i, (title, start) in enumerate(toc_entries):
-        end = (toc_entries[i + 1][1] - 1) if i + 1 < len(toc_entries) else total_pages
+        end = (toc_entries[i + 1][1] - 1) if i + \
+            1 < len(toc_entries) else total_pages
         # Extract text
         pages_text = []
         for p in range(start - 1, end):
@@ -267,14 +270,16 @@ def generate_json(pdf_path, title, author, publication_year):
             )
 
             pages_text = []
-            section_header_pattern = re.compile(r"^Sección\s+\d+—", re.MULTILINE)
+            section_header_pattern = re.compile(
+                r"^Sección\s+\d+—", re.MULTILINE)
             for p in range(start_idx, end_idx):
                 page_text = reader.pages[p].extract_text() or ""
                 # In the first page, start extracting after the subheader's occurrence.
                 if p == start_idx:
                     header_index = page_text.find(item["title"])
                     if header_index != -1:
-                        page_text = page_text[header_index + len(item["title"]) :]
+                        page_text = page_text[header_index +
+                                              len(item["title"]):]
                 # If the next subheader occurs on this page, only include text up to it.
                 if idx + 1 < len(section["items"]):
                     next_header = section["items"][idx + 1]["title"]
@@ -292,7 +297,7 @@ def generate_json(pdf_path, title, author, publication_year):
                 pages_text.append(page_text)
             item["content"] = "\n".join(pages_text)
             # Print first 100 chars
-            print(f"Extracted content: {item['content'][:100]}...")
+            print(f"Extracted Contenido: {item['content'][:100]}...")
             print("---" * 30)
 
             # Clean up the title and author for book-section-id
@@ -302,7 +307,8 @@ def generate_json(pdf_path, title, author, publication_year):
             trimmed_content = item["content"].lstrip(" \n–—")
             # Check if the cleaned title is at the start of the content
             if trimmed_content.startswith(cleaned_title):
-                trimmed_content = trimmed_content[len(cleaned_title) :].lstrip(" \n–—")
+                trimmed_content = trimmed_content[len(
+                    cleaned_title):].lstrip(" \n–—")
             # Clean the title and author for book-section-id
             # Remove special characters and spaces
             # Clean both the title and the beginning of the content before comparing

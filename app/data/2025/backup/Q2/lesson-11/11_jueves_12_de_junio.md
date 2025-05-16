@@ -2,9 +2,7 @@
 
 **Fecha:** Jueves 12 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Existe una desafortunada tendencia entre algunos cristianos a detenerse en los
 momentos oscuros descritos en la profecía bíblica. Se avecinan tiempos difíciles,
 y el estudio de la profecía podría desacertadamente centrarse en el temor y en

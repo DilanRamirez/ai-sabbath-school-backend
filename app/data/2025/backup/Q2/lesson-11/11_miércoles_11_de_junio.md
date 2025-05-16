@@ -4,11 +4,11 @@
 
 **Lectura principal:** ¿qué harás en la hora de la gran prueba?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿qué harás en la hora de la gran prueba?
 
-
-**Content:** 
+**Contenido:**
 La historia de Ester incluye a Amán, un personaje ávido de poder, y a quien se
 había otorgado un elevado grado de prominencia en el imperio, por encima de
 todos los demás príncipes (Est. 3:1).

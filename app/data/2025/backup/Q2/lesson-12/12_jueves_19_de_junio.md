@@ -4,11 +4,11 @@
 
 **Lectura principal:** ¿Morir a causa de uno de los mandamientos de Dios?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Morir a causa de uno de los mandamientos de Dios?
 
-
-**Content:** 
+**Contenido:**
 Puesto que ciertos acontecimientos finales –como el decreto de muerte y la
 imposición de la marca de la bestia– aún no han sucedido a pesar del paso del
 tiempo, algunos han expresado dudas e incluso escepticismo acerca de nuestra

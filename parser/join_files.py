@@ -1,82 +1,95 @@
 import os
-import sys
-import json
 import re
-
-OUTPUT_FILE = "lesson.json"
-
-
-def extract_lines(block, key):
-    match = re.search(rf"\*\*{key}:\*\*\s*(.*?)(?=\n\*\*|$)", block, re.DOTALL)
-    if match:
-        return match.group(1).strip()
-    return ""
+import json
 
 
-def extract_questions(block):
-    questions = re.findall(r"[-*]\s+(.*)", block)
-    return [q.strip() for q in questions]
+def parse_markdown_file(md_path):
+    with open(md_path, "r", encoding="utf-8") as f:
+        content = f.read()
 
+    data = {}
+    filename = os.path.basename(md_path)
+    data["filename"] = filename
 
-def clean_lines(lines):
-    return [line.strip() for line in lines if line.strip()]
+    day_match = re.search(
+        r"(sabado|domingo|lunes|martes|miércoles|jueves|viernes)", filename, re.IGNORECASE)
+    if day_match:
+        data["day"] = day_match.group(1).capitalize()
 
+    title_match = re.search(r"### Título:\s*\n(.+?)\n\n", content, re.DOTALL)
 
-def main(input_path):
+    # Parse lesson_number from filename since it's no longer in the title
+    lesson_number_match = re.search(r"(\d+)", filename)
+    data["lesson_number"] = lesson_number_match.group(
+        1) if lesson_number_match else ""
+    data["title"] = title_match.group(1).strip() if title_match else ""
 
-    for filename in sorted(os.listdir(input_path)):
-        if not filename.endswith(".md"):
-            continue
+    date_match = re.search(r"\*\*### Fecha:\*\* (.+)", content)
+    if date_match:
+        data["date"] = date_match.group(1).strip()
 
-        with open(os.path.join(input_path, filename), "r", encoding="utf-8") as f:
-            content = f.read()
+    # Detect Sabbath
+    if "sabado" in day_match.group(1) or "sabado" in data.get("date", ""):
+        title_match = re.search(
+            r"### Título:\s*\n(.+?)\n\n", content, re.DOTALL)
+        data["title"] = title_match.group(1).strip() if title_match else ""
 
-        lines = content.splitlines()
-        title_line = lines[0].strip()
-        lesson_title = title_line.replace("#", "").strip().split(" - ")[-1]
-        day = re.search(r"_(\w+)_", filename).group(1).capitalize()
+        lecturas_match = re.search(
+            r"### Lecturas para esta semana:\s*\n(.+?)\n\n", content, re.DOTALL)
+        data["study_texts"] = lecturas_match.group(
+            1).strip() if lecturas_match else ""
 
-        date = extract_lines(content, "Fecha")
-        study_texts = extract_lines(content, "Lecturas para esta semana")
-        memory_verse = extract_lines(content, "Para memorizar")
-        main_prompt = extract_lines(content, "Lectura principal")
-        page = extract_lines(content, "Página")
-
-        if "dialogar" in content:
-            question_key = "Preguntas para dialogar"
+        mem_match = re.search(
+            r"### Para memorizar:\s*\n(.+?)\n\n", content, re.DOTALL)
+        data["memory_verse"] = mem_match.group(1).strip() if mem_match else ""
+    elif "viernes" in day_match.group(1).lower() or "viernes" in data.get("date", "").lower():
+        reflect_block = re.search(
+            r"### Reflexionar: para dialogar:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL)
+        if reflect_block:
+            raw_block = reflect_block.group(1).strip()
+            paragraphs = [p.strip()
+                          for p in raw_block.split("\n\n") if p.strip()]
+            data["reflexionar"] = paragraphs
         else:
-            question_key = "Preguntas"
+            data["reflexionar"] = []
+    else:
+        reflect_block = re.search(
+            r"### Reflexionar:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL)
+        if reflect_block:
+            raw_block = reflect_block.group(1).strip()
+            paragraphs = [p.strip()
+                          for p in raw_block.split("\n\n") if p.strip()]
+            data["reflexionar"] = paragraphs
+        else:
+            data["reflexionar"] = []
 
-        q_block_match = re.search(
-            rf"### {question_key}:\n(.*?)\n\*\*Página:", content, re.DOTALL)
-        question_block = q_block_match.group(1) if q_block_match else ""
-        questions = extract_questions(question_block)
+    content_match = re.search(
+        r"### Contenido:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL)
+    if content_match:
+        raw_content = content_match.group(1).strip()
+        data["content"] = [block.strip()
+                           for block in raw_content.split("\n\n") if block.strip()]
+    else:
+        data["content"] = []
 
-        # Grab content between the last known field and "Página"
-        content_lines = []
-        if "**Content:**" in content:
-            content_start = content.find("**Content:**") + len("**Content:**")
-            content_end = content.find("**Página:**")
-            content_block = content[content_start:content_end].strip()
-            content_lines = clean_lines(content_block.split("\n\n"))
+    page_match = re.search(r"### Página:\s*\n?(\d+)", content, re.IGNORECASE)
+    data["page_number"] = page_match.group(1) if page_match else ""
 
-        output = {
-            "lesson_number": lesson_title.split()[0],
-            "title": lesson_title,
-            "day": day,
-            "date": date,
-            "study_texts": study_texts if study_texts else None,
-            "memory_verse": memory_verse if memory_verse else None,
-            "main_prompt": main_prompt if main_prompt else None,
-            "questions": questions,
-            "content": content_lines,
-            "page_number": page
-        }
+    return data
 
-        out_file = os.path.splitext(filename)[0] + ".json"
-        with open(os.path.join(input_path, out_file), "w", encoding="utf-8") as f:
-            json.dump(output, f, ensure_ascii=False, indent=2)
+
+def convert_md_files_to_json(directory):
+    for fname in os.listdir(directory):
+        if fname.endswith(".md"):
+            md_path = os.path.join(directory, fname)
+            json_path = os.path.join(directory, fname.replace(".md", ".json"))
+            print(f"Parsing {md_path}")
+            data = parse_markdown_file(md_path)
+            with open(json_path, "w", encoding="utf-8") as jf:
+                json.dump(data, jf, ensure_ascii=False, indent=2)
+            if md_path == "app/data/2025/Q2/lesson-08/8_viernes_23_de_mayo.md":
+                print(json.dumps(data, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":
-    main("app/data/2025/Q2/lesson-07")
+    convert_md_files_to_json("app/data/2025/Q2/lesson-08")

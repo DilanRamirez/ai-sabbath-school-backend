@@ -6,7 +6,7 @@ UN AUXILIO MUY PRESENTE EN EL TIEMPO DE ANGUSTIA
 
 Domingo-25 de mayo
 
-### Content:
+### Contenido:
 
 Lee Salmos 46. ¿Qué mensaje de esperanza podemos extraer de esto en
 medio de la confusión actual y de lo que sabemos que ocurrirá en la tierra
@@ -43,7 +43,7 @@ comprender. Por ahora, sin embargo, solo tenemos que soportar, perseverando
 en la fe y aferrándonos a la revelación de Dios que tenemos, especialmente la
 que fue hecha por Jesús en la Cruz.
 
-### Preguntas:
+### Reflexionar:
 
 - Por muy mal que vayan las cosas en este mundo (y sabemos que empeorarán),
   ¿qué esperanza deberías extraer de tu conocimiento de la bondad, el poder y el

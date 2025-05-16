@@ -10,13 +10,13 @@ Lunes-16 de junio
 
 ¿Cuál era el mensaje?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cuál era el mensaje?
 - ¿Qué nos enseña esto?
 - ¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe?
 
-### Content:
+### Contenido:
 
 La atención que Nabucodonosor prestó a Daniel y a su Dios en un principio,
 cuando estaba aún impresionado por lo que se le reveló (ver Dan. 2, especial­
@@ -48,7 +48,7 @@ inclinándose para ajustar su calzado mientras oraban a Dios? ¿Valía realmente
 la pena lo que les esperaba? Pensaban obviamente que sí, aunque lo que dijeron
 mostraba que eran conscientes de que era muy probable que morirían.
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe? ¿Qué
   dice el siguiente texto acerca de una tentación similar: “El que es fiel en lo muy

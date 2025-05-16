@@ -5,7 +5,7 @@
   "date": "Miércoles 14 de mayo",
   "study_texts": null,
   "memory_verse": null,
-  "main_prompt": "¿cuáles eran las cuatro tribus principales?\n\n### Preguntas:\n- ¿cuáles eran las cuatro tribus principales?",
+  "main_prompt": "¿cuáles eran las cuatro tribus principales?\n\n### Reflexionar:\n- ¿cuáles eran las cuatro tribus principales?",
   "questions": [
     "¿cuáles eran las cuatro tribus principales?",
     "En el desierto, la presencia de Dios en la nube guiaba a su pueblo durante su",

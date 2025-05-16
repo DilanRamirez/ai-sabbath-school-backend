@@ -2,9 +2,7 @@
 
 **Fecha:** Domingo 15 de junio
 
-
-
-**Content:** 
+**Contenido:**
 PROFECÍA
 La profecía que aparece en Daniel 2 es una de las más poderosas de toda la Es­
 critura. Casi seis siglos antes de Cristo, el profeta expone la historia del mundo
@@ -16,8 +14,7 @@ hierro no se mezcla con la arcilla” (Dan. 2:43). Esta predicción se ha cumpli
 asombrosamente. Es decir, a pesar de todo tipo de alianzas matrimoniales entre
 estas naciones, siguen divididas.
 Por ejemplo, la monarquía británica se llama Casa de Windsor, un nombre
-inglés. Sin embargo, esa designación es relativamente reciente, ya que data de
-1917. Antes de eso, la familia se llamaba Casa de Saxe-Coburg y Gotha, un nombre
+inglés. Sin embargo, esa designación es relativamente reciente, ya que data de 1917. Antes de eso, la familia se llamaba Casa de Saxe-Coburg y Gotha, un nombre
 claramente alemán, pues muchos miembros de la realeza británica, al mezclarse
 “por medio de casamientos”, eran parientes consanguíneos de los alemanes.
 Sin embargo, esos lazos de sangre no bastaron para mantenerlos alejados de la

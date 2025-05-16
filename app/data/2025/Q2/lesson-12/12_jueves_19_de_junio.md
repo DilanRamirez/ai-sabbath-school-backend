@@ -10,7 +10,7 @@ Jueves-19 de junio
 
 ¿Morir a causa de uno de los mandamientos de Dios?
 
-### Content:
+### Contenido:
 
 Puesto que ciertos acontecimientos finales –como el decreto de muerte y la
 imposición de la marca de la bestia– aún no han sucedido a pesar del paso del
@@ -48,7 +48,7 @@ Aunque la cuestión específica allí descrita no es la misma que en los acontec
 mientos finales, se parece bastante: la ley humana en oposición a la de Dios. En
 ambos casos, la ley cuestionada tiene que ver con el sábado bíblico.
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Morir a causa de uno de los mandamientos de Dios? ¿Cómo podría alguien racio­
   nalizar la situación para procurar una escapatoria?

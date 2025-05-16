@@ -2,9 +2,7 @@
 
 **Fecha:** Domingo 18 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 Cuando Moisés supervisó la construcción del Tabernáculo, no se le permitió
 utilizar cualquier diseño, sino el modelo que Dios le mostró: “Y cuida de hacer
 todo conforme al modelo que te ha sido mostrado en el monte” (Éxo. 25:40).

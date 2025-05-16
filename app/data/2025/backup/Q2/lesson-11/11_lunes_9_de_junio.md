@@ -2,9 +2,7 @@
 
 **Fecha:** Lunes 9 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Noemí pidió que cambiaran su nombre por el de Mara (“amargura”, en hebreo),
 a causa de la amargura que le había sobrevenido (ver Rut 1:20). La relación con
 nuestro Creador ha quedado irremediablemente dañada por el pecado, lo que

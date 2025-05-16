@@ -1,4 +1,5 @@
-# Lección 9 - EN LOS SALMOS - SEGUNDA 
+# Lección 9 - EN LOS SALMOS - SEGUNDA
+
 PARTE
 
 **Fecha:** Sábado 24 de mayo
@@ -10,9 +11,7 @@ PARTE
 naciones, porque juzgarás a los pueblos con equidad, y guiarás a las naciones en
 la tierra” (Sal. 67:3, 4).
 
-
-
-**Content:** 
+**Contenido:**
 A
 l pensar en los acontecimientos finales, tendemos a centrarnos en las
 bestias y los poderes descritos en Apocalipsis, que tienen sin duda un

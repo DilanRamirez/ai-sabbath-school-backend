@@ -6,11 +6,15 @@ EN EL MONTE SION
 
 Lunes-19 de mayo
 
+### Dia:
+
+Lunes
+
 ### Lectura principal:
 
 ¿Quién residirá en tu santo monte?
 
-### Content:
+### Contenido:
 
 En Apocalipsis 14 encontramos al pueblo de Dios de pie sobre el monte Sion.
 Este se encontraba al oeste de lo que hoy se conoce como la Ciudad Vieja en
@@ -47,11 +51,11 @@ acreditada a nosotros por la fe. Podemos tener la “plena seguridad para entrar
 el santuario, por el camino nuevo y vivo que él nos abrió a través del velo, esto es,
 de su carne” (Heb. 10:19, 20). Sin su sangre, no habría esperanza para nosotros.
 
-### Preguntas:
+### Reflexionar:
 
-- Piensa en todas las promesas bíblicas de victoria sobre el pecado. ¿Por qué, aun
-  con esas promesas, seguimos sin estar a la altura del ejemplo perfecto que Jesús
-  nos ha dado y por qué necesitamos su vida perfecta como sustituto nuestro?
+Piensa en todas las promesas bíblicas de victoria sobre el pecado. ¿Por qué, aun
+con esas promesas, seguimos sin estar a la altura del ejemplo perfecto que Jesús
+nos ha dado y por qué necesitamos su vida perfecta como sustituto nuestro?
 
 ### Página:
 

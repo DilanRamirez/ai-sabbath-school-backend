@@ -10,14 +10,14 @@ Domingo-1 de junio
 
 ¿Qué es esto?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Qué es esto?
 - ¿Quién podrá quedar en pie?
 - ¿Dónde está la promesa de su venida?
 - ¿Cómo pueden ayudarnos esas realidades a afrontar la “demora”?
 
-### Content:
+### Contenido:
 
 Lee Apocalipsis 6:12 al 17. Considera los detalles de la respuesta de estas
 personas ante el desarrollo repentino de los acontecimientos finales. ¿Qué
@@ -50,7 +50,7 @@ dirán: ‘¿Dónde está la promesa de su venida? Desde que los padres durmiero
 todas las cosas permanecen como desde el principio de la creación’ ” (2 Ped.
 3:3, 4). Este sentimiento irá en aumento a medida que pase el tiempo.
 
-### Preguntas:
+### Reflexionar:
 
 - En el caso de quienes mueran antes del regreso de Cristo, la Segunda Venida (o
   la tercera, si mueren sin aceptar a Jesús como su Salvador) ocurrirá apenas un

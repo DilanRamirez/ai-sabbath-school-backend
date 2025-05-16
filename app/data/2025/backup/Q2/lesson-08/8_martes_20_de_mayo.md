@@ -4,11 +4,11 @@
 
 **Lectura principal:** ¿cuál fue la respuesta divina?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿cuál fue la respuesta divina?
 
-
-**Content:** 
+**Contenido:**
 El remanente reunido en Sion tiene un nombre escrito en la frente: el del Padre
 y del Cordero. Puesto que Jesús es la imagen misma del Padre, es dudoso que se
 trate de dos nombres diferentes. En las Escrituras, un “nombre” no representa

@@ -48,18 +48,20 @@ def load_chunk_text(meta: dict) -> str:
             book_id = meta.get("book-section-id")
 
             found = next(
-                (item for item in items if item.get("book-section-id") == book_id), None
+                (item for item in items if item.get(
+                    "book-section-id") == book_id), None
             )
             if not found:
                 page = meta.get("page_number")
-                found = next((item for item in items if item.get("page") == page), None)
+                found = next(
+                    (item for item in items if item.get("page") == page), None)
 
             return found.get("content", "") if found else meta.get("text", "")
 
         else:
             return data.get("content") or data.get("text", "")
     except Exception as e:
-        return f"Error loading content: {e}"
+        return f"Error loading Contenido: {e}"
 
 
 class IndexStore:
@@ -84,7 +86,8 @@ def search_lessons(query: str, top_k: int = 5) -> List[dict]:
             raise RuntimeError("FAISS index or metadata not loaded in memory.")
 
         query_vector = embed_text(query)
-        D, I = IndexStore.index.search(np.array([query_vector], dtype="float32"), top_k)
+        D, I = IndexStore.index.search(
+            np.array([query_vector], dtype="float32"), top_k)
 
         results = []
         for score, idx in zip(D[0], I[0]):

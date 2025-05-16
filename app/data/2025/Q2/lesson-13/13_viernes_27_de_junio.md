@@ -6,7 +6,7 @@ Para Estudiar y Meditar
 
 Viernes 27 de junio
 
-### Content:
+### Contenido:
 
 Lee el capítulo titulado “El Vigía invisible” en las páginas 384 a 395 del libro
 Profetas y reyes, de Elena de White.
@@ -32,17 +32,18 @@ del mal que había pensado hacerle, y en un instante hablaré de esa nación o e
 reino para edificar y plantar. Pero si hace lo malo ante mis ojos, y desoye mi voz,
 desistiré del bien que había determinado hacerle” (Jer. 18:7-10).
 
-### Preguntas para dialogar:
+### Reflexionar: para dialogar:
 
-- Piensa en la afirmación de Jesús de que el Juicio será menos severo para
-  Nínive que para el pueblo de Dios que se había desviado de la verdad
-  (ver Mat. 12:39-42). ¿Qué lección puede extraer la iglesia de Dios de esta
-  advertencia?
-- Nota la afirmación de Elena de White de que “la historia se repitió” con
-  cada imperio sucesivo (Elena de White, Profetas y reyes, p. 392). ¿Qué tie­
-  nen en común todos los imperios enumerados en la profecía? ¿De qué
-  manera siguieron el mismo derrotero profético? ¿Cómo va también
-  nuestro mundo actual en pos de ellos?
+Piensa en la afirmación de Jesús de que el Juicio será menos severo para
+Nínive que para el pueblo de Dios que se había desviado de la verdad
+(ver Mat. 12:39-42). ¿Qué lección puede extraer la iglesia de Dios de esta
+advertencia?
+
+Nota la afirmación de Elena de White de que “la historia se repitió” con
+cada imperio sucesivo (Elena de White, Profetas y reyes, p. 392). ¿Qué tie­
+nen en común todos los imperios enumerados en la profecía? ¿De qué
+manera siguieron el mismo derrotero profético? ¿Cómo va también
+nuestro mundo actual en pos de ellos?
 
 ### Página:
 

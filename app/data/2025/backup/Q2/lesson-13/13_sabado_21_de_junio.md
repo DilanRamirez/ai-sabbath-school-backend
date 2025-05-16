@@ -8,9 +8,7 @@ lipsis 18:4; Daniel 5:1-31; Apocalipsis 16:12-19; 2 Crónicas 36:22, 23.
 **Para memorizar:** “Y él respondió: ‘Soy hebreo, y venero al Señor, Dios de los cielos, que hizo la tierra
 y el mar’ ” (Jon. 1:9).
 
-
-
-**Content:** 
+**Contenido:**
 E
 sta semana daremos nuestra última mirada a los relatos que nos ayudan a
 comprender los acontecimientos de los últimos días. Esta vez analizaremos

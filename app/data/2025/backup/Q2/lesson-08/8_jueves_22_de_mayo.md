@@ -4,11 +4,11 @@
 
 **Lectura principal:** ¿No ocurre lo mismo con nosotros?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿No ocurre lo mismo con nosotros?
 
-
-**Content:** 
+**Contenido:**
 Después de que el Señor apareció a Isaías en la escena de la sala del Trono de
 Isaías 6:1 al 8, y después de que se le dijo que su culpa había sido quitada y su
 pecado perdonado, respondió al llamado de Dios diciendo: “Aquí estoy, envíame

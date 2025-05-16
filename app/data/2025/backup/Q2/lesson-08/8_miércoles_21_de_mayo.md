@@ -2,9 +2,7 @@
 
 **Fecha:** Miércoles 21 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 Lee Salmos 5, donde David traza agudos contrastes entre los perdidos y
 quienes han sido redimidos. Compara el contenido de este salmo con el
 lenguaje de Apocalipsis 14:1 al 12. ¿Qué similitudes encuentras y cómo

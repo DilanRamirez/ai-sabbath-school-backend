@@ -6,7 +6,7 @@ LA EVANGELIZACIÓN DE NOÉ
 
 Lunes-2 de junio
 
-### Content:
+### Contenido:
 
 Pedro nos recuerda que muchos no estarán preparados para el regreso de
 Cristo porque “intencionalmente ignoran” (2 Ped. 3:5) lo que ocurrió en oca­
@@ -43,7 +43,7 @@ que quedará terminada la gran obra en favor de la salvación del hombre” (Ele
 de White, El conflicto de los siglos, p. 424). Hasta entonces, tenemos una obra
 que hacer como iglesia.
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cómo podemos aprender a no desanimarnos si nuestros esfuerzos personales
   de evangelización no parecen dar mucho fruto por el momento? ¿Por qué debe­

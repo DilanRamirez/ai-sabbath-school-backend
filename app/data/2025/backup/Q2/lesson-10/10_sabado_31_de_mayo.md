@@ -1,4 +1,5 @@
-# Lección 10 - SOBRE QUIENES HA 
+# Lección 10 - SOBRE QUIENES HA
+
 LLEGADO EL FIN
 
 **Fecha:** Sábado 31 de mayo
@@ -9,9 +10,7 @@ LLEGADO EL FIN
 sotros, a los que han llegado al fin del tiempo. Así, el que piensa estar firme, mire
 que no caiga” (1 Cor. 10: 11, 12).
 
-
-
-**Content:** 
+**Contenido:**
 Génesis 6:1-8; 2 Pedro 2:4-11; Génesis 18:17-32; Daniel 7:9, 10.
 
 L

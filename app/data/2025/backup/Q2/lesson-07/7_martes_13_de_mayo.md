@@ -2,9 +2,7 @@
 
 **Fecha:** Martes 13 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 Los querubines, ya sea como seres vivientes (Eze. 10:8) o como símbolos hechos
 de oro (Éxo. 25:18), aparecen a lo largo de todo el Antiguo Testamento. A menudo
 se los representa junto al Trono de Dios, desde donde la gloria de él se irradia al

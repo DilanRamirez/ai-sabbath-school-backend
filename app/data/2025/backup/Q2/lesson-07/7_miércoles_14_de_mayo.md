@@ -4,7 +4,7 @@
 
 **Lectura principal:** ¿cuáles eran las cuatro tribus principales?
 
-**Content:**
+**Contenido:**
 En el desierto, la presencia de Dios en la nube guiaba a su pueblo durante su
 viaje a la Tierra Prometida y hacía que se detuvieran en el lugar indicado por
 él y levantaran allí el Tabernáculo, alrededor del cual las tribus acampaban

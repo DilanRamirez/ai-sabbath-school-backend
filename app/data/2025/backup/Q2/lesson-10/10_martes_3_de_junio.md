@@ -2,9 +2,7 @@
 
 **Fecha:** Martes 3 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Hay otra historia clave del Antiguo Testamento a la que Pedro hace referencia
 al describir los acontecimientos de los últimos días: la destrucción de So­
 doma y Gomorra. Las ciudades de la llanura se han hecho legendarias por

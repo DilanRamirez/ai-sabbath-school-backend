@@ -6,7 +6,7 @@ HAMBRE EN LA “CASA DEL PAN”
 
 Domingo-8 de junio
 
-### Content:
+### Contenido:
 
 Los críticos de la fe cristiana han señalado a menudo la brutal realidad de vivir en
 este mundo como prueba de que: (a) Dios no existe, (b) es impotente para impedir
@@ -44,7 +44,7 @@ es un poderoso testimonio del amor de Dios, pero la codicia humana y los es­
 tragos del pecado hacen que el mundo parezca someternos más a nosotros que
 nosotros a él. Un día, sin embargo, todo esto terminará.
 
-### Preguntas:
+### Reflexionar:
 
 - Incluso después de seis mil años de pecado y muerte, ¿cómo sigue revelando la
   Tierra las maravillas del amor y el poder creador de Dios?

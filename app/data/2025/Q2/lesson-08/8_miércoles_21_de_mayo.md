@@ -4,9 +4,13 @@ SALMOS 5
 
 ### Fecha:
 
-Miércoles-21 de mayo
+21 de mayo
 
-### Content:
+### Dia:
+
+Miércoles
+
+### Contenido:
 
 Lee Salmos 5, donde David traza agudos contrastes entre los perdidos y
 quienes han sido redimidos. Compara el contenido de este salmo con el
@@ -46,11 +50,11 @@ en silencio. El pueblo de Dios hace un último ofrecimiento de misericordia a
 voces de júbilo, porque tú los defiendes. En ti se regocijen los que aman tu
 nombre” (Sal. 5:11).
 
-### Preguntas:
+### Reflexionar:
 
-- Imagina que estás ante un Dios santo y perfecto en ocasión del Juicio y con todos
-  tus hechos expuestos ante él. ¿Qué te dice esta perspectiva acerca de tu necesi­
-  dad de la justicia de Cristo?
+Imagina que estás ante un Dios santo y perfecto en ocasión del Juicio y con todos
+tus hechos expuestos ante él. ¿Qué te dice esta perspectiva acerca de tu necesi­
+dad de la justicia de Cristo?
 
 ### Página:
 

@@ -4,12 +4,12 @@
 
 **Lectura principal:** ¿Cuánto hay de Jonás en ti?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Cuánto hay de Jonás en ti?
 - ¿Cómo puedes superar esa actitud equivocada?
 
-
-**Content:** 
+**Contenido:**
 Aunque breve, la historia de Jonás (ver Jon. 1-4) es considerablemente impac­
 tante. Muchos creyentes se han visto reflejados en este profeta renuente. Su
 historia también contiene notables alusiones a acontecimientos futuros.

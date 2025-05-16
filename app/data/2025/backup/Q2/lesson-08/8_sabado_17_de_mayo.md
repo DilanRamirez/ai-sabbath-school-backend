@@ -1,4 +1,5 @@
-# Lección 8 - EN LOS SALMOS - PRIMERA 
+# Lección 8 - EN LOS SALMOS - PRIMERA
+
 PARTE
 
 **Fecha:** Sábado 17 de mayo
@@ -10,9 +11,7 @@ PARTE
 y cuatro mil que tenían el nombre del Cordero y el nombre de su Padre escrito en
 sus frentes” (Apoc. 14:1).
 
-
-
-**Content:** 
+**Contenido:**
 C
 omo adventistas del séptimo día, estamos acostumbrados a buscar los
 símbolos del Apocalipsis en el Antiguo Testamento para entender qué

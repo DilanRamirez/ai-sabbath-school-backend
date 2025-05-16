@@ -2,9 +2,7 @@
 
 **Fecha:** Lunes 26 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 Gran parte del lenguaje del libro de los Salmos es simbólico, metafórico, pero
 cuando se trata del que apunta al restablecimiento definitivo de nuestro pla­
 neta, hay pocas razones para creer que es meramente figurado. El Salmo 46 nos

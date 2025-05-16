@@ -2,9 +2,7 @@
 
 **Fecha:** Jueves 29 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 Lee el Salmo 67. ¿De qué manera este himno de alabanza te ayuda a com­
 prender el papel del pueblo de Dios en Apocalipsis 14:6 al 12?
 Ingenieros del Instituto de Tecnología de Massachusetts, EE. UU., han creado

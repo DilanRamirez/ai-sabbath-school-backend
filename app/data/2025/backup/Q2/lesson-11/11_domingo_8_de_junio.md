@@ -2,9 +2,7 @@
 
 **Fecha:** Domingo 8 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Los críticos de la fe cristiana han señalado a menudo la brutal realidad de vivir en
 este mundo como prueba de que: (a) Dios no existe, (b) es impotente para impedir
 que ocurran cosas malas o (c) no le importa que suframos. Sin embargo, muchas

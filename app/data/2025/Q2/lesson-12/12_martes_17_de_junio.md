@@ -6,7 +6,7 @@ OTRA IMAGEN Y LA ORDEN DE ADORARLA
 
 Martes-17 de junio
 
-### Content:
+### Contenido:
 
 Hace tiempo que los estudiosos de la Biblia ven la conexión entre Daniel 3 y lo
 que Apocalipsis enseña acerca de los eventos finales. Efectivamente, la orden de

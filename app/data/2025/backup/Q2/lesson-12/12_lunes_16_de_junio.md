@@ -4,13 +4,13 @@
 
 **Lectura principal:** ¿Cuál era el mensaje?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Cuál era el mensaje?
 - ¿Qué nos enseña esto?
 - ¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe?
 
-
-**Content:** 
+**Contenido:**
 La atención que Nabucodonosor prestó a Daniel y a su Dios en un principio,
 cuando estaba aún impresionado por lo que se le reveló (ver Dan. 2, especial­
 mente los versículos 46-48), no duró mucho.

@@ -6,11 +6,15 @@ LA LEY EN NUESTROS CORAZONES
 
 Martes-20 de mayo
 
+### Dia:
+
+Martes
+
 ### Lectura principal:
 
 ¿cuál fue la respuesta divina?
 
-### Content:
+### Contenido:
 
 El remanente reunido en Sion tiene un nombre escrito en la frente: el del Padre
 y del Cordero. Puesto que Jesús es la imagen misma del Padre, es dudoso que se
@@ -49,10 +53,10 @@ El nombre de Dios es su carácter. Su ley moral es un trasunto de su carácter.
 Y aquellos que se reúnen en el monte santo de Dios en los últimos días están im­
 buidos de un amor por Dios que se pone de manifiesto en la obediencia a su Ley.
 
-### Preguntas:
+### Reflexionar:
 
-- Si somos salvos por la fe y no por la Ley, ¿cuál es entonces la importancia de la
-  Ley de Dios? (Ver 1 Juan 5:3).
+Si somos salvos por la fe y no por la Ley, ¿cuál es entonces la importancia de la
+Ley de Dios? (Ver 1 Juan 5:3).
 
 ### Página:
 

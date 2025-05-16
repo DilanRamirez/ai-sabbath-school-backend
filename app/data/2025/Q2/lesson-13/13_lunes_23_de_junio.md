@@ -10,11 +10,11 @@ Lunes-23 de junio
 
 ¿Por qué no se cumplió esta profecía?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Por qué no se cumplió esta profecía?
 
-### Content:
+### Contenido:
 
 Jonás tenía un mensaje inequívoco para el pueblo de Nínive: “Jonás entró en
 la ciudad y caminó un día pregonando: ‘De aquí a cuarenta días Nínive será
@@ -49,7 +49,7 @@ que los seres humanos hagan y las decisiones que tomen determinarán de qué
 lado estarán cuando se desarrollen los acontecimientos finales predichos por
 los profetas.
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Qué decisiones estás tomando ahora que podrían determinar cuáles tomarás
   cuando surja la cuestión de adorar a Dios o la imagen de la bestia?

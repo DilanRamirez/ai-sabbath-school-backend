@@ -2,7 +2,7 @@
 
 **Fecha:** Lunes 12 de mayo
 
-**Content:**
+**Contenido:**
 Tan pronto como nuestros primeros padres fueron expulsados del Edén, Dios
 ofreció la esperanza del Mesías (Gén. 3:15). Estableció entonces un poderoso
 símbolo a las puertas del Edén: dos querubines con una destellante luz entre

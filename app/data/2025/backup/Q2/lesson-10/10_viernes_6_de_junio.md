@@ -2,7 +2,7 @@
 
 **Fecha:** Viernes 6 de junio
 
-**Content:** 
+**Contenido:**
 Lee las páginas 100 y 101 del capítulo titulado “El Diluvio” en el libro Patriarcas
 y profetas, de Elena de White.
 “El sumo sacerdote no puede defenderse a sí mismo ni a su pueblo de las
@@ -26,20 +26,21 @@ Calvario. Su perfecta obediencia a la Ley de Dios le ha dado toda potestad en
 el Cielo y en la Tierra, y él solicita a su Padre misericordia y reconciliación pa-
 ra el hombre culpable” (Elena de White, Profetas y reyes, pp. 428, 430).
 
-### Preguntas para dialogar:
+### Reflexionar: para dialogar:
+
 - Jesús dijo a sus discípulos que debían permanecer en el mundo sin per­
-tenecer a este (ver Juan 15:19; 17:14-16). ¿Cómo equilibramos nuestra res­
-ponsabilidad de alcanzar al mundo con la necesidad de mantenernos
-“sin mancha” de él (Sant. 1:27)?
+  tenecer a este (ver Juan 15:19; 17:14-16). ¿Cómo equilibramos nuestra res­
+  ponsabilidad de alcanzar al mundo con la necesidad de mantenernos
+  “sin mancha” de él (Sant. 1:27)?
 - ¿Qué nos enseña el ministerio público de Noé antes del Diluvio acerca de
-cómo funciona el Gran Conflicto? ¿De qué manera desempeñamos hoy
-el mismo papel?
+  cómo funciona el Gran Conflicto? ¿De qué manera desempeñamos hoy
+  el mismo papel?
 - Antes de consumir a los impíos con fuego del Cielo (como hizo con So­
-doma), Dios los resucita y permite que Satanás trabaje con ellos por un
-corto tiempo (Apoc. 20:7-9). ¿Qué razones se te ocurren para que este sea
-un último paso necesario antes de que Dios termine con el mal?
+  doma), Dios los resucita y permite que Satanás trabaje con ellos por un
+  corto tiempo (Apoc. 20:7-9). ¿Qué razones se te ocurren para que este sea
+  un último paso necesario antes de que Dios termine con el mal?
 - Al considerar las historias que estudiamos esta semana, ¿qué adver­
-tencias encuentras para tu propia vida? ¿Qué te enseñan estas historias
-acerca de tu esperanza en Cristo?
+  tencias encuentras para tu propia vida? ¿Qué te enseñan estas historias
+  acerca de tu esperanza en Cristo?
 
 **Página:** N/A

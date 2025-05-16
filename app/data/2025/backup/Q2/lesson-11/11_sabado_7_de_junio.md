@@ -9,9 +9,7 @@
 le extendió el cetro de oro que tenía en la mano. Entonces Ester se acercó y tocó la
 punta del cetro” (Est. 5:2).
 
-
-
-**Content:** 
+**Contenido:**
 E
 sta semana continuaremos explorando historias que prefiguran aconteci­
 mientos de los últimos días. Al utilizar acontecimientos y personas de la

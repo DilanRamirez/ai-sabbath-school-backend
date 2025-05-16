@@ -2,9 +2,7 @@
 
 **Fecha:** Domingo 25 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 ANGUSTIA
 Lee Salmos 46. ¿Qué mensaje de esperanza podemos extraer de esto en
 medio de la confusión actual y de lo que sabemos que ocurrirá en la tierra

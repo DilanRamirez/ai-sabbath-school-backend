@@ -4,11 +4,11 @@
 
 **Lectura principal:** ¿Cómo le fue a Nietzsche con esta filosofía?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Cómo le fue a Nietzsche con esta filosofía?
 
-
-**Content:** 
+**Contenido:**
 Lee Salmos 75, Mateo 26:26 al 29 y Apocalipsis 14:9 al 12. ¿Qué revela el
 Salmo 75 sobre algunas de las cuestiones que están en juego en el Juicio, y
 cómo nos ayudan los otros textos a entender estas cuestiones?

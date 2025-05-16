@@ -4,11 +4,11 @@
 
 **Lectura principal:** ¿Qué hizo tropezar a Belsasar?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Qué hizo tropezar a Belsasar?
 
-
-**Content:** 
+**Contenido:**
 Después de que la ciudad de Nínive fue humillada en el año 612 a. C. por un
 ejército que incluía a medos y babilonios (dirigidos por el padre de Nabucodo­
 nosor), Babilonia experimentó un renacimiento como no se había visto desde

@@ -6,7 +6,7 @@ LA PERSECUCIÓN A LA IGLESIA PRIMITIVA
 
 Miércoles-18 de junio
 
-### Content:
+### Contenido:
 
 Tanto el Antiguo Testamento como el Nuevo Testamento contienen ejem­
 plos de precursores de los acontecimientos finales. La vida no fue fácil para
@@ -47,7 +47,7 @@ extenderás tus manos y otro te ceñirá, y te llevará a donde no quieras’. D
 para dar a entender de qué muerte había de glorificar a Dios. Dicho esto, añadió:
 ‘Sígueme’ ” (Juan 21:18, 19).
 
-### Preguntas:
+### Reflexionar:
 
 - Tras anunciar a Pedro cómo moriría, Jesús le dijo: “Sígueme”. ¿Qué debería decir­
   nos esto acerca de por qué ni siquiera el riesgo de la muerte debería impedirnos

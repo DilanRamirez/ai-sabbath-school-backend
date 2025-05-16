@@ -10,11 +10,11 @@ Miércoles-28 de mayo
 
 ¿Cómo le fue a Nietzsche con esta filosofía?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cómo le fue a Nietzsche con esta filosofía?
 
-### Content:
+### Contenido:
 
 Lee Salmos 75, Mateo 26:26 al 29 y Apocalipsis 14:9 al 12. ¿Qué revela el
 Salmo 75 sobre algunas de las cuestiones que están en juego en el Juicio, y
@@ -52,7 +52,7 @@ tipos de inmoralidad, cosas de las que mucha gente se habría avergonzado
 de hablar incluso en privado, son ahora alabadas y aplaudidas públicamente.
 Así de mal están las cosas.
 
-### Preguntas:
+### Reflexionar:
 
 - Aunque debemos poner de nuestra parte para intentar mejorar la vida de los
   demás, ¿por qué siempre es importante recordar que será necesaria la destruc­

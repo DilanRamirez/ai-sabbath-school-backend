@@ -6,7 +6,7 @@ PARA ESTA HORA
 
 Jueves-12 de junio
 
-### Content:
+### Contenido:
 
 Existe una desafortunada tendencia entre algunos cristianos a detenerse en los
 momentos oscuros descritos en la profecía bíblica. Se avecinan tiempos difíciles,
@@ -44,7 +44,7 @@ rado. Nosotros tampoco estamos solos al entrar en los últimos momentos
 de la historia de la Tierra: el Rey está de nuestro lado y el pueblo de Dios
 también será liberado.
 
-### Preguntas:
+### Reflexionar:
 
 - Todo resultó bien para el pueblo de Dios en el caso de la historia de Ester, pero
   no siempre es así, al menos a corto plazo. ¿Por qué debemos tener siempre una

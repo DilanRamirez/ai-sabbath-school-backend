@@ -10,7 +10,7 @@ Jueves 26 de junio
 
 ¿En qué difieren? ¿Cuál es la importancia del decreto? ¿Cómo influyó en la primera venida de Jesús siglos más tarde?
 
-### Content:
+### Contenido:
 
 Cuando Ciro conquistó la ciudad de Babilonia y concluyó el cautiverio del
 pueblo de Dios. Los persas les permitieron volver a la Tierra Prometida y re­

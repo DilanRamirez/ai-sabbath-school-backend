@@ -2,7 +2,7 @@
 
 **Fecha:** Viernes 16 de mayo
 
-**Content:** 
+**Contenido:**
 Lee el capítulo titulado “El fin del Conflicto”, en el libro El conflicto de los siglos
 (pp. 720-737), de Elena de White.
 Satanás, quien fue una vez un querubín protector, trató de destruir la con­
@@ -29,19 +29,20 @@ inmolado es digno de tomar el poder, las riquezas, la sabiduría, la fortaleza,
 la honra, la gloria y la alabanza!’ (Apoc. 5:12, RVR 1960)” (Elena de White, El
 conflicto de los siglos, pp. 729, 730).
 
-### Preguntas para dialogar:
+### Reflexionar: para dialogar:
+
 - ¡Imagina lo que significaría estar ante Dios con cada error cometido,
-cada defecto de carácter, cada acto indebido, cada pensamiento inco­
-rrecto, cada motivo inaceptable totalmente expuesto ante él! ¿Qué me­
-recerías justa y legítimamente? ¿Cuál es entonces tu única esperanza?
-¿Por qué debemos tener “la justicia de Dios, por medio de Jesucristo, por
-la fe, para todos los que creen en él” (Rom. 3:22) cubriéndonos ahora y en
-el Juicio, cuando más la necesitamos? En resumen, ¿por qué necesita-
-mos el evangelio?
+  cada defecto de carácter, cada acto indebido, cada pensamiento inco­
+  rrecto, cada motivo inaceptable totalmente expuesto ante él! ¿Qué me­
+  recerías justa y legítimamente? ¿Cuál es entonces tu única esperanza?
+  ¿Por qué debemos tener “la justicia de Dios, por medio de Jesucristo, por
+  la fe, para todos los que creen en él” (Rom. 3:22) cubriéndonos ahora y en
+  el Juicio, cuando más la necesitamos? En resumen, ¿por qué necesita-
+  mos el evangelio?
 - Juan el Bautista, como hemos visto, desempeñó el papel de un serafín:
-una lámpara ardiente y brillante (ver Juan 5:35). Fue, por supuesto, el pre­
-cursor de Cristo, y quien anunció la primera aparición del Mesías. ¿De
-qué manera el pueblo de Dios de los últimos días desempeña un papel
-profético similar?
+  una lámpara ardiente y brillante (ver Juan 5:35). Fue, por supuesto, el pre­
+  cursor de Cristo, y quien anunció la primera aparición del Mesías. ¿De
+  qué manera el pueblo de Dios de los últimos días desempeña un papel
+  profético similar?
 
 **Página:** N/A

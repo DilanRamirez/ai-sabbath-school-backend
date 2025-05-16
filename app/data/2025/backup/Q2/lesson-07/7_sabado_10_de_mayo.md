@@ -1,4 +1,5 @@
-# Lección 7 - FUNDAMENTOS DE LA 
+# Lección 7 - FUNDAMENTOS DE LA
+
 PROFECÍA
 
 **Fecha:** Sábado 10 de mayo
@@ -9,9 +10,7 @@ PROFECÍA
 **Para memorizar:** “Después oí la voz del Señor, que dijo: ‘¿A quién enviaré? ¿Quién irá de nuestra
 parte?’ Entonces respondí: ‘Aquí estoy, envíame a mí’ ” (Isa. 6:8).
 
-
-
-**Content:** 
+**Contenido:**
 E
 l derecho de Dios a gobernar el universo se basa en su posición como Crea­
 dor de todas las cosas (Apoc. 4:11) y también en su carácter. Al descubrir el

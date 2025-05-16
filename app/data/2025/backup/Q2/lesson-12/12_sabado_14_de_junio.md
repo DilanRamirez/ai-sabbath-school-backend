@@ -7,9 +7,7 @@
 **Para memorizar:** “Porque no nos ha dado Dios espíritu de timidez, sino de poder, de amor y de do­
 minio propio” (2 Tim. 1:7).
 
-
-
-**Content:** 
+**Contenido:**
 Apocalipsis 13:11-17; Romanos 1:18-25; Hechos 12:1-17; Mateo 12:9-14.
 
 E

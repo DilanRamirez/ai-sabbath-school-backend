@@ -6,6 +6,10 @@ EN LOS SALMOS - PRIMERA PARTE
 
 17 de mayo
 
+### Dia:
+
+Sabado
+
 ### Lecturas para esta semana:
 
 Hebreos 9:11-15; Salmos 122; Salmos

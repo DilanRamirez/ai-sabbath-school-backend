@@ -2,9 +2,7 @@
 
 **Fecha:** Martes 10 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Booz se enamora profundamente de Rut y desea casarse con ella, pero existe un
 obstáculo importante para ello: hay un pariente más cercano que también tiene
 derecho a ella y a la tierra. Si consideramos a Booz como un tipo de Cristo, esta

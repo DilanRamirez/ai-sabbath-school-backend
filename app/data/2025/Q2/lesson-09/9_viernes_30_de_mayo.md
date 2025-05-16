@@ -6,7 +6,7 @@ Para Estudiar y Meditar
 
 30 de mayo
 
-### Content:
+### Contenido:
 
 Lee Salmo 133, Hechos 1:4 al 9 y Apocalipsis 5:4 al 7.
 “Durante la era patriarcal, la influencia del Espíritu Santo se había revelado a
@@ -31,23 +31,25 @@ invitarlos a unirse al pueblo de Dios cuando esté con el Cordero sobre el monte
 Sion. No necesitamos inventar nuevos medios y métodos, pues nunca hemos
 estado a cargo de la obra.
 
-### Preguntas para dialogar:
+### Reflexionar: para dialogar:
 
-- Aún hay muchas personas no alcanzadas, aunque los mensajes de los
-  tres ángeles han llegado a todo el mundo. Dialoguen como clase acerca
-  de cómo puede nuestra iglesia realizar mejor la tarea para la que Cristo
-  nos está usando. ¿Cómo podemos aprender a no desesperarnos por el
-  hecho de que aún hay tanta gente que no ha oído hablar de las verdades
-  cruciales para los últimos días?
-- Juan es testigo, en Apocalipsis 5, de cómo el rollo sellado es entregado al
-  Cordero porque es digno. Cuando el Cordero abre los sellos del rollo en
-  Apocalipsis 6, vemos claramente predicha la historia de la iglesia cris­
-  tiana desde la época del Nuevo Testamento hasta el final de los tiempos.
-  ¿Qué lecciones podemos aprender de esta descripción acerca de cómo se
-  propone Dios terminar la obra?
-- ¿Qué acontecimientos actuales podrían conducir fácilmente a lo que sa­
-  bemos que se avecina en Apocalipsis 13 y 14? ¿Qué obstáculos quedan
-  aún por delante?
+Aún hay muchas personas no alcanzadas, aunque los mensajes de los
+tres ángeles han llegado a todo el mundo. Dialoguen como clase acerca
+de cómo puede nuestra iglesia realizar mejor la tarea para la que Cristo
+nos está usando. ¿Cómo podemos aprender a no desesperarnos por el
+hecho de que aún hay tanta gente que no ha oído hablar de las verdades
+cruciales para los últimos días?
+
+Juan es testigo, en Apocalipsis 5, de cómo el rollo sellado es entregado al
+Cordero porque es digno. Cuando el Cordero abre los sellos del rollo en
+Apocalipsis 6, vemos claramente predicha la historia de la iglesia cris­
+tiana desde la época del Nuevo Testamento hasta el final de los tiempos.
+¿Qué lecciones podemos aprender de esta descripción acerca de cómo se
+propone Dios terminar la obra?
+
+¿Qué acontecimientos actuales podrían conducir fácilmente a lo que sa­
+bemos que se avecina en Apocalipsis 13 y 14? ¿Qué obstáculos quedan
+aún por delante?
 
 ### Página:
 

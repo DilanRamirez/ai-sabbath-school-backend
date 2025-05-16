@@ -2,9 +2,7 @@
 
 **Fecha:** Miércoles 18 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Tanto el Antiguo Testamento como el Nuevo Testamento contienen ejem­
 plos de precursores de los acontecimientos finales. La vida no fue fácil para
 los cristianos del primer siglo. Primero fueron odiados por muchos de sus

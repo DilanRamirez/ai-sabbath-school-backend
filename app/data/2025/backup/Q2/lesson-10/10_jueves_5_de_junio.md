@@ -4,12 +4,12 @@
 
 **Lectura principal:** ¿Cuál es el objetivo principal del Juicio?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Cuál es el objetivo principal del Juicio?
 - ¿Cuál es tu única esperanza en ese momento?
 
-
-**Content:** 
+**Contenido:**
 La descripción del Juicio que se encuentra en Daniel 7 nos permite ver detrás
 del velo, una oportunidad impresionante de observar cómo actúa Dios para
 resolver el problema del pecado y para redimir a quienes desean vivir en una

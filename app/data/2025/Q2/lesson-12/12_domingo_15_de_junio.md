@@ -6,7 +6,7 @@ DANIEL 2 Y EL ENFOQUE HISTORICISTA DE LA
 
 Domingo-15 de junio
 
-### Content:
+### Contenido:
 
 PROFECÍA
 La profecía que aparece en Daniel 2 es una de las más poderosas de toda la Es­
@@ -40,7 +40,7 @@ historicista de las profecías surge de los textos mismos y es crucial para com�
 prender los acontecimientos de los últimos días, particularmente los descritos
 en Apocalipsis.
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cómo demuestra Daniel 2 que Dios no solo conoce el futuro sino también tiene,
   en última instancia, el control de este?

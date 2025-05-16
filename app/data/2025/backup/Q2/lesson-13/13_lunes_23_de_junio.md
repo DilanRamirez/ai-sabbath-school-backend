@@ -4,11 +4,11 @@
 
 **Lectura principal:** ¿Por qué no se cumplió esta profecía?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Por qué no se cumplió esta profecía?
 
-
-**Content:** 
+**Contenido:**
 Jonás tenía un mensaje inequívoco para el pueblo de Nínive: “Jonás entró en
 la ciudad y caminó un día pregonando: ‘De aquí a cuarenta días Nínive será
 destruida’ ” (Jon. 3:4). El lugar estaba condenado. ¿Acaso no era un anuncio

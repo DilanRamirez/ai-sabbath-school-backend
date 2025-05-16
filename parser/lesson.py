@@ -85,13 +85,13 @@ def extract_and_write_markdown():
             if main_prompt:
                 md += f"### Lectura principal:\n{main_prompt}\n\n"
             if questions:
-                md += "### Preguntas:\n" + \
+                md += "### Reflexionar:\n" + \
                     "\n".join(f"- {q}" for q in questions) + "\n"
             page_number_match = re.search(r"\n(\d{1,4})\s*$", body.strip())
             page_number = page_number_match.group(
                 1) if page_number_match else "N/A"
             body = re.sub(r"\n" + re.escape(page_number) + r"\s*$", "", body)
-            md += f"\n\n### Content:\n{clean(body)}"
+            md += f"\n\n### Contenido:\n{clean(body)}"
             md += f"\n\n### Página:\n{page_number}"
             save_markdown(filename, md)
 
@@ -112,9 +112,9 @@ def extract_and_write_markdown():
             1) if page_number_match else "N/A"
         meditation = re.sub(
             r"\n" + re.escape(page_number) + r"\s*$", "", meditation)
-        md = f"### Título:\nPara Estudiar y Meditar\n\n### Fecha:\nViernes {date_str}\n\n### Content:\n{clean(meditation)}\n\n"
+        md = f"### Título:\nPara Estudiar y Meditar\n\n### Fecha:\nViernes {date_str}\n\n### Contenido:\n{clean(meditation)}\n\n"
         if questions:
-            md += "### Preguntas para dialogar:\n" + "\n".join(
+            md += "### Reflexionar: para dialogar:\n" + "\n".join(
                 f"- {clean(q)}" for q in questions
             )
 

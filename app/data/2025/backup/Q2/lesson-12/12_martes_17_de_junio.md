@@ -2,9 +2,7 @@
 
 **Fecha:** Martes 17 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Hace tiempo que los estudiosos de la Biblia ven la conexión entre Daniel 3 y lo
 que Apocalipsis enseña acerca de los eventos finales. Efectivamente, la orden de
 “adorar la imagen” o morir (Dan. 3:15) refleja lo que el Apocalipsis enseña acerca

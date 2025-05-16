@@ -4,14 +4,14 @@
 
 **Lectura principal:** ¿qué mensaje típico del evangelio se encuentra allí?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿qué mensaje típico del evangelio se encuentra allí?
 - ¿En qué difieren?
 - ¿Cuál es la importancia del decreto?
 - ¿Cómo influyó en la primera venida de Jesús siglos más tarde?
 
-
-**Content:** 
+**Contenido:**
 Uno de los puntos fuertes de Babilonia era el río Éufrates, que fluía bajo sus mu­
 rallas y proveía a la ciudad un suministro ilimitado de agua. Pero ese resultó ser
 a la vez su punto débil. Nitocris, una antigua reina babilónica, había realizado
@@ -44,7 +44,7 @@ Lee Apocalipsis 16:15. Aun en medio de estas advertencias acerca del fin de los
 tiempos, ¿qué mensaje típico del evangelio se encuentra allí? ¿Qué significa “no
 andar desnudo”?
 
-Lección 13  |
+Lección 13 |
 154
 Jueves 26 de junio
 CIRO, EL UNGIDO

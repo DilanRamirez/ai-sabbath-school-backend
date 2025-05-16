@@ -6,7 +6,7 @@ PARA QUE SE CONOZCA TU SALVACIÓN
 
 29 de mayo
 
-### Content:
+### Contenido:
 
 Lee el Salmo 67. ¿De qué manera este himno de alabanza te ayuda a com­
 prender el papel del pueblo de Dios en Apocalipsis 14:6 al 12? [notas]
@@ -48,7 +48,7 @@ se contenta con permanecer en Sion con Cristo y disfrutar allí de su presencia.
 Por el contrario, sus integrantes vuelan sobre la faz de la Tierra mientras instan
 al mundo a unirse a ellos en el monte santo de Dios.
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Qué obligaciones deberíamos sentir como iglesia y como individuos en cuanto a
   enseñar a los demás las verdades que tanto amamos?

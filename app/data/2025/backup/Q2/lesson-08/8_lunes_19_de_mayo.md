@@ -4,13 +4,13 @@
 
 **Lectura principal:** ¿Quién residirá en tu santo monte?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿Quién residirá en tu santo monte?
 - ¿Qué paralelismos encuentras?
 - ¿Cómo puede uno unirse a este grupo?
 
-
-**Content:** 
+**Contenido:**
 En Apocalipsis 14 encontramos al pueblo de Dios de pie sobre el monte Sion.
 Este se encontraba al oeste de lo que hoy se conoce como la Ciudad Vieja en
 Jerusalén y era considerado la sede del Trono de Dios o de su presencia entre su

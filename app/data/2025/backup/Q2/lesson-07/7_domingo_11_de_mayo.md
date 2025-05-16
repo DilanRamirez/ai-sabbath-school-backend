@@ -2,9 +2,7 @@
 
 **Fecha:** Domingo 11 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 Hace años, una iglesia decidió renovar un antiguo sótano a fin de que sirviera
 como un espacio para la confraternización. Una de las primeras cosas que
 hicieron fue instalar nuevas luces, con la esperanza de que el lugar luciera

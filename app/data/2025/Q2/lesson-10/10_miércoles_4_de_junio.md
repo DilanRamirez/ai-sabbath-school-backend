@@ -6,7 +6,7 @@ EL JUEZ DE TODA LA TIERRA
 
 Miércoles-4 de junio
 
-### Content:
+### Contenido:
 
 La Biblia registra una curiosa historia que tiene lugar en las llanuras de Mamre
 justo antes de la destrucción de Sodoma. En ese relato, Dios se aparece a Abraham
@@ -42,7 +42,7 @@ que llegue el fin del mal y de los malvados, Dios abre los libros del cielo (Apo
 sobre la Tierra. Es decir, tendremos mil años para obtener respuesta a muchas
 preguntas que ahora tenemos.
 
-### Preguntas:
+### Reflexionar:
 
 - Antes de ejecutar su juicio final sobre los perdidos, el Señor nos dará mil años
   para entender por qué lo hará. ¿Qué nos dice esto acerca de su carácter y de cuán

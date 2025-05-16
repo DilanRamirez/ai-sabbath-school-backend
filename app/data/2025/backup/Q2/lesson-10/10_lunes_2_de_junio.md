@@ -2,9 +2,7 @@
 
 **Fecha:** Lunes 2 de junio
 
-
-
-**Content:** 
+**Contenido:**
 Pedro nos recuerda que muchos no estarán preparados para el regreso de
 Cristo porque “intencionalmente ignoran” (2 Ped. 3:5) lo que ocurrió en oca­
 sión del Diluvio. En la actualidad, aunque un asombroso número de culturas,

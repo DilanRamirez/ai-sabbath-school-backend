@@ -10,11 +10,11 @@ Miércoles-11 de junio
 
 ¿qué harás en la hora de la gran prueba?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿qué harás en la hora de la gran prueba?
 
-### Content:
+### Contenido:
 
 La historia de Ester incluye a Amán, un personaje ávido de poder, y a quien se
 había otorgado un elevado grado de prominencia en el imperio, por encima de
@@ -53,7 +53,7 @@ la observancia del domingo, la negativa persistente, por parte de una pequeña
 minoría, de ceder a la exigencia popular, la convertirá en objeto de execración
 universal” (Elena de White, El conflicto de los siglos, p. 673).
 
-### Preguntas:
+### Reflexionar:
 
 - Piensa en las cosas “pequeñas” que ponen a prueba tu fe ahora. Si cedes en esas
   cosas “pequeñas”, ¿qué harás en la hora de la gran prueba?

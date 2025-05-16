@@ -2,9 +2,7 @@
 
 **Fecha:** Miércoles 4 de junio
 
-
-
-**Content:** 
+**Contenido:**
 La Biblia registra una curiosa historia que tiene lugar en las llanuras de Mamre
 justo antes de la destrucción de Sodoma. En ese relato, Dios se aparece a Abraham
 acompañado por dos ángeles. Cuando el patriarca los ve, invita a los visitantes

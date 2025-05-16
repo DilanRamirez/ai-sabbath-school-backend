@@ -6,11 +6,15 @@ ENSEÑA A LOS TRANSGRESORES TU CAMINO
 
 Jueves-22 de mayo
 
+### Dia:
+
+Jueves
+
 ### Lectura principal:
 
 ¿No ocurre lo mismo con nosotros?
 
-### Content:
+### Contenido:
 
 Después de que el Señor apareció a Isaías en la escena de la sala del Trono de
 Isaías 6:1 al 8, y después de que se le dijo que su culpa había sido quitada y su
@@ -50,11 +54,11 @@ evangelio, de la salvación en Jesús. Las advertencias y los mensajes de los tr
 mensajes tienen en Jesús y en lo que ha hecho por ellos. Fuera del “evangelio
 eterno”, realmente no tenemos nada de valor que decir al mundo.
 
-### Preguntas:
+### Reflexionar:
 
-- Medita en el hecho de que, incluso antes del inicio de la proclamación de los men­
-  sajes de los tres ángeles, se nos señala el “evangelio eterno”. ¿Qué nos dice esto
-  acerca de cuán fundamental es esta verdad para todo lo que creemos?
+Medita en el hecho de que, incluso antes del inicio de la proclamación de los men­
+sajes de los tres ángeles, se nos señala el “evangelio eterno”. ¿Qué nos dice esto
+acerca de cuán fundamental es esta verdad para todo lo que creemos?
 
 ### Página:
 

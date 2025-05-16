@@ -6,7 +6,7 @@ Para Estudiar y Meditar
 
 Viernes 13 de junio
 
-### Content:
+### Contenido:
 
 Lee el capítulo titulado “El primer rey de Israel” en las páginas 653 a 668 del libro
 Patriarcas y profetas, de Elena de White. “Satanás despertará indignación contra la
@@ -26,21 +26,25 @@ el error. Y no se nos deja en la duda en cuanto al resultado. Hoy, como en los
 días de Ester y Mardoqueo, el Señor vindicará su verdad y a su pueblo” (Elena
 de White, Profetas y reyes, pp. 444, 445).
 
-### Preguntas para dialogar:
+### Reflexionar: para dialogar:
 
-- ¿Por qué permite Dios que su pueblo afronte tiempos difíciles?
-- ¿Cómo puede prepararse el creyente para cualquier dificultad que pueda
-  surgir en relación con su lealtad a Cristo? ¿Dónde encuentras esperanza
-  en medio de las circunstancias difíciles?
-- ¿Por qué tenemos la tendencia a detenernos en los eventos sombríos
-  anunciados en la profecía y permitir que eclipsen el panorama más
-  amplio y luminoso de sus buenas noticias?
-- Una amiga acude a ti después de leer el Apocalipsis y te confiesa que le
-  parece aterrador. ¿Qué enfoque utilizarías para ayudarla a comprender­
-  lo mejor y a tener paz?
-- Alguien dice: “No creo que Dios me ame, pues he hecho cosas muy ma­
-  las”. ¿Qué le responderías? ¿Cómo influyen las historias de Rut y Ester
-  en tu perspectiva?
+¿Por qué permite Dios que su pueblo afronte tiempos difíciles?
+
+¿Cómo puede prepararse el creyente para cualquier dificultad que pueda
+surgir en relación con su lealtad a Cristo? ¿Dónde encuentras esperanza
+en medio de las circunstancias difíciles?
+
+¿Por qué tenemos la tendencia a detenernos en los eventos sombríos
+anunciados en la profecía y permitir que eclipsen el panorama más
+amplio y luminoso de sus buenas noticias?
+
+Una amiga acude a ti después de leer el Apocalipsis y te confiesa que le
+parece aterrador. ¿Qué enfoque utilizarías para ayudarla a comprender­
+lo mejor y a tener paz?
+
+Alguien dice: “No creo que Dios me ame, pues he hecho cosas muy ma­
+las”. ¿Qué le responderías? ¿Cómo influyen las historias de Rut y Ester
+en tu perspectiva?
 
 ### Página:
 

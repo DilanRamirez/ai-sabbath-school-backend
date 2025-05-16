@@ -6,7 +6,7 @@ ESPERANZA EN MEDIO DE LA CONFUSIÓN
 
 Lunes-26 de mayo
 
-### Content:
+### Contenido:
 
 Gran parte del lenguaje del libro de los Salmos es simbólico, metafórico, pero
 cuando se trata del que apunta al restablecimiento definitivo de nuestro pla­
@@ -43,7 +43,7 @@ se derrite la tierra. ¡El Señor Todopoderoso está con nosotros! Nuestro refug
 es el Dios de Jacob” (Sal. 46:6, 7). Las cosas no irán bien a corto plazo, pero sí en
 última instancia gracias a Jesús.
 
-### Preguntas:
+### Reflexionar:
 
 - Nuestro mundo parece caótico y fuera de control. Sin embargo, ¿cómo debería
   ayudarnos la profecía de Daniel 7, por ejemplo, a ver que, en última instancia,

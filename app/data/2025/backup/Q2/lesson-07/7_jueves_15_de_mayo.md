@@ -2,9 +2,7 @@
 
 **Fecha:** Jueves 15 de mayo
 
-
-
-**Content:** 
+**Contenido:**
 Resulta difícil de entender que Lucifer ocupara una vez el puesto de querubín
 protector, una posición exaltada junto al Trono de Dios. Seguramente su exis­
 tencia habría ayudado a revelar la gloria de Dios al universo. En lugar de eso,

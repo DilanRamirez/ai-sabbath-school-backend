@@ -10,12 +10,12 @@ Domingo-22 de junio
 
 ¿Cuánto hay de Jonás en ti?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cuánto hay de Jonás en ti?
 - ¿Cómo puedes superar esa actitud equivocada?
 
-### Content:
+### Contenido:
 
 Aunque breve, la historia de Jonás (ver Jon. 1-4) es considerablemente impac­
 tante. Muchos creyentes se han visto reflejados en este profeta renuente. Su
@@ -52,7 +52,7 @@ que la mayoría no recibe con agrado, por muy amable que sea el mensajero.
 ¿Quién de nosotros no ha recibido respuestas negativas o incluso hostiles como
 resultado de su testificación? Ello es simplemente parte de la tarea.
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cuánto hay de Jonás en ti? ¿Cómo puedes superar esa actitud equivocada?
 

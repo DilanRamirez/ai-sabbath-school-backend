@@ -6,7 +6,7 @@ RUT Y BOOZ
 
 Lunes-9 de junio
 
-### Content:
+### Contenido:
 
 Noemí pidió que cambiaran su nombre por el de Mara (“amargura”, en hebreo),
 a causa de la amargura que le había sobrevenido (ver Rut 1:20). La relación con
@@ -49,7 +49,7 @@ revelada en la persona de Booz desplaza por completo esas nociones erróneas.
 Dios no solo se fija en nosotros a pesar de nuestra profunda indigencia espiritual,
 sino también nos quiere como su esposa.
 
-### Preguntas:
+### Reflexionar:
 
 - Trata de comprender que el Creador no solo se convirtió en parte de su propia
   Creación, sino también murió por ella. ¿Cómo debería influir esta asombrosa ver­

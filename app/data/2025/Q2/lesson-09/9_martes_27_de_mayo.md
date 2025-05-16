@@ -10,12 +10,12 @@ Martes-27 de mayo
 
 ¿De dónde vienes?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿De dónde vienes?
 - ¿verdad?
 
-### Content:
+### Contenido:
 
 Lee Salmos 47:1 al 4. ¿Qué dice el salmista acerca del lugar que nos espera
 en el reino de Cristo? [notas]
@@ -49,7 +49,7 @@ Jerusalén, que desciende del Cielo con deslumbrante esplendor, se asienta en el
 lugar purificado y preparado para recibirla, y Cristo, con su pueblo y los ángeles,
 entra en la Santa Ciudad” (Elena de White, El conflicto de los siglos, pp. 720, 721).
 
-### Preguntas:
+### Reflexionar:
 
 - Nota la esperanza que se nos ha dado en Jesús. Piensa en lo que significaría la
   vida si todo terminara para siempre con la muerte. Todo sería inútil, ¿verdad?

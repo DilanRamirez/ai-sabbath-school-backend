@@ -10,12 +10,12 @@ Jueves-5 de junio
 
 ¿Cuál es el objetivo principal del Juicio?
 
-### Preguntas:
+### Reflexionar:
 
 - ¿Cuál es el objetivo principal del Juicio?
 - ¿Cuál es tu única esperanza en ese momento?
 
-### Content:
+### Contenido:
 
 La descripción del Juicio que se encuentra en Daniel 7 nos permite ver detrás
 del velo, una oportunidad impresionante de observar cómo actúa Dios para
@@ -49,7 +49,7 @@ Hombre” (Dan. 7:13, ver también Mat. 20:28), cuya aparición es la única raz
 por la que este juicio es “hecho en favor de los santos del Altísimo” (Dan. 7:22).
 Solo su perfecta justicia hace que su pueblo salga airoso del Juicio.
 
-### Preguntas:
+### Reflexionar:
 
 - Imagina que todos tus secretos estén expuestos ante nuestro santo Dios en oca­
   sión del Juicio. ¿Cuál es tu única esperanza en ese momento? (ver el contenido

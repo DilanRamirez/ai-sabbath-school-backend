@@ -4,15 +4,14 @@
 
 **Lectura principal:** ¿De dónde vienes?
 
-### Preguntas:
+### Reflexionar:
+
 - ¿De dónde vienes?
 - ¿verdad?
 
-
-**Content:** 
+**Contenido:**
 Lee Salmos 47:1 al 4. ¿Qué dice el salmista acerca del lugar que nos espera
 en el reino de Cristo?
-
 
 A largo plazo, el futuro es brillante. Hasta entonces, la humanidad ha
 cedido el dominio del planeta a Lucifer, y cuando Satanás apareció en el
