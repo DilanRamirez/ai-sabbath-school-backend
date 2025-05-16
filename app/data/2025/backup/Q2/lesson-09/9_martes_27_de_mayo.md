@@ -6,8 +6,7 @@
 
 ### Reflexionar:
 
-- ¿De dónde vienes?
-- ¿verdad?
+¿De dónde vienes?
 
 **Contenido:**
 Lee Salmos 47:1 al 4. ¿Qué dice el salmista acerca del lugar que nos espera

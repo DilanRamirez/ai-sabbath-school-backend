@@ -12,7 +12,7 @@ Miércoles-28 de mayo
 
 ### Reflexionar:
 
-- ¿Cómo le fue a Nietzsche con esta filosofía?
+¿Cómo le fue a Nietzsche con esta filosofía?
 
 ### Contenido:
 
@@ -54,10 +54,10 @@ Así de mal están las cosas.
 
 ### Reflexionar:
 
-- Aunque debemos poner de nuestra parte para intentar mejorar la vida de los
-  demás, ¿por qué siempre es importante recordar que será necesaria la destruc­
-  ción total de este mundo actual y su recreación sobrenatural para que todo sea
-  restaurado?
+Aunque debemos poner de nuestra parte para intentar mejorar la vida de los
+demás, ¿por qué siempre es importante recordar que será necesaria la destruc­
+ción total de este mundo actual y su recreación sobrenatural para que todo sea
+restaurado?
 
 ### Página:
 

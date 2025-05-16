@@ -6,7 +6,7 @@
 
 ### Reflexionar:
 
-- ¿Qué hizo tropezar a Belsasar?
+¿Qué hizo tropezar a Belsasar?
 
 **Contenido:**
 Después de que la ciudad de Nínive fue humillada en el año 612 a. C. por un

@@ -92,4 +92,8 @@ def convert_md_files_to_json(directory):
 
 
 if __name__ == "__main__":
-    convert_md_files_to_json("app/data/2025/Q2/lesson-08")
+    base_dir = "app/data/2025/Q2"
+    for folder in sorted(os.listdir(base_dir)):
+        path = os.path.join(base_dir, folder)
+        if os.path.isdir(path) and folder.startswith("lesson-"):
+            convert_md_files_to_json(path)

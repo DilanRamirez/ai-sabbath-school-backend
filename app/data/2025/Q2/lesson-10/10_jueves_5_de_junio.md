@@ -12,8 +12,9 @@ Jueves-5 de junio
 
 ### Reflexionar:
 
-- ¿Cuál es el objetivo principal del Juicio?
-- ¿Cuál es tu única esperanza en ese momento?
+¿Cuál es el objetivo principal del Juicio?
+
+¿Cuál es tu única esperanza en ese momento?
 
 ### Contenido:
 
@@ -51,9 +52,9 @@ Solo su perfecta justicia hace que su pueblo salga airoso del Juicio.
 
 ### Reflexionar:
 
-- Imagina que todos tus secretos estén expuestos ante nuestro santo Dios en oca­
-  sión del Juicio. ¿Cuál es tu única esperanza en ese momento? (ver el contenido
-  del viernes).
+Imagina que todos tus secretos estén expuestos ante nuestro santo Dios en oca­
+sión del Juicio. ¿Cuál es tu única esperanza en ese momento? (ver el contenido
+del viernes).
 
 ### Página:
 

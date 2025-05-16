@@ -6,7 +6,7 @@
 
 ### Reflexionar:
 
-- ¿qué harás en la hora de la gran prueba?
+¿qué harás en la hora de la gran prueba?
 
 **Contenido:**
 La historia de Ester incluye a Amán, un personaje ávido de poder, y a quien se

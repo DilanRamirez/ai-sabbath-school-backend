@@ -49,9 +49,9 @@ para dar a entender de qué muerte había de glorificar a Dios. Dicho esto, aña
 
 ### Reflexionar:
 
-- Tras anunciar a Pedro cómo moriría, Jesús le dijo: “Sígueme”. ¿Qué debería decir­
-  nos esto acerca de por qué ni siquiera el riesgo de la muerte debería impedirnos
-  seguir al Señor?
+Tras anunciar a Pedro cómo moriría, Jesús le dijo: “Sígueme”. ¿Qué debería decir­
+nos esto acerca de por qué ni siquiera el riesgo de la muerte debería impedirnos
+seguir al Señor?
 
 ### Página:
 

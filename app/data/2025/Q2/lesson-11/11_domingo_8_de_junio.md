@@ -46,8 +46,8 @@ nosotros a él. Un día, sin embargo, todo esto terminará.
 
 ### Reflexionar:
 
-- Incluso después de seis mil años de pecado y muerte, ¿cómo sigue revelando la
-  Tierra las maravillas del amor y el poder creador de Dios?
+Incluso después de seis mil años de pecado y muerte, ¿cómo sigue revelando la
+Tierra las maravillas del amor y el poder creador de Dios?
 
 ### Página:
 

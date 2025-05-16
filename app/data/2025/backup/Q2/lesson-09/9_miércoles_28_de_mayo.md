@@ -6,7 +6,7 @@
 
 ### Reflexionar:
 
-- ¿Cómo le fue a Nietzsche con esta filosofía?
+¿Cómo le fue a Nietzsche con esta filosofía?
 
 **Contenido:**
 Lee Salmos 75, Mateo 26:26 al 29 y Apocalipsis 14:9 al 12. ¿Qué revela el

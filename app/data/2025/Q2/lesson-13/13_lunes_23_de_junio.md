@@ -12,7 +12,7 @@ Lunes-23 de junio
 
 ### Reflexionar:
 
-- ¿Por qué no se cumplió esta profecía?
+¿Por qué no se cumplió esta profecía?
 
 ### Contenido:
 
@@ -51,8 +51,8 @@ los profetas.
 
 ### Reflexionar:
 
-- ¿Qué decisiones estás tomando ahora que podrían determinar cuáles tomarás
-  cuando surja la cuestión de adorar a Dios o la imagen de la bestia?
+¿Qué decisiones estás tomando ahora que podrían determinar cuáles tomarás
+cuando surja la cuestión de adorar a Dios o la imagen de la bestia?
 
 ### Página:
 

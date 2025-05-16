@@ -10,11 +10,6 @@ Domingo-22 de junio
 
 ¿Cuánto hay de Jonás en ti?
 
-### Reflexionar:
-
-- ¿Cuánto hay de Jonás en ti?
-- ¿Cómo puedes superar esa actitud equivocada?
-
 ### Contenido:
 
 Aunque breve, la historia de Jonás (ver Jon. 1-4) es considerablemente impac­
@@ -54,7 +49,7 @@ resultado de su testificación? Ello es simplemente parte de la tarea.
 
 ### Reflexionar:
 
-- ¿Cuánto hay de Jonás en ti? ¿Cómo puedes superar esa actitud equivocada?
+¿Cuánto hay de Jonás en ti? ¿Cómo puedes superar esa actitud equivocada?
 
 ### Página:
 

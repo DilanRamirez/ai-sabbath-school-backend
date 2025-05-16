@@ -46,9 +46,9 @@ también será liberado.
 
 ### Reflexionar:
 
-- Todo resultó bien para el pueblo de Dios en el caso de la historia de Ester, pero
-  no siempre es así, al menos a corto plazo. ¿Por qué debemos tener siempre una
-  visión a largo plazo de las cosas para mantener viva nuestra esperanza en Cristo?
+Todo resultó bien para el pueblo de Dios en el caso de la historia de Ester, pero
+no siempre es así, al menos a corto plazo. ¿Por qué debemos tener siempre una
+visión a largo plazo de las cosas para mantener viva nuestra esperanza en Cristo?
 
 ### Página:
 

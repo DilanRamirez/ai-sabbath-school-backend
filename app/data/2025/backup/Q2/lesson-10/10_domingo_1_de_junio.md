@@ -6,10 +6,13 @@
 
 ### Reflexionar:
 
-- ¿Qué es esto?
-- ¿Quién podrá quedar en pie?
-- ¿Dónde está la promesa de su venida?
-- ¿Cómo pueden ayudarnos esas realidades a afrontar la “demora”?
+¿Qué es esto?
+
+¿Quién podrá quedar en pie?
+
+¿Dónde está la promesa de su venida?
+
+¿Cómo pueden ayudarnos esas realidades a afrontar la “demora”?
 
 **Contenido:**
 Lee Apocalipsis 6:12 al 17. Considera los detalles de la respuesta de estas

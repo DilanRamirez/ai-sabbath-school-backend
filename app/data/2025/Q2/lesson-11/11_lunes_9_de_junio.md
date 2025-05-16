@@ -51,9 +51,9 @@ sino también nos quiere como su esposa.
 
 ### Reflexionar:
 
-- Trata de comprender que el Creador no solo se convirtió en parte de su propia
-  Creación, sino también murió por ella. ¿Cómo debería influir esta asombrosa ver­
-  dad en nuestra propia existencia?
+Trata de comprender que el Creador no solo se convirtió en parte de su propia
+Creación, sino también murió por ella. ¿Cómo debería influir esta asombrosa ver­
+dad en nuestra propia existencia?
 
 ### Página:
 

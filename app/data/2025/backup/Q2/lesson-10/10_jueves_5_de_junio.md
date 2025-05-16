@@ -6,8 +6,9 @@
 
 ### Reflexionar:
 
-- ¿Cuál es el objetivo principal del Juicio?
-- ¿Cuál es tu única esperanza en ese momento?
+¿Cuál es el objetivo principal del Juicio?
+
+¿Cuál es tu única esperanza en ese momento?
 
 **Contenido:**
 La descripción del Juicio que se encuentra en Daniel 7 nos permite ver detrás

@@ -42,8 +42,8 @@ en Apocalipsis.
 
 ### Reflexionar:
 
-- ¿Cómo demuestra Daniel 2 que Dios no solo conoce el futuro sino también tiene,
-  en última instancia, el control de este?
+¿Cómo demuestra Daniel 2 que Dios no solo conoce el futuro sino también tiene,
+en última instancia, el control de este?
 
 ### Página:
 

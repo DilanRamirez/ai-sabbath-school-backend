@@ -6,8 +6,9 @@
 
 ### Reflexionar:
 
-- ¿Cuánto hay de Jonás en ti?
-- ¿Cómo puedes superar esa actitud equivocada?
+¿Cuánto hay de Jonás en ti?
+
+¿Cómo puedes superar esa actitud equivocada?
 
 **Contenido:**
 Aunque breve, la historia de Jonás (ver Jon. 1-4) es considerablemente impac­

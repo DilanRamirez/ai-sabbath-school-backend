@@ -50,8 +50,8 @@ al mundo a unirse a ellos en el monte santo de Dios.
 
 ### Reflexionar:
 
-- ¿Qué obligaciones deberíamos sentir como iglesia y como individuos en cuanto a
-  enseñar a los demás las verdades que tanto amamos?
+¿Qué obligaciones deberíamos sentir como iglesia y como individuos en cuanto a
+enseñar a los demás las verdades que tanto amamos?
 
 ### Página:
 

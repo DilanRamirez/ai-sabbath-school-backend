@@ -12,7 +12,7 @@ Martes-24 de junio
 
 ### Reflexionar:
 
-- ¿Qué hizo tropezar a Belsasar?
+¿Qué hizo tropezar a Belsasar?
 
 ### Contenido:
 

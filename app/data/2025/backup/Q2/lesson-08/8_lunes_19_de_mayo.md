@@ -6,9 +6,11 @@
 
 ### Reflexionar:
 
-- ¿Quién residirá en tu santo monte?
-- ¿Qué paralelismos encuentras?
-- ¿Cómo puede uno unirse a este grupo?
+¿Quién residirá en tu santo monte?
+
+¿Qué paralelismos encuentras?
+
+¿Cómo puede uno unirse a este grupo?
 
 **Contenido:**
 En Apocalipsis 14 encontramos al pueblo de Dios de pie sobre el monte Sion.

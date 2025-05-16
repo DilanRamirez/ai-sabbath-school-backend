@@ -6,7 +6,7 @@
 
 ### Reflexionar:
 
-- ¿Por qué no se cumplió esta profecía?
+¿Por qué no se cumplió esta profecía?
 
 **Contenido:**
 Jonás tenía un mensaje inequívoco para el pueblo de Nínive: “Jonás entró en

@@ -6,9 +6,11 @@
 
 ### Reflexionar:
 
-- ¿Cuál era el mensaje?
-- ¿Qué nos enseña esto?
-- ¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe?
+¿Cuál era el mensaje?
+
+¿Qué nos enseña esto?
+
+¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe?
 
 **Contenido:**
 La atención que Nabucodonosor prestó a Daniel y a su Dios en un principio,

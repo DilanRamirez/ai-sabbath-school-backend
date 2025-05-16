@@ -12,8 +12,7 @@ Martes-27 de mayo
 
 ### Reflexionar:
 
-- ¿De dónde vienes?
-- ¿verdad?
+¿De dónde vienes?
 
 ### Contenido:
 
@@ -51,8 +50,8 @@ entra en la Santa Ciudad” (Elena de White, El conflicto de los siglos, pp. 720
 
 ### Reflexionar:
 
-- Nota la esperanza que se nos ha dado en Jesús. Piensa en lo que significaría la
-  vida si todo terminara para siempre con la muerte. Todo sería inútil, ¿verdad?
+Nota la esperanza que se nos ha dado en Jesús. Piensa en lo que significaría la
+vida si todo terminara para siempre con la muerte. Todo sería inútil, ¿verdad?
 
 ### Página:
 

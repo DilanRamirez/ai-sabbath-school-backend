@@ -6,10 +6,13 @@
 
 ### Reflexionar:
 
-- ¿qué mensaje típico del evangelio se encuentra allí?
-- ¿En qué difieren?
-- ¿Cuál es la importancia del decreto?
-- ¿Cómo influyó en la primera venida de Jesús siglos más tarde?
+¿qué mensaje típico del evangelio se encuentra allí?
+
+¿En qué difieren?
+
+¿Cuál es la importancia del decreto?
+
+¿Cómo influyó en la primera venida de Jesús siglos más tarde?
 
 **Contenido:**
 Uno de los puntos fuertes de Babilonia era el río Éufrates, que fluía bajo sus mu­

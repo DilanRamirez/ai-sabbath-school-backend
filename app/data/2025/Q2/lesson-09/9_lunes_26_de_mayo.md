@@ -45,9 +45,9 @@ es el Dios de Jacob” (Sal. 46:6, 7). Las cosas no irán bien a corto plazo, pe
 
 ### Reflexionar:
 
-- Nuestro mundo parece caótico y fuera de control. Sin embargo, ¿cómo debería
-  ayudarnos la profecía de Daniel 7, por ejemplo, a ver que, en última instancia,
-  todo saldrá bien si permanecemos fieles?
+Nuestro mundo parece caótico y fuera de control. Sin embargo, ¿cómo debería
+ayudarnos la profecía de Daniel 7, por ejemplo, a ver que, en última instancia,
+todo saldrá bien si permanecemos fieles?
 
 ### Página:
 

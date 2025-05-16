@@ -50,8 +50,8 @@ ambos casos, la ley cuestionada tiene que ver con el sábado bíblico.
 
 ### Reflexionar:
 
-- ¿Morir a causa de uno de los mandamientos de Dios? ¿Cómo podría alguien racio­
-  nalizar la situación para procurar una escapatoria?
+¿Morir a causa de uno de los mandamientos de Dios? ¿Cómo podría alguien racio­
+nalizar la situación para procurar una escapatoria?
 
 ### Página:
 

@@ -45,9 +45,9 @@ que hacer como iglesia.
 
 ### Reflexionar:
 
-- ¿Cómo podemos aprender a no desanimarnos si nuestros esfuerzos personales
-  de evangelización no parecen dar mucho fruto por el momento? ¿Por qué debe­
-  mos seguir esforzándonos? (Ver Juan 4:35-37).
+¿Cómo podemos aprender a no desanimarnos si nuestros esfuerzos personales
+de evangelización no parecen dar mucho fruto por el momento? ¿Por qué debe­
+mos seguir esforzándonos? (Ver Juan 4:35-37).
 
 ### Página:
 

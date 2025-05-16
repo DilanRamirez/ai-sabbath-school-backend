@@ -44,11 +44,11 @@ preguntas que ahora tenemos.
 
 ### Reflexionar:
 
-- Antes de ejecutar su juicio final sobre los perdidos, el Señor nos dará mil años
-  para entender por qué lo hará. ¿Qué nos dice esto acerca de su carácter y de cuán
-  dispuesto está al escrutinio de sus acciones por parte de los seres creados que
-  dependen totalmente de él para existir y que no tienen ningún derecho inherente
-  a conocer estas cosas?
+Antes de ejecutar su juicio final sobre los perdidos, el Señor nos dará mil años
+para entender por qué lo hará. ¿Qué nos dice esto acerca de su carácter y de cuán
+dispuesto está al escrutinio de sus acciones por parte de los seres creados que
+dependen totalmente de él para existir y que no tienen ningún derecho inherente
+a conocer estas cosas?
 
 ### Página:
 

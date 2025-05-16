@@ -6,7 +6,7 @@
 
 ### Reflexionar:
 
-- ¿No ocurre lo mismo con nosotros?
+¿No ocurre lo mismo con nosotros?
 
 **Contenido:**
 Después de que el Señor apareció a Isaías en la escena de la sala del Trono de

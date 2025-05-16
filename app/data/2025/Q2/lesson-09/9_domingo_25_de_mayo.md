@@ -45,9 +45,9 @@ que fue hecha por Jesús en la Cruz.
 
 ### Reflexionar:
 
-- Por muy mal que vayan las cosas en este mundo (y sabemos que empeorarán),
-  ¿qué esperanza deberías extraer de tu conocimiento de la bondad, el poder y el
-  carácter de Dios (piensa en la Cruz)?
+Por muy mal que vayan las cosas en este mundo (y sabemos que empeorarán),
+¿qué esperanza deberías extraer de tu conocimiento de la bondad, el poder y el
+carácter de Dios (piensa en la Cruz)?
 
 ### Página:
 

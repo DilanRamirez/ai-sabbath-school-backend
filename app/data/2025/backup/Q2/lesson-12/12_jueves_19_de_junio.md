@@ -6,7 +6,7 @@
 
 ### Reflexionar:
 
-- ¿Morir a causa de uno de los mandamientos de Dios?
+¿Morir a causa de uno de los mandamientos de Dios?
 
 **Contenido:**
 Puesto que ciertos acontecimientos finales –como el decreto de muerte y la

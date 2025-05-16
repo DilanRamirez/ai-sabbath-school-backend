@@ -6,7 +6,7 @@
 
 ### Reflexionar:
 
-- ¿cuál fue la respuesta divina?
+¿cuál fue la respuesta divina?
 
 **Contenido:**
 El remanente reunido en Sion tiene un nombre escrito en la frente: el del Padre

@@ -12,9 +12,11 @@ Lunes-16 de junio
 
 ### Reflexionar:
 
-- ¿Cuál era el mensaje?
-- ¿Qué nos enseña esto?
-- ¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe?
+¿Cuál era el mensaje?
+
+¿Qué nos enseña esto?
+
+¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe?
 
 ### Contenido:
 
@@ -50,10 +52,10 @@ mostraba que eran conscientes de que era muy probable que morirían.
 
 ### Reflexionar:
 
-- ¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe? ¿Qué
-  dice el siguiente texto acerca de una tentación similar: “El que es fiel en lo muy
-  poco también en lo más será fiel; y el que en lo muy poco es injusto también en
-  lo más será injusto” (Luc. 16:10)?
+¿Cómo podemos evitar las racionalizaciones que comprometen nuestra fe? ¿Qué
+dice el siguiente texto acerca de una tentación similar: “El que es fiel en lo muy
+poco también en lo más será fiel; y el que en lo muy poco es injusto también en
+lo más será injusto” (Luc. 16:10)?
 
 ### Página:
 

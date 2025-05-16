@@ -12,7 +12,7 @@ Miércoles-11 de junio
 
 ### Reflexionar:
 
-- ¿qué harás en la hora de la gran prueba?
+¿qué harás en la hora de la gran prueba?
 
 ### Contenido:
 
@@ -55,8 +55,8 @@ universal” (Elena de White, El conflicto de los siglos, p. 673).
 
 ### Reflexionar:
 
-- Piensa en las cosas “pequeñas” que ponen a prueba tu fe ahora. Si cedes en esas
-  cosas “pequeñas”, ¿qué harás en la hora de la gran prueba?
+Piensa en las cosas “pequeñas” que ponen a prueba tu fe ahora. Si cedes en esas
+cosas “pequeñas”, ¿qué harás en la hora de la gran prueba?
 
 ### Página:
 

@@ -12,10 +12,13 @@ Miércoles-25 de junio
 
 ### Reflexionar:
 
-- ¿qué mensaje típico del evangelio se encuentra allí?
-- ¿En qué difieren?
-- ¿Cuál es la importancia del decreto?
-- ¿Cómo influyó en la primera venida de Jesús siglos más tarde?
+¿qué mensaje típico del evangelio se encuentra allí?
+
+¿En qué difieren?
+
+¿Cuál es la importancia del decreto?
+
+¿Cómo influyó en la primera venida de Jesús siglos más tarde?
 
 ### Contenido:
 
@@ -53,9 +56,9 @@ no haber creído en él.
 
 ### Reflexionar:
 
-- Lee Apocalipsis 16:15. Aun en medio de estas advertencias acerca del fin de los
-  tiempos, ¿qué mensaje típico del evangelio se encuentra allí? ¿Qué significa “no
-  andar desnudo”?
+Lee Apocalipsis 16:15. Aun en medio de estas advertencias acerca del fin de los
+tiempos, ¿qué mensaje típico del evangelio se encuentra allí? ¿Qué significa “no
+andar desnudo”?
 
 ### Página:
 
