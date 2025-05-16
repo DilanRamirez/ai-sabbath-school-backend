@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Body, HTTPException, Query
 from fastapi.responses import FileResponse
-from typing import Literal
+from typing import Literal, Optional
 import logging
 from pydantic import BaseModel, Field
 from app.indexing.search_service import search_lessons, IndexStore
@@ -21,6 +21,24 @@ class QARequest(BaseModel):
     top_k: int = Field(default=3, ge=1, le=20, description="Must be between 1 and 20")
     lang: Literal["en", "es"] = "es"
     mode: Literal["explain", "reflect", "apply", "summarize", "ask"] = "explain"
+
+
+@router.get("/quarters")
+def list_quarters():
+    """
+    Returns a list of available quarters across all years.
+    Example response: [{"year": "2025", "quarter": "Q2"}, ...]
+    """
+    try:
+        lessons = list_all_lessons()
+        # Extract unique (year, quarter) pairs
+        quarters_set = set((l.get("year"), l.get("quarter")) for l in lessons)
+        # Build sorted list
+        quarters = [{"year": y, "quarter": q} for (y, q) in sorted(quarters_set)]
+        return quarters
+    except Exception as e:
+        logger.error(f"Error listing quarters: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Unable to list quarters")
 
 
 @router.get("/ping")
@@ -92,15 +110,26 @@ def get_lesson_pdf(year: str, quarter: str, lesson_id: str):
 
 
 @router.get("/lessons")
-def list_lessons():
+def list_lessons(
+    year: Optional[str] = Query(None, description="Filter by year, e.g. '2025'"),
+    quarter: Optional[str] = Query(None, description="Filter by quarter, e.g. 'Q2'"),
+):
     """
-    Returns a list of all lessons available in the system.
-    Example: /api/v1/lessons
+    Returns lessons, optionally filtered by year and quarter.
+    Examples:
+      /api/v1/lessons
+      /api/v1/lessons?year=2025&quarter=Q2
     """
     try:
-        return list_all_lessons()
-    except Exception:
-        logger.error("Error listing lessons", exc_info=True)
+        lessons = list_all_lessons()
+        # Apply filters if provided
+        if year:
+            lessons = [l for l in lessons if l.get("year") == year]
+        if quarter:
+            lessons = [l for l in lessons if l.get("quarter") == quarter]
+        return lessons
+    except Exception as e:
+        logger.error(f"Error listing lessons: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Unable to list lessons")
 
 
