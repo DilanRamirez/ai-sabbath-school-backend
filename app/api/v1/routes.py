@@ -73,7 +73,7 @@ def get_lesson_metadata(year: str, quarter: str, lesson_id: str):
 def get_lesson_pdf(year: str, quarter: str, lesson_id: str):
     """
     Returns the PDF file for a given year, quarter, and lesson ID.
-    Example: /api/v1/lessons/2025/Q2/lesson-06/pdf
+    Example: /api/v1/lessons/2025/Q2/lesson-08/pdf
     """
     try:
         pdf_path = get_lesson_pdf_path(year, quarter, lesson_id)

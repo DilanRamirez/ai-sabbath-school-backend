@@ -12,7 +12,10 @@ def parse_markdown_file(md_path):
     data["filename"] = filename
 
     day_match = re.search(
-        r"(sabado|domingo|lunes|martes|miércoles|jueves|viernes)", filename, re.IGNORECASE)
+        r"(sabado|domingo|lunes|martes|miércoles|jueves|viernes)",
+        filename,
+        re.IGNORECASE,
+    )
     if day_match:
         data["day"] = day_match.group(1).capitalize()
 
@@ -20,8 +23,7 @@ def parse_markdown_file(md_path):
 
     # Parse lesson_number from filename since it's no longer in the title
     lesson_number_match = re.search(r"(\d+)", filename)
-    data["lesson_number"] = lesson_number_match.group(
-        1) if lesson_number_match else ""
+    data["lesson_number"] = lesson_number_match.group(1) if lesson_number_match else ""
     data["title"] = title_match.group(1).strip() if title_match else ""
 
     date_match = re.search(r"\*\*### Fecha:\*\* (.+)", content)
@@ -30,45 +32,50 @@ def parse_markdown_file(md_path):
 
     # Detect Sabbath
     if "sabado" in day_match.group(1) or "sabado" in data.get("date", ""):
-        title_match = re.search(
-            r"### Título:\s*\n(.+?)\n\n", content, re.DOTALL)
+        title_match = re.search(r"### Título:\s*\n(.+?)\n\n", content, re.DOTALL)
         data["title"] = title_match.group(1).strip() if title_match else ""
 
         lecturas_match = re.search(
-            r"### Lecturas para esta semana:\s*\n(.+?)\n\n", content, re.DOTALL)
-        data["study_texts"] = lecturas_match.group(
-            1).strip() if lecturas_match else ""
+            r"### Lecturas para esta semana:\s*\n(.+?)\n\n", content, re.DOTALL
+        )
+        data["study_texts"] = lecturas_match.group(1).strip() if lecturas_match else ""
 
-        mem_match = re.search(
-            r"### Para memorizar:\s*\n(.+?)\n\n", content, re.DOTALL)
+        mem_match = re.search(r"### Para memorizar:\s*\n(.+?)\n\n", content, re.DOTALL)
         data["memory_verse"] = mem_match.group(1).strip() if mem_match else ""
-    elif "viernes" in day_match.group(1).lower() or "viernes" in data.get("date", "").lower():
+    elif (
+        "viernes" in day_match.group(1).lower()
+        or "viernes" in data.get("date", "").lower()
+    ):
         reflect_block = re.search(
-            r"### Reflexionar: para dialogar:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL)
+            r"### Reflexionar: para dialogar:\s*\n(.*?)(?=\n### |\Z)",
+            content,
+            re.DOTALL,
+        )
         if reflect_block:
             raw_block = reflect_block.group(1).strip()
-            paragraphs = [p.strip()
-                          for p in raw_block.split("\n\n") if p.strip()]
+            paragraphs = [p.strip() for p in raw_block.split("\n\n") if p.strip()]
             data["reflexionar"] = paragraphs
         else:
             data["reflexionar"] = []
     else:
         reflect_block = re.search(
-            r"### Reflexionar:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL)
+            r"### Reflexionar:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL
+        )
         if reflect_block:
             raw_block = reflect_block.group(1).strip()
-            paragraphs = [p.strip()
-                          for p in raw_block.split("\n\n") if p.strip()]
+            paragraphs = [p.strip() for p in raw_block.split("\n\n") if p.strip()]
             data["reflexionar"] = paragraphs
         else:
             data["reflexionar"] = []
 
     content_match = re.search(
-        r"### Contenido:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL)
+        r"### Contenido:\s*\n(.*?)(?=\n### |\Z)", content, re.DOTALL
+    )
     if content_match:
         raw_content = content_match.group(1).strip()
-        data["content"] = [block.strip()
-                           for block in raw_content.split("\n\n") if block.strip()]
+        data["content"] = [
+            block.strip() for block in raw_content.split("\n\n") if block.strip()
+        ]
     else:
         data["content"] = []
 

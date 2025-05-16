@@ -24,7 +24,7 @@ ci:
 
 # Build or rebuild the semantic FAISS index for lessons + books
 index:
-	PYTHONPATH=backend python backend/app/indexing/index_builder.py
+	PYTHONPATH=python python app/indexing/index_builder.py
 
 .PHONY: serve-local
 serve-local:

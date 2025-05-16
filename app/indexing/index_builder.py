@@ -1,9 +1,14 @@
-import os
-import json
-import faiss
-import numpy as np
+# -*- coding: utf-8 -*-
 from pathlib import Path
-from app.indexing.embeddings import embed_text
+import numpy as np
+import faiss
+import json
+import os
+import sys
+
+# Add the project root to the Python path
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
 
 # Output locations
 OUTPUT_DIR = Path(__file__).resolve().parent
@@ -16,6 +21,8 @@ BOOK_DIR = LESSON_DIR / "books"
 
 
 def build_index():
+    from app.indexing.embeddings import embed_text
+
     print("🔍 Building index...")
     texts = []
     metadata = []
@@ -30,6 +37,7 @@ def build_index():
 
             try:
                 with open(path, "r", encoding="utf-8") as f:
+                    print(f"📖 Indexing JSON: {path}")
                     data = json.load(f)
                     lesson = data.get("lesson", {})
                     sections = lesson.get("daily_sections", [])

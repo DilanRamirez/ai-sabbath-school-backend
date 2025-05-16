@@ -15,13 +15,13 @@ client = TestClient(app)
 
 
 def test_load_lesson_success():
-    lesson = load_lesson_by_path("2025", "Q2", "lesson-06")
+    lesson = load_lesson_by_path("2025", "Q2", "lesson-08")
     assert "lesson" in lesson
     assert "title" in lesson["lesson"]
 
 
 def test_load_metadata_success():
-    metadata = load_metadata_by_path("2025", "Q2", "lesson-06")
+    metadata = load_metadata_by_path("2025", "Q2", "lesson-08")
     assert "title" in metadata
 
 
@@ -35,7 +35,7 @@ def test_list_all_lessons_returns_list():
 
 
 def test_get_lesson_pdf_path_valid():
-    pdf_path = get_lesson_pdf_path("2025", "Q2", "lesson-06")
+    pdf_path = get_lesson_pdf_path("2025", "Q2", "lesson-08")
     assert pdf_path.name.endswith(".pdf")
     assert pdf_path.exists()
 
@@ -59,13 +59,13 @@ def test_invalid_pdf_path():
 
 
 def test_api_get_lesson_success():
-    res = client.get("/api/v1/lessons/2025/Q2/lesson-06")
+    res = client.get("/api/v1/lessons/2025/Q2/lesson-08")
     assert res.status_code == 200
     assert "lesson" in res.json()
 
 
 def test_api_get_metadata_success():
-    res = client.get("/api/v1/lessons/2025/Q2/lesson-06/metadata")
+    res = client.get("/api/v1/lessons/2025/Q2/lesson-08/metadata")
     assert res.status_code == 200
     assert "title" in res.json()
 

@@ -21,8 +21,7 @@ def extract_and_write_markdown():
     pages = [(i + 1, page.get_text()) for i, page in enumerate(doc)]
     text = "\n".join([page_text for _, page_text in pages])
     lesson_number_match = re.search(r"Lección\s+(\d+):", text)
-    lesson_number = lesson_number_match.group(
-        1) if lesson_number_match else "unknown"
+    lesson_number = lesson_number_match.group(1) if lesson_number_match else "unknown"
 
     # Saturday - Intro Page
     intro_match = re.search(
@@ -57,8 +56,7 @@ def extract_and_write_markdown():
         if memory_verse:
             md += f"### Para memorizar:\n{memory_verse}\n\n"
         page_number_match = re.search(r"\n(\d{1,4})\s*$", content.strip())
-        page_number = page_number_match.group(
-            1) if page_number_match else "N/A"
+        page_number = page_number_match.group(1) if page_number_match else "N/A"
         content = re.sub(r"\n" + re.escape(page_number) + r"\s*$", "", content)
         md += "\n\n### Contenido:\n" + clean(content)
         md += f"\n\n### Página:\n{page_number}"
@@ -73,7 +71,9 @@ def extract_and_write_markdown():
             date_str, title_block, body = match.groups()
             title_lines = []
             for line in title_block.strip().splitlines():
-                if line.isupper() or re.fullmatch(r"[A-ZÁÉÍÓÚÑ0-9\s,.;:¡!¿?\"'-]+", line):
+                if line.isupper() or re.fullmatch(
+                    r"[A-ZÁÉÍÓÚÑ0-9\s,.;:¡!¿?\"'-]+", line
+                ):
                     title_lines.append(line.strip())
                 else:
                     break
@@ -85,11 +85,11 @@ def extract_and_write_markdown():
             if main_prompt:
                 md += f"### Lectura principal:\n{main_prompt}\n\n"
             if questions:
-                md += "### Reflexionar:\n" + \
-                    "\n".join(f"- {q}" for q in questions) + "\n"
+                md += (
+                    "### Reflexionar:\n" + "\n".join(f"- {q}" for q in questions) + "\n"
+                )
             page_number_match = re.search(r"\n(\d{1,4})\s*$", body.strip())
-            page_number = page_number_match.group(
-                1) if page_number_match else "N/A"
+            page_number = page_number_match.group(1) if page_number_match else "N/A"
             body = re.sub(r"\n" + re.escape(page_number) + r"\s*$", "", body)
             md += f"\n\n### Contenido:\n{clean(body)}"
             md += f"\n\n### Página:\n{page_number}"
@@ -108,10 +108,8 @@ def extract_and_write_markdown():
         )
         filename = f"{lesson_number}_viernes_{date_str.replace(' ', '_')}.md"
         page_number_match = re.search(r"\n(\d{1,4})\s*$", meditation.strip())
-        page_number = page_number_match.group(
-            1) if page_number_match else "N/A"
-        meditation = re.sub(
-            r"\n" + re.escape(page_number) + r"\s*$", "", meditation)
+        page_number = page_number_match.group(1) if page_number_match else "N/A"
+        meditation = re.sub(r"\n" + re.escape(page_number) + r"\s*$", "", meditation)
         md = f"### Título:\nPara Estudiar y Meditar\n\n### Fecha:\nViernes {date_str}\n\n### Contenido:\n{clean(meditation)}\n\n"
         if questions:
             md += "### Reflexionar: para dialogar:\n" + "\n".join(
