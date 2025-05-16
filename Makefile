@@ -1,15 +1,15 @@
 # Makefile
 
 # Run backend unit tests
-test-backend:
+test:
 	pytest tests --maxfail=1 --disable-warnings -q
 
 # Format backend using black
-format-backend:
+format:
 	black .
 
 # Check formatting (used in GHA)
-check-format-backend:
+check-format:
 	black --check .
 
 # Run the GitHub Actions workflow locally
@@ -18,9 +18,9 @@ test-gha:
 
 # Full local CI simulation
 ci:
-	make format-backend
-	make check-format-backend
-	make test-backend
+	make format
+	make check-format
+	make test
 
 # Build or rebuild the semantic FAISS index for lessons + books
 index:

@@ -1,26 +1,27 @@
 {
-  "id": "leccion_7_mayo_17_2025",
-  "lesson_number": 7,
-  "title": "FUNDAMENTOS DE LA PROFECÍA",
-  "week_end_date": "2025-05-17",
-  "memory_verse_reference": "Isaías 6:8",
+  "id": "leccion_6_mayo_10_2025",
+  "lesson_number": 6,
+  "title": "ENTENDIENDO EL SACRIFICIO",
+  "week_end_date": "2025-05-10",
+  "memory_verse_reference": "Apoc. 5:9",
   "daily_titles": [
-    { "day": "Sábado", "title": "Introducción" },
-    { "day": "Domingo", "title": "¿AQUÍ ESTOY, ENVÍAME A MÍ?" },
-    { "day": "Lunes", "title": "LOS DOS QUERUBINES" },
-    { "day": "Martes", "title": "COMO CARBONES ENCENDIDOS" },
-    { "day": "Miércoles", "title": "DIOS ENTRE SU PUEBLO" },
-    { "day": "Jueves", "title": "LA CAÍDA DE LUCIFER" },
+    { "day": "Sábado", "title": "Introducción y Panorama de la Semana" },
+    { "day": "Domingo", "title": "¿SACRIFICIOS INÚTILES?" },
+    { "day": "Lunes", "title": "SANGRE DE TOROS Y DE MACHOS CABRÍOS" },
+    { "day": "Martes", "title": "EL CORDERO DE LA PASCUA" },
+    { "day": "Miércoles", "title": "JESÚS EN EL TEMPLO" },
+    { "day": "Jueves", "title": "TÚ CREASTE TODAS LAS COSAS" },
     { "day": "Viernes", "title": "PARA ESTUDIAR Y MEDITAR" }
   ],
   "study_texts": [
-    "Isaías 6:6-8",
-    "Génesis 3:21-24",
-    "Ezequiel 1:4-14",
-    "Apocalipsis 4:1-11",
-    "Números 2:3-25",
-    "Isaías 14:12-14"
+    "Isaías 1:2-15",
+    "Hebreos 10:3-10",
+    "Éxodo 12:1-11",
+    "1 Corintios 5:7",
+    "Hageo 2:7-9",
+    "Isaías 6:1-5",
+    "Apocalipsis 4:7-11"
   ],
-  "discussion_question_count": 2,
+  "discussion_question_count": 3,
   "has_egw_quotes": true
 }
