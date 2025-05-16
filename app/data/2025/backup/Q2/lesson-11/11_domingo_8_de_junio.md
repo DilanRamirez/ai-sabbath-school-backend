@@ -1,8 +1,13 @@
-# Lección 11 - HAMBRE EN LA “CASA DEL PAN”
+### Título:
 
-**Fecha:** Domingo 8 de junio
+HAMBRE EN LA “CASA DEL PAN”
 
-**Contenido:**
+### Fecha:
+
+Domingo-8 de junio
+
+### Contenido:
+
 Los críticos de la fe cristiana han señalado a menudo la brutal realidad de vivir en
 este mundo como prueba de que: (a) Dios no existe, (b) es impotente para impedir
 que ocurran cosas malas o (c) no le importa que suframos. Sin embargo, muchas
@@ -11,9 +16,11 @@ estas suposiciones es correcta. Es cierto que Dios permite que la humanidad
 coseche las consecuencias de la rebelión contra él, pero está siempre presente y
 activo en la historia humana para la resolución final del pecado y el sufrimiento,
 aunque sin coartar la libertad humana. La historia de Rut es un ejemplo de ello.
+
 Lee Rut 1:1 al 5. ¿Cuáles fueron las penurias que cayeron sobre Noemí
 y Rut, y qué las causó? ¿Cómo refleja esto la situación a la que se enfrenta
-ahora toda la humanidad?
+ahora toda la humanidad? [notas]
+
 El enunciado inicial de esta historia resulta paradójico: Hubo una hambruna
 que afectó a Belén, una ciudad cuyo nombre significa “casa del pan [o del ali­
 mento]”. La abundancia caracterizaba al Edén, donde Dios dijo a Adán y a Eva:
@@ -22,6 +29,7 @@ existencia en medio de la abundancia, bajo el cuidado de un Creador generoso,
 pero su papel de administradores de la Creación se convirtió luego en la escla­
 vitud del pecado. “Con el sudor de tu rostro comerás el pan hasta que vuelvas a
 la tierra de donde fuiste tomado”, dijo Dios a Adán (Gén. 3:19).
+
 Al igual que Noemí, hemos sido desposeídos de la herencia que Dios ori­
 ginalmente dispuso que tuviéramos, y nuestra vida se ha convertido en una
 penuria. El Edén fue un regalo, pero no incondicional. Los humanos eran libres
@@ -30,11 +38,17 @@ de su propio bienestar. Originalmente, debíamos controlar o ejercer dominio
 sobre la Creación con la bendición de Dios, pero ahora nos enfrentamos a la
 tarea de controlar un mundo caído. Los seres humanos egoístas que compiten
 por los escasos recursos provocan mucho dolor y sufrimiento.
+
 La tragedia es indecible. La tierra sigue produciendo en abundancia, lo que
 es un poderoso testimonio del amor de Dios, pero la codicia humana y los es­
 tragos del pecado hacen que el mundo parezca someternos más a nosotros que
 nosotros a él. Un día, sin embargo, todo esto terminará.
+
+### Reflexionar:
+
 Incluso después de seis mil años de pecado y muerte, ¿cómo sigue revelando la
 Tierra las maravillas del amor y el poder creador de Dios?
 
-**Página:** 127
+### Página:
+
+127

@@ -1,14 +1,21 @@
-# Lección 13 - LA FIESTA DE BELSASAR
+### Título:
 
-**Fecha:** Martes 24 de junio
+LA FIESTA DE BELSASAR
 
-**Lectura principal:** ¿Qué hizo tropezar a Belsasar?
+### Fecha:
+
+Martes-24 de junio
+
+### Lectura principal:
+
+¿Qué hizo tropezar a Belsasar?
 
 ### Reflexionar:
 
 ¿Qué hizo tropezar a Belsasar?
 
-**Contenido:**
+### Contenido:
+
 Después de que la ciudad de Nínive fue humillada en el año 612 a. C. por un
 ejército que incluía a medos y babilonios (dirigidos por el padre de Nabucodo­
 nosor), Babilonia experimentó un renacimiento como no se había visto desde
@@ -17,24 +24,29 @@ estaba libre del problema de las incursiones asirias, la ciudad de Babilonia cre
 en riqueza e influencia hasta el punto de que las naciones vecinas no tuvieron
 más remedio que someterse a ella. Era la reina del mundo del antiguo cercano
 oriente, y las naciones que deseaban prosperar se declararon leales a ella.
+
 Por su parte, y hasta donde sabemos, Nabucodonosor aceptó que el Dios de
 Daniel era el legítimo soberano de todas las naciones (Dan. 4:34-37). El siguiente
 relato que aparece en el libro de Daniel es el de Belsasar, príncipe heredero y
 corregente del reino de Babilonia.
+
 Lee Daniel 5:1 al 31. ¿Qué importantes mensajes espirituales podemos
-extraer de este relato? ¿Qué hizo tropezar a Belsasar?
+extraer de este relato? ¿Qué hizo tropezar a Belsasar? [notas]
+
 Quizá la parte más triste y trágica de este relato se encuentre en Daniel 5:22.
 Después de relatar al rey la caída y la restauración de Nabucodonosor, Daniel le
 dice: “Y tú, su hijo Belsasar, sabiendo todo esto, no has humillado tu corazón”.
 Es decir, aunque tuvo la oportunidad de conocer la verdad, prefirió ignorar los
 hechos y siguió el mismo curso de acción que acarreó tantos problemas a su
 predecesor.
+
 Como Nabucodonosor al erigir la estatua de oro, Belsasar desafió abier­
 tamente lo que el Dios de Daniel había predicho. El uso profano que hizo de
 los vasos del templo de Jerusalén era probablemente una manera de subrayar
 el hecho de que Babilonia había conquistado a los judíos y ahora poseía los
 artículos religiosos pertenecientes a su Dios. Es decir, que todavía tenían su­
 premacía sobre el Dios que había predicho su desaparición.
+
 Fue un completo desafío, a pesar de que Belsasar tenía sobrada evidencia y
 pleno conocimiento de los hechos. Su problema no era la falta de información
 o conocimiento, sino la dureza de su corazón. En los últimos días, cuando la
@@ -42,4 +54,6 @@ crisis final se desate sobre el mundo, las personas también tendrán la oportu�
 nidad de conocer la verdad. Lo que determinará su decisión, como en el caso
 de Belsasar, será su corazón.
 
-**Página:** 153
+### Página:
+
+153

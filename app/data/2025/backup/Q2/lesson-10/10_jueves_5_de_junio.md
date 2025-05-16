@@ -1,8 +1,14 @@
-# Lección 10 - EL JUICIO PREVIO AL ADVENIMIENTO
+### Título:
 
-**Fecha:** Jueves 5 de junio
+EL JUICIO PREVIO AL ADVENIMIENTO
 
-**Lectura principal:** ¿Cuál es el objetivo principal del Juicio?
+### Fecha:
+
+Jueves-5 de junio
+
+### Lectura principal:
+
+¿Cuál es el objetivo principal del Juicio?
 
 ### Reflexionar:
 
@@ -10,15 +16,18 @@
 
 ¿Cuál es tu única esperanza en ese momento?
 
-**Contenido:**
+### Contenido:
+
 La descripción del Juicio que se encuentra en Daniel 7 nos permite ver detrás
 del velo, una oportunidad impresionante de observar cómo actúa Dios para
 resolver el problema del pecado y para redimir a quienes desean vivir en una
 relación de pacto con él.
+
 Lee la descripción del Juicio Investigador que se ofrece en Daniel 7:9,
 10, 13, 14, 22, 26 y 27. ¿Cuál es el objetivo principal del Juicio? ¿Cuál es el
 veredicto emitido al final del proceso? ¿Qué nos dice esto acerca del Plan
-de Salvación?
+de Salvación? [notas]
+
 No cabe duda de que la humanidad es juzgada por Dios. Eclesiastés 12:14
 asegura que “Dios traerá toda obra a juicio”, y Pablo nos recuerda que “todos
 hemos de comparecer ante el tribunal de Cristo” (Rom. 14:10). Dios no necesita
@@ -27,6 +36,7 @@ tado examinando el Plan de Salvación todo el tiempo (1 Ped. 1:12), naturalmente
 tienen preguntas. Ellos fueron testigos de la rebelión de Satanás, vieron a un
 tercio de sus compañeros expulsados del Cielo (Apoc. 12:4, 9) y ahora Dios nos
 trae ante él. Dios abre los libros y permite que los santos vean lo que hay en ellos.
+
 La historia de la súplica de Abraham por Sodoma y Gomorra, un tipo o pre­
 figuración del Juicio, aporta una importante vislumbre acerca de este. Los pe­
 cados de Sodoma obviamente fueron investigados, ya que Dios menciona que la
@@ -34,12 +44,18 @@ maldad de la ciudad le había dado una reputación tal que el clamor contra ella
 grande (Gén. 18:20). Pero no solo Sodoma y Gomorra fueron investigadas antes
 de su destrucción. Dios también permitió que Abraham evaluara si la decisión
 divina de destruir a los malvados era justa.
+
 Quien aparece en medio del juicio celestial en Daniel 7 es Jesús, “un Hijo de
 Hombre” (Dan. 7:13, ver también Mat. 20:28), cuya aparición es la única razón
 por la que este juicio es “hecho en favor de los santos del Altísimo” (Dan. 7:22).
 Solo su perfecta justicia hace que su pueblo salga airoso del Juicio.
+
+### Reflexionar:
+
 Imagina que todos tus secretos estén expuestos ante nuestro santo Dios en oca­
 sión del Juicio. ¿Cuál es tu única esperanza en ese momento? (ver el contenido
 del viernes).
 
-**Página:** 119
+### Página:
+
+119

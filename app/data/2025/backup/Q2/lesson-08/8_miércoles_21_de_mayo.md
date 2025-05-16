@@ -1,17 +1,28 @@
-# Lección 8 - SALMOS 5
+### Título:
 
-**Fecha:** Miércoles 21 de mayo
+SALMOS 5
 
-**Contenido:**
+### Fecha:
+
+21 de mayo
+
+### Dia:
+
+Miércoles
+
+### Contenido:
+
 Lee Salmos 5, donde David traza agudos contrastes entre los perdidos y
 quienes han sido redimidos. Compara el contenido de este salmo con el
 lenguaje de Apocalipsis 14:1 al 12. ¿Qué similitudes encuentras y cómo
 influye esto en tu comprensión de lo que significa formar parte del movi­
-miento remanente de los últimos días creado por Dios?
+miento remanente de los últimos días creado por Dios? [notas]
+
 Nota que David insiste en que el mal “no habitará” con Dios (Sal. 5:4). El
 objetivo del Tabernáculo era que Dios pudiera habitar entre su pueblo, algo que
 Dios también pretende en el caso del reino de Cristo (ver Apoc. 21:3). Quienes
 quieran acercarse al Trono de Dios deben ser redimidos.
+
 También es digno de mención que Salmo 5:7 describe un acto de adoración,
 que es la cuestión central en juego en el Gran Conflicto. Apocalipsis 13 menciona
 cinco veces la “adoración”, y los mensajes de los tres ángeles llaman al mundo
@@ -19,10 +30,12 @@ a adorar “al que hizo el cielo y la tierra, el mar y las fuentes de las aguas�
 dice que “reverencia” a Dios, y el mensaje del Remanente hace el siguiente lla­
 mado al mundo: “Respeten a Dios y denle gloria, porque ha llegado la hora de
 su juicio” (Apoc. 14:7; BP).
+
 Observa también que “no se halló engaño” en las bocas de los redimidos
 (Apoc. 14:5), pues son veraces, y sus palabras y sus acciones reflejan el carácter
 justo de Dios. Según David, “no hay sinceridad” en la boca de los malvados
 (Sal. 5:9).
+
 La escena que Juan presenta en esta parte clave del Apocalipsis es asombrosa:
 simples pecadores han sido rescatados de la muerte y tienen el privilegio de
 estar en la presencia de Dios. No han ganado ese derecho, sino que les ha sido
@@ -30,13 +43,19 @@ concedido porque el Cordero de Dios, el justo Hijo del Hombre, está allí con e
 Fueron perdonados, están redimidos y ya no tienen que cargar con su propia
 culpa (comparar con Sal. 5:10), porque el Cordero de Dios la ha llevado por ellos
 (comparar con Isa. 53:12 y 2 Cor. 5:21).
+
 Cuando el nombre de Dios ha sido escrito en el corazón, es difícil permanecer
 en silencio. El pueblo de Dios hace un último ofrecimiento de misericordia a
 “gran voz” (Apoc. 14:7). “Pero alégrense todos los que en ti confían; den siempre
 voces de júbilo, porque tú los defiendes. En ti se regocijen los que aman tu
 nombre” (Sal. 5:11).
+
+### Reflexionar:
+
 Imagina que estás ante un Dios santo y perfecto en ocasión del Juicio y con todos
 tus hechos expuestos ante él. ¿Qué te dice esta perspectiva acerca de tu necesi­
 dad de la justicia de Cristo?
 
-**Página:** 94
+### Página:
+
+94

@@ -1,8 +1,14 @@
-# Lección 13 - EL SECAMIENTO DEL ÉUFRATES
+### Título:
 
-**Fecha:** Miércoles 25 de junio
+EL SECAMIENTO DEL ÉUFRATES
 
-**Lectura principal:** ¿qué mensaje típico del evangelio se encuentra allí?
+### Fecha:
+
+Miércoles-25 de junio
+
+### Lectura principal:
+
+¿qué mensaje típico del evangelio se encuentra allí?
 
 ### Reflexionar:
 
@@ -14,7 +20,8 @@
 
 ¿Cómo influyó en la primera venida de Jesús siglos más tarde?
 
-**Contenido:**
+### Contenido:
+
 Uno de los puntos fuertes de Babilonia era el río Éufrates, que fluía bajo sus mu­
 rallas y proveía a la ciudad un suministro ilimitado de agua. Pero ese resultó ser
 a la vez su punto débil. Nitocris, una antigua reina babilónica, había realizado
@@ -30,9 +37,11 @@ no tenían idea de que los suburbios habían caído, pues era una época de fies
 y todos estaban entregados a la danza y los placeres” (Herodotus, The Histories,
 trad. por Tom Holland [Nueva York: Penguin, 2015], p. 94). No cabe duda de que
 se trata de la fiesta descrita en Daniel 5.
+
 Lee Daniel 5:18 al 31 y Apocalipsis 16:12 al 19. ¿Qué paralelismos encuen­
 tras entre algunas de las plagas del Apocalipsis y la historia de la caída de
-Babilonia?
+Babilonia? [notas]
+
 Al explicar cómo discernir las señales de los tiempos, Jesús advirtió a sus
 discípulos: “Velen, pues, porque no saben a qué hora ha de venir su Señor. Sin
 embargo, sepan esto: Si el padre de la familia supiere a qué hora el ladrón había
@@ -41,48 +50,16 @@ la caída de Babilonia, la repentina aparición de Cristo tomará por sorpresa a
 la Babilonia moderna. Sin embargo, no tiene por qué ser así, ya que se nos ha
 dado amplia evidencia acerca de la pronta venida de Jesús en una multitud de
 detalladas profecías.
+
 El mundo no será sorprendido por no conocer el anuncio divino, sino por
 no haber creído en él.
+
+### Reflexionar:
+
 Lee Apocalipsis 16:15. Aun en medio de estas advertencias acerca del fin de los
 tiempos, ¿qué mensaje típico del evangelio se encuentra allí? ¿Qué significa “no
 andar desnudo”?
 
-Lección 13 |
-154
-Jueves 26 de junio
-CIRO, EL UNGIDO
-Cuando Ciro conquistó la ciudad de Babilonia y concluyó el cautiverio del
-pueblo de Dios. Los persas les permitieron volver a la Tierra Prometida y re­
-construir el Templo. Bajo Ciro, el Imperio Persa se convirtió en el más grande
-de la historia merced a lo que el historiador Tom Holland llama “el mayor
-conglomerado de territorios que el mundo hubiera conocido” (Tom Holland,
-Dominion: The Making of the Western Mind [Nueva York: Basic Books, 2019], p.
-25, kindle edition). Como era costumbre entre los persas, Ciro fue llamado
-“el gran rey”, o “rey de reyes”.
-Ciro prefigura lo que sucederá cuando Cristo regrese para buscar a su pueblo.
-Él es el Rey que viene del este (comparar con Mat. 24:27), para guerrear contra
-Babilonia y liberar a su pueblo a fin de que este quede finalmente libre de ella
-y vuelva a la Tierra Prometida (ver Apoc. 19:11-16). Por eso Dios se refiere a Ciro
-como “su ungido” (Isa. 45:1). Este famoso persa no solo liberó al pueblo de Dios,
-sino también su campaña contra Babilonia es un tipo o prefiguración de la
-segunda venida de Cristo.
-Lee 2 Crónicas 36:22 y 23. ¿En qué se parecen la historia de Ciro y la de
-Nabucodonosor? ¿En qué difieren? ¿Cuál es la importancia del decreto?
-¿Cómo influyó en la primera venida de Jesús siglos más tarde?
-Malaquías es hoy el último libro del Antiguo Testamento, pero, de acuerdo
-con el orden original del canon hebreo, este terminaba originalmente con la
-declaración de Ciro en 2 Crónicas 36:22 y 23, después de la cual comienza el
-Nuevo Testamento con el relato de Mateo acerca del nacimiento de Cristo,
-el Ciro antitípico. Ciro decretó la reconstrucción del Templo terrenal, pero
-Jesús inauguraría su ministerio en el Santuario celestial, que conduciría a
-su regreso y a nuestra liberación.
-Ciro no era una representación perfecta de Cristo. Ningún tipo o prefigura­
-ción se alinea perfectamente con el antitipo, con la realidad representada, razón
-por la cual no debemos leer demasiado en cada pequeño detalle. Sin embargo,
-Ciro funciona en líneas generales como un tipo del Salvador.
-Cuán fascinante es que Dios utilizara a un rey pagano de una manera tan
-marcada para hacer su voluntad. A pesar de las apariencias, ¿cómo podemos
-aprender a confiar en que Dios ciertamente dirigirá los acontecimientos finales
-según han sido profetizados?
+### Página:
 
-**Página:** 155
+153

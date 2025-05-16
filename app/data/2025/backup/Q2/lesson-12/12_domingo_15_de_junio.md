@@ -1,18 +1,25 @@
-# Lección 12 - DANIEL 2 Y EL ENFOQUE HISTORICISTA DE LA
+### Título:
 
-**Fecha:** Domingo 15 de junio
+DANIEL 2 Y EL ENFOQUE HISTORICISTA DE LA
 
-**Contenido:**
+### Fecha:
+
+Domingo-15 de junio
+
+### Contenido:
+
 PROFECÍA
 La profecía que aparece en Daniel 2 es una de las más poderosas de toda la Es­
 critura. Casi seis siglos antes de Cristo, el profeta expone la historia del mundo
 desde la época de Babilonia y a través de Medopersia, Grecia y Roma hasta la
 fragmentación de esta en lo que son hoy las naciones europeas.
+
 De hecho, la profecía dijo de estas naciones europeas que “se mezclarán
 por medio de casamientos pero no se unirán el uno con el otro, así como el
 hierro no se mezcla con la arcilla” (Dan. 2:43). Esta predicción se ha cumplido
 asombrosamente. Es decir, a pesar de todo tipo de alianzas matrimoniales entre
 estas naciones, siguen divididas.
+
 Por ejemplo, la monarquía británica se llama Casa de Windsor, un nombre
 inglés. Sin embargo, esa designación es relativamente reciente, ya que data de 1917. Antes de eso, la familia se llamaba Casa de Saxe-Coburg y Gotha, un nombre
 claramente alemán, pues muchos miembros de la realeza británica, al mezclarse
@@ -20,8 +27,10 @@ claramente alemán, pues muchos miembros de la realeza británica, al mezclarse
 Sin embargo, esos lazos de sangre no bastaron para mantenerlos alejados de la
 guerra, ya que durante la Primera Guerra Mundial y en un intento de desvincu­
 larse de sus odiados enemigos, cambiaron su nombre por el de Casa de Windsor.
+
 Lee Daniel 2:31 al 45. ¿Cuál fue el sueño de Nabucodonosor y cómo lo
-interpretó Daniel?
+interpretó Daniel? [notas]
+
 Todas las profecías apocalípticas de Daniel siguen la base establecida en
 Daniel 2. Es decir, la secuencia de un imperio mundial tras otro hasta que Dios
 establece su reino eterno (ver Dan. 2:44; 7:13, 14). En otras palabras, esas profecías
@@ -30,7 +39,12 @@ el fin de la historia, incluyendo nuestros días. Este enfoque o interpretación
 historicista de las profecías surge de los textos mismos y es crucial para com­
 prender los acontecimientos de los últimos días, particularmente los descritos
 en Apocalipsis.
+
+### Reflexionar:
+
 ¿Cómo demuestra Daniel 2 que Dios no solo conoce el futuro sino también tiene,
 en última instancia, el control de este?
 
-**Página:** 139
+### Página:
+
+139

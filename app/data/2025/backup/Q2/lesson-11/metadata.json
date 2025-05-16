@@ -1,15 +1,48 @@
 {
-  "id": "leccion_11_junio_14_2025",
+  "id": "2025-06-07-2025-06-13",
   "lesson_number": 11,
   "title": "RUT Y ESTER",
-  "week_end_date": "2025-06-14",
-  "week_start_date": "2025-06-08",
-  "study_texts": [
-    "Rut 1:1-5; Rut 2:5-20; Job 1:6-11; Mateo",
-    "4:8, 9; Ester 3:1-14; Apocalipsis 12:14-17."
+  "week_end_date": "2025-06-13",
+  "week_start_date": "2025-06-07",
+  "memory_verse_reference": "Ester 5:2",
+  "daily_titles": [
+    {
+      "day": "Sábado",
+      "title": "RUT Y ESTER"
+    },
+    {
+      "day": "Domingo",
+      "title": "HAMBRE EN LA “CASA DEL PAN”"
+    },
+    {
+      "day": "Lunes",
+      "title": "RUT Y BOOZ"
+    },
+    {
+      "day": "Martes",
+      "title": "BOOZ COMO REDENTOR"
+    },
+    {
+      "day": "Miércoles",
+      "title": "AMÁN Y SATÁN"
+    },
+    {
+      "day": "Jueves",
+      "title": "PARA ESTA HORA"
+    },
+    {
+      "day": "Viernes",
+      "title": "Para Estudiar y Meditar"
+    }
   ],
-  "memory_verse_reference": "Est. 5:2",
-  "has_egw_quotes": false,
-  "daily_titles": [],
-  "discussion_question_count": 0
+  "study_texts": [
+    "Rut 1:1-5",
+    "Rut 2:5-20",
+    "Job 1:6-11",
+    "Mateo 4:8, 9",
+    "Ester 3:1-14",
+    "Apocalipsis 12:14-17"
+  ],
+  "discussion_question_count": 5,
+  "has_egw_quotes": true
 }

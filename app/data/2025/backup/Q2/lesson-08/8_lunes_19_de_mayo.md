@@ -1,39 +1,46 @@
-# Lección 8 - EN EL MONTE SION
+### Título:
 
-**Fecha:** Lunes 19 de mayo
+EN EL MONTE SION
 
-**Lectura principal:** ¿Quién residirá en tu santo monte?
+### Fecha:
 
-### Reflexionar:
+Lunes-19 de mayo
+
+### Dia:
+
+Lunes
+
+### Lectura principal:
 
 ¿Quién residirá en tu santo monte?
 
-¿Qué paralelismos encuentras?
+### Contenido:
 
-¿Cómo puede uno unirse a este grupo?
-
-**Contenido:**
 En Apocalipsis 14 encontramos al pueblo de Dios de pie sobre el monte Sion.
 Este se encontraba al oeste de lo que hoy se conoce como la Ciudad Vieja en
 Jerusalén y era considerado la sede del Trono de Dios o de su presencia entre su
 pueblo. Con el tiempo, el monte Moria, donde estaba el Templo, llegó también
 a ser identificado como el monte Sion.
+
 En otras palabras, esta importante descripción del remanente de Dios de
 los últimos días se presenta en el lenguaje característico del Santuario, como
 la mayoría de las escenas clave de Apocalipsis. Gracias al Cordero, el pueblo de
 Dios está en el Monte Santo.
+
 Lee los Salmos 15 y 24, donde David hace una pregunta de suma impor­
 tancia: “¿Quién residirá en tu santo monte?” Compara su respuesta con la
 descripción que hace Apocalipsis 14:1 al 5 del pueblo de Dios que está en
 Sion. ¿Qué paralelismos encuentras? ¿Cómo puede uno unirse a este grupo?
 ¿Qué significado tiene el hecho de que el nombre del Padre esté escrito en
-sus frentes? (Apoc. 14:1).
+sus frentes? (Apoc. 14:1). [notas]
+
 La descripción de aquellos a quienes se permite estar en la presencia de Dios
 según los Salmos 15 y 24 representa una tarea bastante difícil de cumplir para los
 simples pecadores. ¿Quién de nosotros puede decir honestamente que siempre
 ha caminado rectamente o que siempre ha dicho la verdad (Sal. 15:2)? Ninguno
 de nosotros puede decir que “no caerá jamás” (Sal. 15:5). La Biblia enseña que
 si decimos que nunca hemos pecado la verdad no está en nosotros (1 Juan 1:8).
+
 La única conclusión posible a la que podemos llegar es que el Cordero es
 quien nos permite estar de pie sobre el monte Sion. Aunque el Cordero no
 es mencionado en esos dos salmos de David, aparece en la descripción de Apo­
@@ -43,8 +50,13 @@ Santuario, nosotros también podemos estar allí en virtud de su perfecta justic
 acreditada a nosotros por la fe. Podemos tener la “plena seguridad para entrar en
 el santuario, por el camino nuevo y vivo que él nos abrió a través del velo, esto es,
 de su carne” (Heb. 10:19, 20). Sin su sangre, no habría esperanza para nosotros.
+
+### Reflexionar:
+
 Piensa en todas las promesas bíblicas de victoria sobre el pecado. ¿Por qué, aun
 con esas promesas, seguimos sin estar a la altura del ejemplo perfecto que Jesús
 nos ha dado y por qué necesitamos su vida perfecta como sustituto nuestro?
 
-**Página:** 92
+### Página:
+
+92

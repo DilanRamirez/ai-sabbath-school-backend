@@ -1,8 +1,13 @@
-# Lección 9 - ESPERANZA EN MEDIO DE LA CONFUSIÓN
+### Título:
 
-**Fecha:** Lunes 26 de mayo
+ESPERANZA EN MEDIO DE LA CONFUSIÓN
 
-**Contenido:**
+### Fecha:
+
+Lunes-26 de mayo
+
+### Contenido:
+
 Gran parte del lenguaje del libro de los Salmos es simbólico, metafórico, pero
 cuando se trata del que apunta al restablecimiento definitivo de nuestro pla­
 neta, hay pocas razones para creer que es meramente figurado. El Salmo 46 nos
@@ -10,12 +15,12 @@ recuerda que nuestro planeta se verá profundamente afectado por el regreso de
 Cristo. Pero no se trata apenas de las rocas y los océanos, sino que el gran clímax
 de la historia de la Tierra significará el colapso de los reinos mundanos, de los
 miserables sistemas de gobierno humano que han causado tanto sufrimiento
-durante milenios.
-Todos estos poderes, así como el mal y el sufrimiento que han provocado a
+durante milenios. Todos estos poderes, así como el mal y el sufrimiento que han provocado a
 la humanidad, dejarán por fin de existir.
+
 Lee Jeremías 4:23 al 26. ¿Qué nos dice esto acerca del destino de este
 mundo, al menos hasta que haya “un cielo nuevo y una tierra nueva”
-(Apoc. 21:1)?
+(Apoc. 21:1)? [notas]
 
 La profecía bíblica revela lo que ocurrirá a este mundo. Por ejemplo, la visión
 de Daniel 7 muestra un mar tempestuoso del cual surgen naciones. Los vientos
@@ -24,6 +29,7 @@ origen a un reino mundano tras otro, ninguno de los cuales puede resolver los
 problemas que acosan a la humanidad. Los líderes mundanos en los que nos
 atrevemos a confiar son casi siempre tan pecadores y egoístas como el resto
 de nosotros.
+
 Ninguno de los reinos mostrados a Daniel resultó ser un hogar seguro para
 el pueblo de Dios, aun cuando algunos fueron mejores que otros. No obstante,
 sabemos que nuestra ciudadanía se encuentra en el Reino de Dios (Fil. 3:20) y
@@ -36,8 +42,13 @@ plirá sus promesas: “Braman las naciones, titubean los reinos; alza él su vo
 se derrite la tierra. ¡El Señor Todopoderoso está con nosotros! Nuestro refugio
 es el Dios de Jacob” (Sal. 46:6, 7). Las cosas no irán bien a corto plazo, pero sí en
 última instancia gracias a Jesús.
+
+### Reflexionar:
+
 Nuestro mundo parece caótico y fuera de control. Sin embargo, ¿cómo debería
 ayudarnos la profecía de Daniel 7, por ejemplo, a ver que, en última instancia,
 todo saldrá bien si permanecemos fieles?
 
-**Página:** 104
+### Página:
+
+104

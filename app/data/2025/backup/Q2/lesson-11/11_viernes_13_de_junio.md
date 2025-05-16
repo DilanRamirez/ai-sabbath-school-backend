@@ -1,12 +1,16 @@
-# Lección 11 - Para Estudiar y Meditar
+### Título:
 
-**Fecha:** Viernes 13 de junio
+Para Estudiar y Meditar
 
-**Contenido:**
+### Fecha:
+
+Viernes 13 de junio
+
+### Contenido:
+
 Lee el capítulo titulado “El primer rey de Israel” en las páginas 653 a 668 del libro
-Patriarcas y profetas, de Elena de White.
-“Satanás despertará indignación contra la minoría que se niega a aceptar
-las costumbres y las tradiciones populares. Hombres encumbrados y célebres
+Patriarcas y profetas, de Elena de White. “Satanás despertará indignación contra la
+minoría que se niega a aceptar las costumbres y las tradiciones populares. Hombres encumbrados y célebres
 se unirán con los inicuos y los viles para concertarse contra el pueblo de Dios.
 Las riquezas, el genio y la educación se combinarán para cubrirlo de desprecio.
 Gobernantes, ministros y miembros de iglesia perseguidores conspirarán contra
@@ -24,18 +28,24 @@ de White, Profetas y reyes, pp. 444, 445).
 
 ### Reflexionar: para dialogar:
 
-- ¿Por qué permite Dios que su pueblo afronte tiempos difíciles?
-- ¿Cómo puede prepararse el creyente para cualquier dificultad que pueda
-  surgir en relación con su lealtad a Cristo? ¿Dónde encuentras esperanza
-  en medio de las circunstancias difíciles?
-- ¿Por qué tenemos la tendencia a detenernos en los eventos sombríos
-  anunciados en la profecía y permitir que eclipsen el panorama más
-  amplio y luminoso de sus buenas noticias?
-- Una amiga acude a ti después de leer el Apocalipsis y te confiesa que le
-  parece aterrador. ¿Qué enfoque utilizarías para ayudarla a comprender­
-  lo mejor y a tener paz?
-- Alguien dice: “No creo que Dios me ame, pues he hecho cosas muy ma­
-  las”. ¿Qué le responderías? ¿Cómo influyen las historias de Rut y Ester
-  en tu perspectiva?
+¿Por qué permite Dios que su pueblo afronte tiempos difíciles?
 
-**Página:** N/A
+¿Cómo puede prepararse el creyente para cualquier dificultad que pueda
+surgir en relación con su lealtad a Cristo? ¿Dónde encuentras esperanza
+en medio de las circunstancias difíciles?
+
+¿Por qué tenemos la tendencia a detenernos en los eventos sombríos
+anunciados en la profecía y permitir que eclipsen el panorama más
+amplio y luminoso de sus buenas noticias?
+
+Una amiga acude a ti después de leer el Apocalipsis y te confiesa que le
+parece aterrador. ¿Qué enfoque utilizarías para ayudarla a comprender­
+lo mejor y a tener paz?
+
+Alguien dice: “No creo que Dios me ame, pues he hecho cosas muy ma­
+las”. ¿Qué le responderías? ¿Cómo influyen las historias de Rut y Ester
+en tu perspectiva?
+
+### Página:
+
+131
