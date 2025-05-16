@@ -1,0 +1,46 @@
+# Lección 12 - LA MARCA DE LA BESTIA
+
+**Fecha:** Jueves 19 de junio
+
+**Lectura principal:** ¿Morir a causa de uno de los mandamientos de Dios?
+
+### Preguntas:
+- ¿Morir a causa de uno de los mandamientos de Dios?
+
+
+**Content:** 
+Puesto que ciertos acontecimientos finales –como el decreto de muerte y la
+imposición de la marca de la bestia– aún no han sucedido a pesar del paso del
+tiempo, algunos han expresado dudas e incluso escepticismo acerca de nuestra
+interpretación de los eventos finales, incluyendo el papel central del sábado y
+del domingo en la etapa final del Conflicto.
+El libro de Apocalipsis es claro: adoramos al Creador o a la bestia y a su
+imagen. Y, dado que el séptimo día, el sábado semanal, es desde el Edén mismo la
+señal de Dios como Creador (ver Gén. 2:1-3), no debería sorprender que el sábado
+ocupe un lugar central en la adoración al Creador. Además, no es coincidencia
+que el poder representado por la bestia surgida del mar sea el mismo que pre­
+tendió modificar el mandamiento que ordena observar el sábado como día de
+adoración al Creador por el domingo, lo cual no es autorizado por la Biblia. Con
+estos antecedentes en mente, la idea de que el sábado y el domingo intervendrán
+en la cuestión de la adoración, ya sea al Creador (ver Apoc. 14:6, 7) o a la bestia,
+tiene mucho sentido. Además, tenemos en el Nuevo Testamento un precursor
+acerca de la cuestión del sábado, o séptimo día, como día de adoración en con­
+traposición con la ley humana.
+Lee Mateo 12:9 al 14 y Juan 5:1 al 16. ¿Por qué quisieron los líderes reli­
+giosos matar a Jesús?
+En Mateo 12:9 al 13, ¿cómo respondieron los líderes religiosos cuando Jesús
+sanó en sábado al hombre que tenía una mano seca? “Pero los fariseos salieron
+y conspiraron contra Jesús para matarlo” (Mat. 12:14). ¿Matar a alguien a causa
+del sábado? En Juan 5:1 al 16, después de otra curación milagrosa realizada en
+el séptimo día, los líderes “perseguían a Jesús, y procuraban matarlo, porque
+hacía estas cosas en sábado” (Juan 5:16).
+¿Muerte a causa de la tradición humana (nada en la Biblia prohibía curar a
+alguien en sábado, así como nada en la Biblia ha puesto el domingo en lugar
+del sábado) versus el día de reposo bíblico (sábado, séptimo día de la semana)?
+Aunque la cuestión específica allí descrita no es la misma que en los aconteci­
+mientos finales, se parece bastante: la ley humana en oposición a la de Dios. En
+ambos casos, la ley cuestionada tiene que ver con el sábado bíblico.
+¿Morir a causa de uno de los mandamientos de Dios? ¿Cómo podría alguien racio­
+nalizar la situación para procurar una escapatoria?
+
+**Página:** 143

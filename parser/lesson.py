@@ -7,7 +7,8 @@ OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def clean(text):
-    return re.sub(r"\s+", " ", text).strip()
+    lines = [line.strip() for line in text.strip().splitlines()]
+    return "\n".join(lines)
 
 
 def save_markdown(filename, content):
@@ -17,9 +18,11 @@ def save_markdown(filename, content):
 
 def extract_and_write_markdown():
     doc = fitz.open(PDF_PATH)
-    text = "\n".join([page.get_text() for page in doc])
+    pages = [(i + 1, page.get_text()) for i, page in enumerate(doc)]
+    text = "\n".join([page_text for _, page_text in pages])
     lesson_number_match = re.search(r"Lección\s+(\d+):", text)
-    lesson_number = lesson_number_match.group(1) if lesson_number_match else "unknown"
+    lesson_number = lesson_number_match.group(
+        1) if lesson_number_match else "unknown"
 
     # Saturday - Intro Page
     intro_match = re.search(
@@ -48,12 +51,17 @@ def extract_and_write_markdown():
         else:
             study_texts = ""
         filename = f"{lesson_number}_sabado_{sabado_date.replace(' ', '_')}.md"
-        md = f"# Lección {lesson_number} - {title.strip()}\n\n**Fecha:** Sábado {sabado_date}\n\n"
+        md = f"### Título:\n{title.strip()}\n### Fecha:\n{sabado_date}\n\n"
         if study_texts:
-            md += f"**Lecturas para esta semana:** {study_texts}\n\n"
+            md += f"### Lecturas para esta semana:\n{study_texts}\n\n"
         if memory_verse:
-            md += f"**Para memorizar:** {memory_verse}\n\n"
-        md += clean(content)
+            md += f"### Para memorizar:\n{memory_verse}\n\n"
+        page_number_match = re.search(r"\n(\d{1,4})\s*$", content.strip())
+        page_number = page_number_match.group(
+            1) if page_number_match else "N/A"
+        content = re.sub(r"\n" + re.escape(page_number) + r"\s*$", "", content)
+        md += "\n\n### Contenido:\n" + clean(content)
+        md += f"\n\n### Página:\n{page_number}"
         save_markdown(filename, md)
 
     # Weekdays Domingo to Jueves
@@ -61,20 +69,30 @@ def extract_and_write_markdown():
     for day in days:
         pattern = rf"(?:\|\s*)?Lección \d+\s*\|?\s*{day}\s+(\d{{1,2}} de \w+)\s*\n(.*?)\n(.*?)(?=\n(?:\|\s*)?Lección \d+\s*\|?\s*(?:Domingo|Lunes|Martes|Miércoles|Jueves|Viernes)|\n+PREGUNTAS PARA DIALOGAR|\Z)"
 
-        print(f"Processing {day}...")
         for match in re.finditer(pattern, text, re.DOTALL):
-            date_str, title, body = match.groups()
+            date_str, title_block, body = match.groups()
+            title_lines = []
+            for line in title_block.strip().splitlines():
+                if line.isupper() or re.fullmatch(r"[A-ZÁÉÍÓÚÑ0-9\s,.;:¡!¿?\"'-]+", line):
+                    title_lines.append(line.strip())
+                else:
+                    break
+            title = clean(" ".join(title_lines))
             questions = re.findall(r"¿.*?\?", body)
             main_prompt = questions[0] if questions else ""
             filename = f"{lesson_number}_{day.lower()}_{date_str.replace(' ', '_')}.md"
-            md = f"# Lección {lesson_number} - {title.strip()}\n\n**Fecha:** {day} {date_str}\n\n"
+            md = f"### Título:\n{title}\n\n### Fecha:\n{day}-{date_str}\n\n"
             if main_prompt:
-                md += f"**Lectura principal:** {main_prompt}\n\n"
+                md += f"### Lectura principal:\n{main_prompt}\n\n"
             if questions:
-                md += "### Preguntas:\n" + "\n".join(f"- {q}" for q in questions) + "\n"
-            md += f"\n{clean(body)}"
-            if re.search(r"_{4,}|\.{4,}", body):
-                md += "\n\n**Escríbelo aquí:**"
+                md += "### Preguntas:\n" + \
+                    "\n".join(f"- {q}" for q in questions) + "\n"
+            page_number_match = re.search(r"\n(\d{1,4})\s*$", body.strip())
+            page_number = page_number_match.group(
+                1) if page_number_match else "N/A"
+            body = re.sub(r"\n" + re.escape(page_number) + r"\s*$", "", body)
+            md += f"\n\n### Content:\n{clean(body)}"
+            md += f"\n\n### Página:\n{page_number}"
             save_markdown(filename, md)
 
     # Friday
@@ -89,13 +107,18 @@ def extract_and_write_markdown():
             r"\d+\.\s*(.*?)(?=\n\d+\.|\Z)", q_block.strip(), re.DOTALL
         )
         filename = f"{lesson_number}_viernes_{date_str.replace(' ', '_')}.md"
-        md = f"# Lección {lesson_number} - Para Estudiar y Meditar\n\n**Fecha:** Viernes {date_str}\n\n{clean(meditation)}\n\n"
+        page_number_match = re.search(r"\n(\d{1,4})\s*$", meditation.strip())
+        page_number = page_number_match.group(
+            1) if page_number_match else "N/A"
+        meditation = re.sub(
+            r"\n" + re.escape(page_number) + r"\s*$", "", meditation)
+        md = f"### Título:\nPara Estudiar y Meditar\n\n### Fecha:\nViernes {date_str}\n\n### Content:\n{clean(meditation)}\n\n"
         if questions:
             md += "### Preguntas para dialogar:\n" + "\n".join(
                 f"- {clean(q)}" for q in questions
             )
-        if re.search(r"_{4,}|\.{4,}", meditation):
-            md += "\n\n**Escríbelo aquí:**"
+
+        md += f"\n\n### Página:\n{page_number}"
         save_markdown(filename, md)
 
 

@@ -1,9 +1,46 @@
-# Lección 12 - PRECURSORES
+### Título:
 
-**Fecha:** Sábado 14 de junio
+PRECURSORES
 
-**Lecturas para esta semana:** Daniel 2:31-45; Daniel 3:1-12, 17, 18;
+### Fecha:
 
-**Para memorizar:** “Porque no nos ha dado Dios espíritu de timidez, sino de poder, de amor y de do­ minio propio” (2 Tim. 1:7).
+14 de junio
 
-Apocalipsis 13:11-17; Romanos 1:18-25; Hechos 12:1-17; Mateo 12:9-14. E sta semana estudiaremos otras dos historias bíblicas que prefiguran los acontecimientos de los últimos días con gran detalle. En primer lugar, examinaremos el relato de Sadrac, Mesac y Abednego, que contiene alusiones evidentes al capítulo 13 de Apocalipsis. Veremos luego la historia de los apóstoles y la experiencia de los primeros cristianos para comprender lo que nos queda aún por delante hasta el regreso de Cristo. Ambos ejemplos, el de los tres jóvenes hebreos y el de la iglesia apostólica, ponen de relieve un valor extraordinario y contienen claves para disfrutar de paz espiritual aun en las circunstancias más difíciles. Jesús dijo una y otra vez cosas como “no temas” y “¿por qué están turbados y suben esos pensamientos a su corazón?” Es importante recordar que el centro de la profecía es Cristo y que debemos por ello ser capaces de escuchar ese mismo mensaje del Señor en las escenas proféticas de los momentos finales de la Tierra. Como dijo a sus discípulos: “No se turbe su corazón. Ustedes creen en Dios, crean también en mí” (Juan 14:1). En otras palabras, aunque los eventos de los últimos días serán difíciles para quienes decidan permanecer fieles a Dios, debemos verlos con espe­ ranza, no con temor. 138
+### Lecturas para esta semana:
+
+Daniel 2:31-45; Daniel 3:1-12, 17, 18;
+
+### Para memorizar:
+
+“Porque no nos ha dado Dios espíritu de timidez, sino de poder, de amor y de do­
+minio propio” (2 Tim. 1:7).
+
+### Contenido:
+
+Apocalipsis 13:11-17; Romanos 1:18-25; Hechos 12:1-17; Mateo 12:9-14.
+
+Esta semana estudiaremos otras dos historias bíblicas que prefiguran los
+acontecimientos de los últimos días con gran detalle.
+
+En primer lugar, examinaremos el relato de Sadrac, Mesac y Abednego,
+que contiene alusiones evidentes al capítulo 13 de Apocalipsis. Veremos luego
+la historia de los apóstoles y la experiencia de los primeros cristianos para
+comprender lo que nos queda aún por delante hasta el regreso de Cristo.
+Ambos ejemplos, el de los tres jóvenes hebreos y el de la iglesia apostólica,
+ponen de relieve un valor extraordinario y contienen claves para disfrutar de
+paz espiritual aun en las circunstancias más difíciles.
+
+Jesús dijo una y otra vez cosas como “no temas” y “¿por qué están turbados
+y suben esos pensamientos a su corazón?” Es importante recordar que el
+centro de la profecía es Cristo y que debemos por ello ser capaces de escuchar
+ese mismo mensaje del Señor en las escenas proféticas de los momentos
+finales de la Tierra. Como dijo a sus discípulos: “No se turbe su corazón.
+Ustedes creen en Dios, crean también en mí” (Juan 14:1).
+
+En otras palabras, aunque los eventos de los últimos días serán difíciles
+para quienes decidan permanecer fieles a Dios, debemos verlos con espe­
+ranza, no con temor.
+
+### Página:
+
+138
