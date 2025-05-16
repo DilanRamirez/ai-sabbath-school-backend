@@ -1,15 +1,49 @@
 {
-  "id": "leccion_13_junio_28_2025",
+  "id": "2025-02-08",
   "lesson_number": 13,
   "title": "IMÁGENES DEL FIN",
   "week_end_date": "2025-06-28",
-  "week_start_date": "2025-06-22",
-  "study_texts": [
-    "Mateo 12:38-42; Jonás 3:5-10; Apoca-",
-    "lipsis 18:4; Daniel 5:1-31; Apocalipsis 16:12-19; 2 Crónicas 36:22, 23."
+  "week_start_date": "2025-06-21",
+  "memory_verse_reference": "Jonás 1:9",
+  "daily_titles": [
+    {
+      "day": "Sábado",
+      "title": "IMÁGENES DEL FIN"
+    },
+    {
+      "day": "Domingo",
+      "title": "EL PROFETA RENUENTE"
+    },
+    {
+      "day": "Lunes",
+      "title": "UNA OBRA DE ARREPENTIMIENTO"
+    },
+    {
+      "day": "Martes",
+      "title": "LA FIESTA DE BELSASAR"
+    },
+    {
+      "day": "Miércoles",
+      "title": "EL SECAMIENTO DEL ÉUFRATES"
+    },
+    {
+      "day": "Jueves",
+      "title": "CIRO, EL UNGIDO"
+    },
+    {
+      "day": "Viernes",
+      "title": "Para Estudiar y Meditar"
+    }
   ],
-  "memory_verse_reference": "Jon. 1:9",
-  "has_egw_quotes": false,
-  "daily_titles": [],
-  "discussion_question_count": 0
+  "study_texts": [
+    "Mateo 12:38-42",
+    "Jonás 3:5-10",
+    "Apocalipsis 18:4",
+    "Daniel 5:1-31",
+    "Apocalipsis 16:12-19",
+    "2 Crónicas 36:22",
+    "2 Crónicas 36:23"
+  ],
+  "discussion_question_count": 2,
+  "has_egw_quotes": true
 }

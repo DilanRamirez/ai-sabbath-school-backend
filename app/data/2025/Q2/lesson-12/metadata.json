@@ -1,15 +1,48 @@
 {
-  "id": "leccion_12_junio_21_2025",
+  "id": "2025-02-08",
   "lesson_number": 12,
   "title": "PRECURSORES",
   "week_end_date": "2025-06-21",
-  "week_start_date": "2025-06-15",
-  "study_texts": [
-    "Daniel 2:31-45; Daniel 3:1-12, 17, 18;",
-    "Apocalipsis 13:11-17; Romanos 1:18-25; Hechos 12:1-17; Mateo 12:9-14."
+  "week_start_date": "2025-06-14",
+  "memory_verse_reference": "2 Timoteo 1:7",
+  "daily_titles": [
+    {
+      "day": "Sábado",
+      "title": "PRECURSORES"
+    },
+    {
+      "day": "Domingo",
+      "title": "DANIEL 2 Y EL ENFOQUE HISTORICISTA DE LA PROFECÍA"
+    },
+    {
+      "day": "Lunes",
+      "title": "LA ADORACIÓN DE LA IMAGEN"
+    },
+    {
+      "day": "Martes",
+      "title": "OTRA IMAGEN Y LA ORDEN DE ADORARLA"
+    },
+    {
+      "day": "Miércoles",
+      "title": "LA PERSECUCIÓN A LA IGLESIA PRIMITIVA"
+    },
+    {
+      "day": "Jueves",
+      "title": "LA MARCA DE LA BESTIA"
+    },
+    {
+      "day": "Viernes",
+      "title": "Para Estudiar y Meditar"
+    }
   ],
-  "memory_verse_reference": "2 Tim. 1:7",
-  "has_egw_quotes": false,
-  "daily_titles": [],
-  "discussion_question_count": 0
+  "study_texts": [
+    "Daniel 2:31-45",
+    "Daniel 3:1-12, 17, 18",
+    "Apocalipsis 13:11-17",
+    "Romanos 1:18-25",
+    "Hechos 12:1-17",
+    "Mateo 12:9-14"
+  ],
+  "discussion_question_count": 3,
+  "has_egw_quotes": true
 }
