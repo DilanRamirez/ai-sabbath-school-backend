@@ -8,7 +8,7 @@ def test_llm_answer_valid_input():
         response = client.post(
             "/api/v1/llm/answer",
             json={
-                "question": "¿Qué significa la justificación por la fe?",
+                "question": "¿Qué significa la fe?",
                 "top_k": 3,
                 "lang": "es",
                 "mode": "explain",
