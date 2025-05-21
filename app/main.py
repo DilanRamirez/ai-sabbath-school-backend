@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.indexing.search_service import preload_index_and_metadata
 from app.api.v1.routes import router as api_router  # your public routes
@@ -16,6 +17,15 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
+
+# Allow CORS from any origin
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # <- allow all origins
+    allow_credentials=True,  # if you need cookies/auth
+    allow_methods=["*"],  # allow GET, POST, PUT, DELETE, etc.
+    allow_headers=["*"],  # allow any headers
+)
 
 # Public endpoints (search, LLM, lessons, etc.)
 app.include_router(api_router, prefix="/api/v1")
