@@ -1,10 +1,33 @@
 import re
-import os
-import json
-import uuid
-import pandas as pd
 from PyPDF2 import PdfReader
+import pandas as pd
+import uuid
 import json
+import os
+
+
+def normalize_paragraphs(text: str) -> str:
+    """
+    Normalize text from PDF extraction by:
+    1. Merging hyphen-split words at line ends.
+    2. Converting sentence-ending newlines before uppercase letters into paragraph breaks (double newlines).
+    3. Collapsing other single newlines into spaces.
+    4. Normalizing multiple spaces.
+    """
+    # 1) Merge hyphenated line breaks (e.g. 'llegó-\nta' -> 'llegóta')
+    text = re.sub(r"(\w+)-\n(\w+)", r"\1\2", text)
+
+    # 2) Convert sentence-ending newline + uppercase start into paragraph break
+    #    e.g. '...visitación."\nDesde...' -> '...visitación."\n\nDesde...'
+    text = re.sub(r"([\.\?\!])\n(?=[A-ZÁÉÍÓÚÑ])", r"\1\n\n", text)
+
+    # 3) Collapse other single newlines (not part of paragraph breaks) into spaces
+    text = re.sub(r"(?<!\n)\n(?!\n)", " ", text)
+
+    # 4) Normalize multiple spaces into a single space
+    text = re.sub(r" +", " ", text)
+
+    return text.strip()
 
 
 def parse_toc_format_1(pdf_path):
@@ -246,7 +269,26 @@ def generate_json(pdf_path, title, author, publication_year):
             item["book-section-id"] = (
                 f"{clean_title}-{clean_author}-{item['page']}-{uuid.uuid4().hex[:8]}"
             )
-            item["content"] = content
+            # Normalize paragraph linebreaks
+            item["content"] = normalize_paragraphs(content)
+
+    # After normalizing content for every original item, split into paragraph-level items
+    for section in sections:
+        para_items = []
+        for item in section["items"]:
+            full_text = item["content"]
+            # split on double-newline paragraph boundaries
+            paragraphs = full_text.split("\n\n") if full_text else []
+            for idx, para in enumerate(paragraphs):
+                # copy the item metadata except content
+                new_item = {k: v for k, v in item.items() if k != "content"}
+                # assign this paragraph as content
+                new_item["content"] = para.strip()
+                # track paragraph index
+                new_item["paragraph_index"] = idx + 1
+                para_items.append(new_item)
+        # replace the original items list
+        section["items"] = para_items
 
     data = {
         "title": title,
@@ -268,8 +310,8 @@ def generate_json(pdf_path, title, author, publication_year):
 
 if __name__ == "__main__":
     generate_json(
-        "app/data/books/el_camino_a_cristo.pdf",
-        "El Camino a Cristo",
+        "app/data/books/conflicto_de_los_siglos.pdf",
+        "El Conflicto de los Siglos",
         "Ellen G. White",
-        1977,
+        2007,
     )
