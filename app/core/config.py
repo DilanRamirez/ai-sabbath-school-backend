@@ -13,7 +13,7 @@ class Settings:
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
     ADMIN_KEY: str = os.getenv("ADMIN_KEY", "")
     AWS_ACCESS_KEY_ID: str = os.getenv("AWS_ACCESS_KEY_ID", "")
-    AWS_SECRET_KEY: str = os.getenv("AWS_SECRET_KEY", "")
+    AWS_SECRET_ACCESS_KEY: str = os.getenv("AWS_SECRET_ACCESS_KEY", "")
     AWS_REGION: str = os.getenv("AWS_REGION", "")
     S3_BUCKET: str = os.getenv("S3_BUCKET", "")
 
@@ -25,7 +25,7 @@ if "pytest" not in sys.modules:
     s3 = boto3.client(
         "s3",
         aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
-        aws_secret_access_key=settings.AWS_SECRET_KEY,
+        aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
         region_name=settings.AWS_REGION,
     )
     BUCKET = settings.S3_BUCKET
