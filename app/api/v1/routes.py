@@ -16,6 +16,8 @@ from app.services.cms_service import (
 )
 
 from app.services.llm_parser import extract_pdf_to_json
+from app.core.config import BUCKET, s3
+
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -307,9 +309,11 @@ async def import_lesson(
     pdf: UploadFile = File(..., description="The lesson PDF file"),
 ):
     """
-    Imports a cleaned lesson: saves lesson.json and PDF under data/{year}/{quarter}/{lesson_id}.
+    Imports a cleaned lesson by saving lesson.json and PDF directly to S3 under {year}/{quarter}/{lesson_id}.
     Expects multipart/form-data with fields 'lesson_data' (JSON string) and 'pdf' (file).
     """
+    logger.info(f"Importing lesson {lesson_id} for {year}/{quarter}")
+
     # Parse the JSON string payload into a dict
     try:
         data = json.loads(lesson_data)
@@ -324,32 +328,37 @@ async def import_lesson(
         logger.error(f"Invalid lesson JSON: {e}")
         raise HTTPException(status_code=400, detail="Invalid lesson JSON payload")
 
-    # Determine target directory
-    base_dir = Path(__file__).resolve().parent.parent.parent / "data"
-    lesson_dir = base_dir / year / quarter / lesson_id
+    # Save JSON directly to S3
     try:
-        lesson_dir.mkdir(parents=True, exist_ok=True)
+        json_body = json.dumps(data, ensure_ascii=False, indent=2)
+        json_key = f"{year}/{quarter}/{lesson_id}/lesson.json"
+        s3.put_object(
+            Bucket=BUCKET,
+            Key=json_key,
+            Body=json_body,
+            ContentType="application/json",
+        )
     except Exception as e:
-        logger.error(f"Error creating lesson directory: {e}")
-        raise HTTPException(status_code=500, detail="Could not create lesson directory")
+        logger.error(f"Error uploading lesson JSON to S3: {e}")
+        raise HTTPException(
+            status_code=500, detail="Could not upload lesson JSON to S3"
+        )
 
-    # Save JSON file
-    json_path = lesson_dir / "lesson.json"
+    # Read and upload PDF directly to S3
     try:
-        with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        pdf_contents = await pdf.read()
+        pdf_key = f"{year}/{quarter}/{lesson_id}/{lesson_id}.pdf"
+        s3.put_object(
+            Bucket=BUCKET,
+            Key=pdf_key,
+            Body=pdf_contents,
+            ContentType="application/pdf",
+        )
     except Exception as e:
-        logger.error(f"Error saving lesson JSON: {e}")
-        raise HTTPException(status_code=500, detail="Could not save lesson JSON")
+        logger.error(f"Error uploading PDF file to S3: {e}")
+        raise HTTPException(status_code=500, detail="Could not upload PDF file to S3")
 
-    # Save PDF file
-    pdf_path = lesson_dir / f"{lesson_id}.pdf"
-    try:
-        contents = await pdf.read()
-        with open(pdf_path, "wb") as f:
-            f.write(contents)
-    except Exception as e:
-        logger.error(f"Error saving PDF file: {e}")
-        raise HTTPException(status_code=500, detail="Could not save PDF file")
-
-    return {"status": "ok", "message": f"Lesson '{lesson_id}' imported to {lesson_dir}"}
+    return {
+        "status": "ok",
+        "message": f"Lesson '{lesson_id}' imported to S3 at {year}/{quarter}/{lesson_id}",
+    }
