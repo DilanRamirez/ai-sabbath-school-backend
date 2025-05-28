@@ -17,7 +17,7 @@ def test_get_lesson_success():
     response = client.get("/api/v1/lessons/2025/Q2/lesson-08")
     assert response.status_code == 200
     data = response.json()
-    assert "lesson" in data
+    assert "days" in data
 
 
 def test_get_lesson_not_found():

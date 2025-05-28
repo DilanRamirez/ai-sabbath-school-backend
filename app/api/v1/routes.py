@@ -1,8 +1,11 @@
-from fastapi import APIRouter, Body, HTTPException, Query
+from fastapi import APIRouter, Body, HTTPException, Query, UploadFile, File
+import json
+from fastapi import Form
 from fastapi.responses import FileResponse
 from typing import Literal, Optional
 import logging
 from pydantic import BaseModel, Field
+from pathlib import Path
 from app.indexing.search_service import search_lessons, IndexStore
 from app.services.llm_service import generate_llm_response
 from app.services.cms_service import (
@@ -11,6 +14,8 @@ from app.services.cms_service import (
     get_lesson_pdf_path,
     list_all_lessons,
 )
+
+from app.services.llm_parser import extract_pdf_to_json
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -255,3 +260,96 @@ def generate_answer(payload: QARequest):
     except Exception as e:
         logger.error(f"Internal server error: {e}")
         raise HTTPException(status_code=500, detail=f"Error interno: {str(e)}")
+
+
+@router.post("/llm/parser")
+async def parse_pdf(file: UploadFile = File(...)):
+    """
+    Upload a PDF, extract its content to markdown, and return it as plain text.
+    """
+    # Save uploaded file to a temporary location
+    temp_path = Path("/tmp") / file.filename
+    with open(temp_path, "wb") as f:
+        content = await file.read()
+        f.write(content)
+
+    # Extract JSON data from PDF
+    result = extract_pdf_to_json(str(temp_path), pages=None, page_chunks=True)
+
+    # Build markdown output from chunks (ignore metadata)
+    chunks = result.get("chunks", [])
+    md_lines: list[str] = []
+    for chunk in chunks:
+        if isinstance(chunk, dict):
+            text = chunk.get("text", "")
+        else:
+            text = str(chunk)
+        md_lines.append(text)
+    markdown_content = "\n\n".join(md_lines)
+
+    # Optionally clean up temp file
+    try:
+        temp_path.unlink()
+    except Exception:
+        pass
+
+    # Return the generated markdown
+    return {"markdown": markdown_content}
+
+
+# Endpoint to import a cleaned lesson JSON and its PDF
+@router.post("/lessons/{year}/{quarter}/{lesson_id}/import")
+async def import_lesson(
+    year: str,
+    quarter: str,
+    lesson_id: str,
+    lesson_data: str = Form(..., description="Cleaned lesson JSON as string"),
+    pdf: UploadFile = File(..., description="The lesson PDF file"),
+):
+    """
+    Imports a cleaned lesson: saves lesson.json and PDF under data/{year}/{quarter}/{lesson_id}.
+    Expects multipart/form-data with fields 'lesson_data' (JSON string) and 'pdf' (file).
+    """
+    # Parse the JSON string payload into a dict
+    try:
+        data = json.loads(lesson_data)
+        # In case lesson_data was double-encoded, decode again
+        if isinstance(data, str):
+            try:
+                data = json.loads(data)
+            except json.JSONDecodeError:
+                # leave data as-is if it's not valid JSON
+                pass
+    except json.JSONDecodeError as e:
+        logger.error(f"Invalid lesson JSON: {e}")
+        raise HTTPException(status_code=400, detail="Invalid lesson JSON payload")
+
+    # Determine target directory
+    base_dir = Path(__file__).resolve().parent.parent.parent / "data"
+    lesson_dir = base_dir / year / quarter / lesson_id
+    try:
+        lesson_dir.mkdir(parents=True, exist_ok=True)
+    except Exception as e:
+        logger.error(f"Error creating lesson directory: {e}")
+        raise HTTPException(status_code=500, detail="Could not create lesson directory")
+
+    # Save JSON file
+    json_path = lesson_dir / "lesson.json"
+    try:
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logger.error(f"Error saving lesson JSON: {e}")
+        raise HTTPException(status_code=500, detail="Could not save lesson JSON")
+
+    # Save PDF file
+    pdf_path = lesson_dir / f"{lesson_id}.pdf"
+    try:
+        contents = await pdf.read()
+        with open(pdf_path, "wb") as f:
+            f.write(contents)
+    except Exception as e:
+        logger.error(f"Error saving PDF file: {e}")
+        raise HTTPException(status_code=500, detail="Could not save PDF file")
+
+    return {"status": "ok", "message": f"Lesson '{lesson_id}' imported to {lesson_dir}"}

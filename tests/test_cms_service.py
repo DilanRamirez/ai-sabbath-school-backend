@@ -16,8 +16,8 @@ client = TestClient(app)
 
 def test_load_lesson_success():
     lesson = load_lesson_by_path("2025", "Q2", "lesson-08")
-    assert "lesson" in lesson
-    assert "title" in lesson["lesson"]
+    assert "days" in lesson
+    assert "title" in lesson
 
 
 def test_load_metadata_success():
@@ -61,7 +61,7 @@ def test_invalid_pdf_path():
 def test_api_get_lesson_success():
     res = client.get("/api/v1/lessons/2025/Q2/lesson-08")
     assert res.status_code == 200
-    assert "lesson" in res.json()
+    assert "days" in res.json()
 
 
 def test_api_get_metadata_success():

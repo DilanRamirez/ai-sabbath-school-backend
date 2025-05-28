@@ -14,3 +14,5 @@ pdfplumber
 pandas
 hf_xet
 PyMuPDF
+python-multipart
+pymupdf4llm

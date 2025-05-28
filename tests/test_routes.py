@@ -34,7 +34,7 @@ def test_list_lessons(client):
 def test_get_lesson_valid(client):
     res = client.get("/api/v1/lessons/2025/Q2/lesson-08")
     assert res.status_code == 200
-    assert "lesson" in res.json()
+    assert "days" in res.json()
 
 
 def test_get_lesson_invalid(client):
