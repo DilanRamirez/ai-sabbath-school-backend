@@ -16,14 +16,15 @@ def s3_import_setup(monkeypatch):
     # Start moto mock
     m = mock_aws()
     m.start()
-    client = boto3.client("s3", region_name=settings.AWS_REGION)
+    _region = settings.AWS_REGION or "us-east-1"
+    client = boto3.client("s3", region_name=_region)
     # Create bucket with proper location constraint
-    if settings.AWS_REGION == "us-east-1":
+    if _region == "us-east-1":
         client.create_bucket(Bucket=BUCKET)
     else:
         client.create_bucket(
             Bucket=BUCKET,
-            CreateBucketConfiguration={"LocationConstraint": settings.AWS_REGION},
+            CreateBucketConfiguration={"LocationConstraint": _region},
         )
     # Monkeypatch the app's S3 client
     monkeypatch.setattr(config, "s3", client)
