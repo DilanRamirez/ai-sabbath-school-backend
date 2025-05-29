@@ -2,7 +2,6 @@
 from dotenv import load_dotenv
 import os
 import boto3
-import sys
 
 load_dotenv()  # Load variables from .env
 
@@ -19,12 +18,19 @@ class Settings:
 
 
 settings = Settings()
+# build a valid S3 client, with a fallback if region is bogus
+_region = settings.AWS_REGION or "us-east-1"
 
-# Initialize S3 client and bucket name for all environments (moto can mock this)
-s3 = boto3.client(
-    "s3",
-    aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
-    aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
-    region_name=settings.AWS_REGION,
-)
+try:
+    # Initialize S3 client and bucket name for all environments (moto can mock this)
+    s3 = boto3.client(
+        "s3",
+        aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
+        aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
+        region_name=_region,
+    )
+except ValueError:
+    # boto3 complained about the endpoint—fall back to the default region lookup
+    s3 = boto3.client("s3")
+
 BUCKET = settings.S3_BUCKET
