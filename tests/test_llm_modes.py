@@ -64,3 +64,34 @@ def test_llm_invalid_mode():
 def test_llm_empty_text():
     response = client.post("/api/v1/llm", json={"text": "   ", "mode": "apply"})
     assert response.status_code in [400, 422]
+
+
+def test_llm_missing_mode_field():
+    # Omit the 'mode' field entirely
+    response = client.post(
+        "/api/v1/llm?lang=es",
+        json={"text": "¿Qué significa la fe?"},
+    )
+    assert response.status_code == 422
+
+
+def test_llm_invalid_lang_fallback():
+    # Pass unsupported lang; should default to English or at least work
+    response = client.post(
+        "/api/v1/llm?lang=fr",
+        json={"text": "test", "mode": "explain"},
+    )
+    assert response.status_code == 200
+    data = response.json()
+    assert "result" in data
+
+
+def test_llm_long_text():
+    # Very long input should still be handled
+    long_text = "a" * 10000
+    response = client.post(
+        "/api/v1/llm?lang=en",
+        json={"text": long_text, "mode": "summarize"},
+    )
+    assert response.status_code == 200
+    assert isinstance(response.json().get("result"), dict)

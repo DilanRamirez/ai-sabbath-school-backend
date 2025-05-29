@@ -17,3 +17,4 @@ PyMuPDF
 python-multipart
 pymupdf4llm
 boto3
+moto

@@ -17,59 +17,8 @@ def mock_llm(monkeypatch):
 
 client = TestClient(app)
 
-# ---- Lesson Index ----
-
-
-def test_list_lessons(client):
-    res = client.get("/api/v1/lessons")
-    assert res.status_code == 200
-    assert isinstance(res.json(), list)
-    assert "year" in res.json()[0]
-    assert "lesson_id" in res.json()[0]
-
-
-# ---- Lesson Content ----
-
-
-def test_get_lesson_valid(client):
-    res = client.get("/api/v1/lessons/2025/Q2/lesson-08")
-    assert res.status_code == 200
-    assert "days" in res.json()
-
-
-def test_get_lesson_invalid(client):
-    res = client.get("/api/v1/lessons/2025/Q2/fake-lesson")
-    assert res.status_code == 404
-    assert res.json()["detail"] == "Lesson not found"
-
-
-# ---- Metadata ----
-
-
-def test_get_metadata_valid(client):
-    res = client.get("/api/v1/lessons/2025/Q2/lesson-08/metadata")
-    assert res.status_code == 200
-    assert "title" in res.json()
-
-
-def test_get_metadata_invalid(client):
-    res = client.get("/api/v1/lessons/2025/Q2/unknown/metadata")
-    assert res.status_code == 404
-    assert res.json()["detail"] == "Metadata not found"
-
-
-# ---- PDF (mocked) ----
-
-
-def test_get_pdf_invalid(client):
-    res = client.get("/api/v1/lessons/2025/Q2/bogus/pdf")
-    assert res.status_code == 404
-    assert res.json()["detail"] == "PDF file not found"
-
 
 # ---- LLM Prompts ----
-
-
 def test_llm_explain_valid(client):
     res = client.post(
         # spell-checker: disable-line

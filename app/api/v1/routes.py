@@ -2,6 +2,8 @@ from fastapi import APIRouter, Body, HTTPException, Query, UploadFile, File
 import json
 from fastapi import Form
 from fastapi.responses import FileResponse
+from fastapi.responses import StreamingResponse, JSONResponse
+import botocore
 from typing import Literal, Optional
 import logging
 from pydantic import BaseModel, Field
@@ -9,10 +11,7 @@ from pathlib import Path
 from app.indexing.search_service import search_lessons, IndexStore
 from app.services.llm_service import generate_llm_response
 from app.services.cms_service import (
-    load_lesson_by_path,
     load_metadata_by_path,
-    get_lesson_pdf_path,
-    list_all_lessons,
 )
 
 from app.services.llm_parser import extract_pdf_to_json
@@ -28,24 +27,6 @@ class QARequest(BaseModel):
     top_k: int = Field(default=3, ge=1, le=20, description="Must be between 1 and 20")
     lang: Literal["en", "es"] = "es"
     mode: Literal["explain", "reflect", "apply", "summarize", "ask"] = "explain"
-
-
-@router.get("/quarters")
-def list_quarters():
-    """
-    Returns a list of available quarters across all years.
-    Example response: [{"year": "2025", "quarter": "Q2"}, ...]
-    """
-    try:
-        lessons = list_all_lessons()
-        # Extract unique (year, quarter) pairs
-        quarters_set = set((l.get("year"), l.get("quarter")) for l in lessons)
-        # Build sorted list
-        quarters = [{"year": y, "quarter": q} for (y, q) in sorted(quarters_set)]
-        return quarters
-    except Exception as e:
-        logger.error(f"Error listing quarters: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail="Unable to list quarters")
 
 
 @router.get("/ping")
@@ -66,13 +47,19 @@ def ping():
 def get_lesson(year: str, quarter: str, lesson_id: str):
     """
     Returns the full lesson.json file for a given year, quarter, and lesson ID.
-    Example: /api/v1/lessons/2025/Q2/lesson_06
+    Example: /api/v1/lessons/2025/Q2/lesson-6
     """
+    key = f"{year}/{quarter}/{lesson_id}/lesson.json"
     try:
-        return load_lesson_by_path(year, quarter, lesson_id)
-    except FileNotFoundError:
-        logger.error(f"Lesson not found: {year}/{quarter}/{lesson_id}")
-        raise HTTPException(status_code=404, detail="Lesson not found")
+        obj = s3.get_object(Bucket=BUCKET, Key=key)
+        body = obj["Body"].read().decode("utf-8")
+        return JSONResponse(content=json.loads(body))
+    except botocore.exceptions.ClientError as e:
+        if e.response["Error"]["Code"] in ("NoSuchKey", "404"):
+            logger.error(f"Lesson JSON not found in S3: {key}")
+            raise HTTPException(status_code=404, detail="Lesson not found")
+        logger.error(f"Error retrieving lesson JSON from S3: {e}")
+        raise HTTPException(status_code=500, detail="Error fetching lesson from S3")
 
 
 @router.get("/lessons/{year}/{quarter}/{lesson_id}/metadata")
@@ -100,20 +87,48 @@ def get_lesson_pdf(year: str, quarter: str, lesson_id: str):
     Returns the PDF file for a given year, quarter, and lesson ID.
     Example: /api/v1/lessons/2025/Q2/lesson-08/pdf
     """
+    key = f"{year}/{quarter}/{lesson_id}/{lesson_id}.pdf"
     try:
-        pdf_path = get_lesson_pdf_path(year, quarter, lesson_id)
-        return FileResponse(
-            pdf_path, media_type="application/pdf", filename=f"{lesson_id}.pdf"
+        obj = s3.get_object(Bucket=BUCKET, Key=key)
+        # Stream the PDF content
+        return StreamingResponse(
+            obj["Body"].iter_chunks(chunk_size=8192),
+            media_type="application/pdf",
+            headers={"Content-Disposition": f'attachment; filename="{lesson_id}.pdf"'},
         )
-    except FileNotFoundError:
-        logger.error(f"PDF not found: {year}/{quarter}/{lesson_id}")
-        raise HTTPException(status_code=404, detail="PDF file not found")
-    except ValueError as ve:
-        logger.error(f"Validation error: {ve}")
-        raise HTTPException(status_code=400, detail=str(ve))
+    except botocore.exceptions.ClientError as e:
+        if e.response["Error"]["Code"] in ("NoSuchKey", "404"):
+            logger.error(f"PDF not found in S3: {key}")
+            raise HTTPException(status_code=404, detail="PDF file not found")
+        logger.error(f"Error retrieving PDF from S3: {e}")
+        raise HTTPException(status_code=500, detail="Error fetching PDF from S3")
+
+
+@router.get("/quarters")
+def list_quarters():
+    """
+    Lists all unique (year, quarter) pairs by scanning S3 bucket prefixes.
+    """
+    try:
+        # Top-level prefixes are years
+        resp = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix="")
+        year_prefixes = [
+            p["Prefix"].rstrip("/") for p in resp.get("CommonPrefixes", [])
+        ]
+        quarters = []
+        for year in year_prefixes:
+            # Within each year, list quarters
+            prefix_q = f"{year}/"
+            resp_q = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix=prefix_q)
+            for cp in resp_q.get("CommonPrefixes", []):
+                quarter = cp["Prefix"][len(prefix_q) :].rstrip("/")
+                quarters.append({"year": year, "quarter": quarter})
+        # Sort by year then quarter
+        quarters.sort(key=lambda x: (x["year"], x["quarter"]))
+        return quarters
     except Exception as e:
-        logger.error(f"Internal server error: {e}")
-        raise HTTPException(status_code=500, detail="Unexpected error loading PDF")
+        logger.error(f"Error listing quarters from S3: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Unable to list quarters from S3")
 
 
 @router.get("/lessons")
@@ -122,22 +137,46 @@ def list_lessons(
     quarter: Optional[str] = Query(None, description="Filter by quarter, e.g. 'Q2'"),
 ):
     """
-    Returns lessons, optionally filtered by year and quarter.
-    Examples:
-      /api/v1/lessons
-      /api/v1/lessons?year=2025&quarter=Q2
+    Lists available lessons by scanning S3 prefixes. Optionally filter by year and quarter.
     """
     try:
-        lessons = list_all_lessons()
-        # Apply filters if provided
+        lessons = []
+        # Determine which years to scan
         if year:
-            lessons = [l for l in lessons if l.get("year") == year]
-        if quarter:
-            lessons = [l for l in lessons if l.get("quarter") == quarter]
+            years = [year]
+        else:
+            resp = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix="")
+            years = [p["Prefix"].rstrip("/") for p in resp.get("CommonPrefixes", [])]
+
+        for y in years:
+            # Determine quarters under this year
+            prefix_y = f"{y}/"
+            if quarter:
+                quarters = [quarter]
+            else:
+                resp_q = s3.list_objects_v2(
+                    Bucket=BUCKET, Delimiter="/", Prefix=prefix_y
+                )
+                quarters = [
+                    cp["Prefix"][len(prefix_y) :].rstrip("/")
+                    for cp in resp_q.get("CommonPrefixes", [])
+                ]
+
+            for q in quarters:
+                # Lessons under this quarter
+                prefix_l = f"{y}/{q}/"
+                resp_l = s3.list_objects_v2(
+                    Bucket=BUCKET, Delimiter="/", Prefix=prefix_l
+                )
+                for cp in resp_l.get("CommonPrefixes", []):
+                    lesson_id = cp["Prefix"][len(prefix_l) :].rstrip("/")
+                    lessons.append({"year": y, "quarter": q, "lesson_id": lesson_id})
+        # Optionally sort
+        lessons.sort(key=lambda x: (x["year"], x["quarter"], x["lesson_id"]))
         return lessons
     except Exception as e:
-        logger.error(f"Error listing lessons: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail="Unable to list lessons")
+        logger.error(f"Error listing lessons from S3: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Unable to list lessons from S3")
 
 
 @router.post("/llm")

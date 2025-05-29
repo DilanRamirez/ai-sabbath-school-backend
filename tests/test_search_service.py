@@ -70,3 +70,91 @@ def test_search_with_type_book():
         r.get("type") == "book" or r.get("type") == "book-section"
         for r in data["results"]
     )
+
+
+# Additional edge case tests
+def test_search_missing_query_param():
+    # No 'q' parameter should yield a validation error (422)
+    response = client.get("/api/v1/search")
+    assert response.status_code == 422
+
+
+def test_search_invalid_top_k_boundary_low():
+    # top_k below minimum should 422
+    response = client.get("/api/v1/search?q=test&top_k=0")
+    assert response.status_code == 422
+
+
+def test_search_invalid_top_k_boundary_high():
+    # top_k above maximum (21) should 422
+    response = client.get("/api/v1/search?q=test&top_k=21")
+    assert response.status_code == 422
+
+
+def test_search_invalid_type_fallback():
+    # invalid type should fallback to 'all' and return results
+    with TestClient(app) as client:
+        response = client.get("/api/v1/search?q=test&type=notatype")
+        assert response.status_code == 200
+        data = response.json()
+        assert isinstance(data.get("results"), list)
+        # should still include some results (if index has items)
+        assert "results" in data
+
+
+def test_search_index_not_loaded(monkeypatch):
+    # Simulate the FAISS index not loaded in memory
+    from app.indexing.search_service import IndexStore
+
+    monkeypatch.setattr(IndexStore, "index", None)
+    monkeypatch.setattr(IndexStore, "metadata", [])
+    response = client.get("/api/v1/search?q=test")
+    # When index is None, route returns a result list containing an error entry
+    assert response.status_code == 200
+    data = response.json()
+    assert "results" in data and isinstance(data["results"], list)
+    # Expect at least one result with an 'error' key indicating load failure
+    assert any("error" in item for item in data["results"])
+
+
+def test_search_empty_results():
+    # FAISS always returns top_k nearest neighbors, even for nonsense queries
+    with TestClient(app) as client:
+        response = client.get("/api/v1/search?q=asdjflkjashdflkjashdf")
+        assert response.status_code == 200
+        data = response.json()
+        # Default top_k is 5
+        assert data.get("count") == 5
+        results = data.get("results")
+        assert isinstance(results, list) and len(results) == 5
+
+
+def test_llm_missing_mode_field():
+    # Omit the 'mode' field entirely
+    response = client.post(
+        "/api/v1/llm?lang=es",
+        json={"text": "¿Qué significa la fe?"},
+    )
+    assert response.status_code == 422
+
+
+def test_llm_invalid_lang_fallback():
+    # Pass unsupported lang; should default to English or at least work
+    response = client.post(
+        "/api/v1/llm?lang=fr",
+        json={"text": "test", "mode": "explain"},
+    )
+    assert response.status_code == 200
+    data = response.json()
+    assert "result" in data
+
+
+def test_llm_long_text():
+    # Very long input should still be handled
+    long_text = "a" * 10000
+    response = client.post(
+        "/api/v1/llm?lang=en",
+        json={"text": long_text, "mode": "summarize"},
+    )
+    assert response.status_code == 200
+    assert isinstance(response.json().get("result"), dict)

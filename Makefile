@@ -1,5 +1,9 @@
 # Makefile
 
+# RUN GITHUB ACTIONS LOCALLY
+run-gha:
+	act
+	
 # Run backend unit tests
 test:
 	pytest tests --maxfail=1 --disable-warnings -q
