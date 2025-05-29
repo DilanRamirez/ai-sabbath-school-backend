@@ -11,15 +11,14 @@ def s3_setup(monkeypatch):
     # Start moto and create a test S3 bucket
     m = mock_aws()
     m.start()
-    _region = settings.AWS_REGION or "us-east-2"
-    client = boto3.client("s3", region_name=_region)
+    client = boto3.client("s3", region_name=settings.AWS_REGION)
     # Create bucket with correct location constraint
-    if _region == "us-east-2":
+    if settings.AWS_REGION == "us-east-1":
         client.create_bucket(Bucket=BUCKET)
     else:
         client.create_bucket(
             Bucket=BUCKET,
-            CreateBucketConfiguration={"LocationConstraint": _region},
+            CreateBucketConfiguration={"LocationConstraint": settings.AWS_REGION},
         )
     # Populate with two years/quarters/lessons
     for year, quarter, lid in [

@@ -20,6 +20,7 @@ class Settings:
 settings = Settings()
 # build a valid S3 client, with a fallback if region is bogus
 _region = settings.AWS_REGION or "us-east-2"
+_bucket = settings.S3_BUCKET or "my-default-bucket"
 
 try:
     # Initialize S3 client and bucket name for all environments (moto can mock this)
@@ -33,4 +34,4 @@ except ValueError:
     # boto3 complained about the endpoint—fall back to the default region lookup
     s3 = boto3.client("s3")
 
-BUCKET = settings.S3_BUCKET
+BUCKET = _bucket
