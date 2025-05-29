@@ -80,7 +80,7 @@ Dependencies list in `requirements.txt`.
 | `S3_BUCKET`             | Name of the S3 bucket for lessons & PDFs   |
 | `AWS_ACCESS_KEY_ID`     | IAM user access key                        |
 | `AWS_SECRET_ACCESS_KEY` | IAM user secret key                        |
-| `AWS_REGION`            | AWS region (e.g. `us-east-1`)              |
+| `AWS_REGION`            | AWS region (e.g. `us-east-2`)              |
 | `GEMINI_API_KEY`        | Google Generative AI API key               |
 | `ADMIN_KEY`             | X-API-Key for admin endpoints              |
 | `ADMIN_USERNAME`        | Username for admin JWT (optional)          |

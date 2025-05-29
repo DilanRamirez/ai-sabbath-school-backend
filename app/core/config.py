@@ -19,7 +19,7 @@ class Settings:
 
 settings = Settings()
 # build a valid S3 client, with a fallback if region is bogus
-_region = settings.AWS_REGION or "us-east-1"
+_region = settings.AWS_REGION or "us-east-2"
 
 try:
     # Initialize S3 client and bucket name for all environments (moto can mock this)
