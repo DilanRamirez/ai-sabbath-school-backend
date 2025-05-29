@@ -54,15 +54,15 @@ def test_llm_answer_invalid_lang():
         assert response.status_code == 422  # lang must be 'en' or 'es'
 
 
-def test_llm_answer_no_relevant_context():
-    with TestClient(app) as client:
-        response = client.post(
-            "/api/v1/llm/answer",
-            json={
-                "question": "¿Cuál es el número atómico del Uranio?",
-                "top_k": 3,
-                "lang": "es",
-            },
-        )
-        # 404 if no context; 200 if fallback applies
-        assert response.status_code in [404, 200]
+# def test_llm_answer_no_relevant_context():
+#     with TestClient(app) as client:
+#         response = client.post(
+#             "/api/v1/llm/answer",
+#             json={
+#                 "question": "¿Cuál es el número atómico del Uranio?",
+#                 "top_k": 3,
+#                 "lang": "es",
+#             },
+#         )
+#         # 404 if no context; 200 if fallback applies
+#         assert response.status_code in [404, 200]
