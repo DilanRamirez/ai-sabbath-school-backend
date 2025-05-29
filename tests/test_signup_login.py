@@ -1,5 +1,6 @@
 # tests/test_auth_routes.py
 import pytest
+from unittest.mock import patch, MagicMock
 from fastapi.testclient import TestClient
 from app.main import app
 from uuid import uuid4
@@ -17,7 +18,9 @@ def user_payload():
     }
 
 
-def test_signup_success(user_payload):
+@patch("app.api.v1.auth.table.put_item", return_value={})
+@patch("app.api.v1.auth.table.scan", return_value={"Items": []})
+def test_signup_success(mock_scan, mock_put, user_payload):
     response = client.post("/api/v1/auth/signup", json=user_payload)
     assert response.status_code == 200
     data = response.json()
@@ -25,12 +28,27 @@ def test_signup_success(user_payload):
     assert "user_id" in data
 
 
-def test_login_success(user_payload):
-    # First signup
-    signup_response = client.post("/api/v1/auth/signup", json=user_payload)
-    assert signup_response.status_code == 200
+@patch("app.api.v1.auth.table.put_item", return_value={})
+@patch("app.api.v1.auth.table.scan")
+def test_login_success(mock_scan, mock_put, user_payload):
+    from app.api.v1.auth import hash_password
 
-    # Then login
+    # Mock signup (no-op due to patching)
+    client.post("/api/v1/auth/signup", json=user_payload)
+
+    # Mock scan for login to return a user with hashed password
+    mock_scan.return_value = {
+        "Items": [
+            {
+                "user_id": "mock-user-id",
+                "email": user_payload["email"],
+                "hashed_password": hash_password(user_payload["password"]),
+                "role": user_payload["role"],
+                "name": user_payload["name"],
+            }
+        ]
+    }
+
     login_data = {"email": user_payload["email"], "password": user_payload["password"]}
     login_response = client.post("/api/v1/auth/login", json=login_data)
     assert login_response.status_code == 200
@@ -41,10 +59,15 @@ def test_login_success(user_payload):
     assert login_json["user"]["role"] == user_payload["role"]
 
 
-def test_signup_duplicate_email(user_payload):
+@patch("app.api.v1.auth.table.put_item", return_value={})
+@patch("app.api.v1.auth.table.scan", return_value={"Items": []})
+def test_signup_duplicate_email(mock_scan, mock_put, user_payload):
     # First signup
     response1 = client.post("/api/v1/auth/signup", json=user_payload)
     assert response1.status_code == 200
+
+    # Modify mock_scan to simulate email already registered
+    mock_scan.return_value = {"Items": [user_payload]}
 
     # Second signup with the same email should fail
     response2 = client.post("/api/v1/auth/signup", json=user_payload)
@@ -52,7 +75,9 @@ def test_signup_duplicate_email(user_payload):
     assert response2.json()["detail"] == "Email already registered"
 
 
-def test_login_wrong_password(user_payload):
+@patch("app.api.v1.auth.table.put_item", return_value={})
+@patch("app.api.v1.auth.table.scan", return_value={"Items": []})
+def test_login_wrong_password(mock_scan, mock_put, user_payload):
     # First signup
     response = client.post("/api/v1/auth/signup", json=user_payload)
     assert response.status_code == 200
