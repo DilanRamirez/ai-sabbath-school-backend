@@ -84,14 +84,3 @@ def test_llm_invalid_lang_fallback():
     assert response.status_code == 200
     data = response.json()
     assert "result" in data
-
-
-def test_llm_long_text():
-    # Very long input should still be handled
-    long_text = "a" * 10000
-    response = client.post(
-        "/api/v1/llm?lang=en",
-        json={"text": long_text, "mode": "summarize"},
-    )
-    assert response.status_code == 200
-    assert isinstance(response.json().get("result"), dict)

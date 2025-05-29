@@ -15,6 +15,7 @@ class Settings:
     AWS_SECRET_ACCESS_KEY: str = os.getenv("AWS_SECRET_ACCESS_KEY", "")
     AWS_REGION: str = os.getenv("AWS_REGION", "")
     S3_BUCKET: str = os.getenv("S3_BUCKET", "")
+    JWT_SECRET: str = os.getenv("JWT_SECRET", "secret-key")
 
 
 settings = Settings()
@@ -29,6 +30,12 @@ try:
         aws_access_key_id=settings.AWS_ACCESS_KEY_ID,
         aws_secret_access_key=settings.AWS_SECRET_ACCESS_KEY,
         region_name=_region,
+    )
+    dynamodb = boto3.resource(
+        "dynamodb",
+        region_name=os.getenv("AWS_REGION"),
+        aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
+        aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
     )
 except ValueError:
     # boto3 complained about the endpoint—fall back to the default region lookup

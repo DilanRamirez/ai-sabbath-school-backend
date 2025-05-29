@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.indexing.search_service import preload_index_and_metadata
 from app.api.v1.routes import router as api_router  # your public routes
 from app.api.v1.admin_routes import router as admin_router  # admin‐only
+from app.api.v1.auth import router as auth_router  # auth routes
 from app.core.config import settings
 
 
@@ -34,6 +35,9 @@ app.include_router(api_router, prefix="/api/v1")
 
 # Admin endpoints, protected by X-API-Key
 app.include_router(admin_router, prefix="/api/v1/admin")
+
+# Auth endpoints
+app.include_router(auth_router, prefix="/api/v1/auth")
 
 
 @app.get("/")

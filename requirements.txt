@@ -18,3 +18,8 @@ python-multipart
 pymupdf4llm
 boto3
 moto
+passlib
+pydantic[email]
+passlib[bcrypt]
+bcrypt==4.0.1
+PyJWT
