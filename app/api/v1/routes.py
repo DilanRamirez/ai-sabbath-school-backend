@@ -107,25 +107,77 @@ def get_lesson_pdf(year: str, quarter: str, lesson_id: str):
 @router.get("/quarters")
 def list_quarters():
     """
-    Lists all unique (year, quarter) pairs by scanning S3 bucket prefixes.
+    Lists all quarters by scanning S3 bucket for metadata.json in each quarter folder.
+    Returns a list of { year, slug, metadata } objects.
     """
     try:
-        # Top-level prefixes are years
+        # List only numeric year prefixes (e.g. "2025/")
         resp = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix="")
         year_prefixes = [
-            p["Prefix"].rstrip("/") for p in resp.get("CommonPrefixes", [])
+            p["Prefix"].rstrip("/")
+            for p in resp.get("CommonPrefixes", [])
+            if p["Prefix"].rstrip("/").isdigit()
         ]
-        quarters = []
+
+        quarters_info = []
         for year in year_prefixes:
-            # Within each year, list quarters
-            prefix_q = f"{year}/"
-            resp_q = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix=prefix_q)
+            prefix_y = f"{year}/"
+            resp_q = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix=prefix_y)
             for cp in resp_q.get("CommonPrefixes", []):
-                quarter = cp["Prefix"][len(prefix_q) :].rstrip("/")
-                quarters.append({"year": year, "quarter": quarter})
-        # Sort by year then quarter
-        quarters.sort(key=lambda x: (x["year"], x["quarter"]))
-        return quarters
+                slug = cp["Prefix"][len(prefix_y) :].rstrip("/")
+                meta_key = f"{year}/{slug}/metadata.json"
+                try:
+                    obj = s3.get_object(Bucket=BUCKET, Key=meta_key)
+                    metadata = json.loads(obj["Body"].read().decode("utf-8"))
+                except botocore.exceptions.ClientError as e:
+                    # Skip quarters without metadata.json
+                    code = e.response.get("Error", {}).get("Code")
+                    if code in ("NoSuchKey", "404"):
+                        logger.warning(f"Missing metadata.json for {year}/{slug}")
+                        continue
+                    logger.error(
+                        f"Error fetching metadata.json for {year}/{slug}: {e}",
+                        exc_info=True,
+                    )
+                    raise HTTPException(
+                        status_code=500, detail="Error fetching quarter metadata"
+                    )
+                # determine cover key from metadata (fall back to slug-based png if not provided)
+                cover_key = (
+                    metadata.get("coverKey")
+                    or f"covers/{metadata.get('slug')}-cover.png"
+                )
+                cover_url = None
+                try:
+                    # verify the object exists
+                    s3.head_object(Bucket=BUCKET, Key=cover_key)
+                    # generate a short-lived presigned URL
+                    cover_url = s3.generate_presigned_url(
+                        "get_object",
+                        Params={"Bucket": BUCKET, "Key": cover_key},
+                        ExpiresIn=3600,
+                    )
+                except botocore.exceptions.ClientError as err:
+                    # missing cover is OK; leave cover_url as None
+                    code = err.response.get("Error", {}).get("Code", "")
+                    if code not in ("NoSuchKey", "404"):
+                        logger.warning(
+                            f"Unexpected error checking cover for {year}/{slug}: {err}"
+                        )
+
+                quarters_info.append(
+                    {
+                        "year": year,
+                        "slug": slug,
+                        "metadata": metadata,
+                        "cover_url": cover_url,
+                    }
+                )
+
+        # Sort by year then slug
+        quarters_info.sort(key=lambda x: (x["year"], x["slug"]))
+        return quarters_info
+
     except Exception as e:
         logger.error(f"Error listing quarters from S3: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Unable to list quarters from S3")

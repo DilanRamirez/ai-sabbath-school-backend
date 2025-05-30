@@ -56,7 +56,9 @@ def test_list_all_lessons_success(client):
 
 
 def test_get_lesson_success(client):
-    response = client.get("/api/v1/lessons/2025/Q2/lesson-8")
+    response = client.get(
+        "/api/v1/lessons/2025/alusiones-imgenes-y-smbolos-cmo-estudiar-la-profeca-biblica/lesson-9"
+    )
     assert response.status_code == 200
     data = response.json()
     assert "days" in data
@@ -73,7 +75,9 @@ def test_get_lesson_metadata_not_found(client):
 
 
 def test_get_lesson_pdf_success(client):
-    response = client.get("/api/v1/lessons/2025/Q2/lesson-8/pdf")
+    response = client.get(
+        "/api/v1/lessons/2025/alusiones-imgenes-y-smbolos-cmo-estudiar-la-profeca-biblica/lesson-9/pdf"
+    )
     assert response.status_code == 200
     assert response.headers["content-type"] == "application/pdf"
 
@@ -104,13 +108,10 @@ def test_get_lesson_pdf_bad_request(client):
 
 # Additional tests for listing quarters and lessons edge cases
 def test_list_quarters_success(client):
-    # Should list all unique year/quarter pairs
     response = client.get("/api/v1/quarters")
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
-    # We expect at least the 2025/Q2 entry
-    assert {"year": "2025", "quarter": "Q2"} in data
 
 
 def test_list_lessons_filter_year(client):

@@ -100,5 +100,10 @@ def login_user(payload: UserLoginRequest):
     return {
         "access_token": token,
         "token_type": "bearer",
-        "user": {"id": user["user_id"], "name": user["name"], "role": user["role"]},
+        "user": {
+            "id": user["user_id"],
+            "name": user["name"],
+            "role": user["role"],
+            "email": user["email"],
+        },
     }
