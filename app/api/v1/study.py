@@ -13,6 +13,7 @@ class StudyProgressUpdate(BaseModel):
     user_id: str
     lesson_id: str
     day: str
+    quarter: str
     note: Optional[str] = None
     cohort_id: Optional[str] = None
     mark_studied: Optional[bool] = False
@@ -53,6 +54,11 @@ def update_study_progress(payload: StudyProgressUpdate):
             else:
                 item["notes"].append({"day": payload.day, "note": payload.note})
 
+        item["last_position"] = {
+            "quarter": payload.quarter,
+            "lesson_id": payload.lesson_id,
+            "day": payload.day,
+        }
         item["last_accessed"] = datetime.utcnow().isoformat()
         item["cohort_id"] = payload.cohort_id or item.get("cohort_id")
         item["score"] = compute_score(item["days_completed"], item["notes"])

@@ -122,6 +122,7 @@ def list_quarters():
         quarters_info = []
         for year in year_prefixes:
             prefix_y = f"{year}/"
+            print(f"Scanning year: {year}")
             resp_q = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix=prefix_y)
             for cp in resp_q.get("CommonPrefixes", []):
                 slug = cp["Prefix"][len(prefix_y) :].rstrip("/")
@@ -215,14 +216,41 @@ def list_lessons(
                 ]
 
             for q in quarters:
-                # Lessons under this quarter
+                # List lesson folders under this quarter
                 prefix_l = f"{y}/{q}/"
                 resp_l = s3.list_objects_v2(
                     Bucket=BUCKET, Delimiter="/", Prefix=prefix_l
                 )
                 for cp in resp_l.get("CommonPrefixes", []):
                     lesson_id = cp["Prefix"][len(prefix_l) :].rstrip("/")
-                    lessons.append({"year": y, "quarter": q, "lesson_id": lesson_id})
+                    # Load lesson metadata.json
+                    meta_key = f"{y}/{q}/{lesson_id}/metadata.json"
+                    try:
+                        obj = s3.get_object(Bucket=BUCKET, Key=meta_key)
+                        metadata = json.loads(obj["Body"].read().decode("utf-8"))
+                    except botocore.exceptions.ClientError as e:
+                        code = e.response.get("Error", {}).get("Code")
+                        # Skip if metadata.json missing
+                        if code in ("NoSuchKey", "404"):
+                            logger.warning(
+                                f"Missing metadata.json for {y}/{q}/{lesson_id}"
+                            )
+                            continue
+                        logger.error(
+                            f"Error fetching lesson metadata {meta_key}: {e}",
+                            exc_info=True,
+                        )
+                        raise HTTPException(
+                            status_code=500, detail="Error fetching lesson metadata"
+                        )
+                    lessons.append(
+                        {
+                            "year": y,
+                            "quarter": q,
+                            "lesson_id": lesson_id,
+                            "metadata": metadata,
+                        }
+                    )
         # Optionally sort
         lessons.sort(key=lambda x: (x["year"], x["quarter"], x["lesson_id"]))
         return lessons
