@@ -20,6 +20,10 @@ class StudyProgressUpdate(BaseModel):
     question_id: Optional[str] = None
 
 
+def normalize_user_id(user_id: str) -> str:
+    return user_id.replace("@", "-at-").replace(".", "-dot-")
+
+
 def compute_score(days_completed: List[str], notes: List[dict]) -> Decimal:
     score = len(set(days_completed)) * 0.1 + len(notes) * 0.1
     return min(Decimal(str(score)), Decimal("1.0"))
@@ -27,7 +31,11 @@ def compute_score(days_completed: List[str], notes: List[dict]) -> Decimal:
 
 @router.post("/progress")
 def update_study_progress(payload: StudyProgressUpdate):
-    pk = f"USER#{payload.user_id}"
+    normalized_id = normalize_user_id(payload.user_id)
+    print(
+        f"Updating progress for user: {normalized_id}, lesson: {payload.lesson_id}, day: {payload.day}"
+    )
+    pk = f"USER#{normalized_id}"
     sk = f"LESSON#{payload.lesson_id}"
 
     try:
@@ -87,12 +95,16 @@ def update_study_progress(payload: StudyProgressUpdate):
 # New route to get study progress for a specific user and lesson
 @router.get("/progress/{user_id}/{lesson_id}")
 def get_study_progress(user_id: str, lesson_id: str):
-    pk = f"USER#{user_id}"
+    normalized_id = normalize_user_id(user_id)
+    print(f"Retrieving progress for user: {normalized_id}, lesson: {lesson_id}")
+    pk = f"USER#{normalized_id}"
     sk = f"LESSON#{lesson_id}"
 
     try:
         result = table.get_item(Key={"PK": pk, "SK": sk})
+        print(f"Result from DynamoDB: {result}")
         item = result.get("Item")
+        print(f"Retrieved item: {item}")
         if not item:
             raise HTTPException(status_code=404, detail="Progress not found")
         return item
