@@ -24,7 +24,7 @@ logger = logging.getLogger(__name__)
 
 class QARequest(BaseModel):
     question: str
-    top_k: int = Field(default=3, ge=1, le=20, description="Must be between 1 and 20")
+    top_k: int = Field(default=1, ge=1, le=20, description="Must be between 1 and 20")
     lang: Literal["en", "es"] = "es"
     mode: Literal["explain", "reflect", "apply", "summarize", "ask"] = "explain"
 
@@ -270,8 +270,31 @@ def process_llm(
     if not text or not text.strip():
         raise HTTPException(status_code=400, detail="Text input cannot be empty.")
     try:
-        result = generate_llm_response(text, mode, "", lang)
-        return {"result": result}
+        # Perform semantic search for context
+        context_chunks = search_lessons(text, top_k=1)
+        rag_refs: dict[str, str] = {}
+        formatted_chunks: list[str] = []
+        for idx, chunk in enumerate(context_chunks):
+            chunk_text = chunk.get("text", "")
+            ref = None
+            if chunk.get("type") == "book-section":
+                ref = {
+                    "book_title": chunk.get("book_title", ""),
+                    "section_number": chunk.get("section_number", ""),
+                    "section_title": chunk.get("section_title", ""),
+                    "page_number": chunk.get("page_number", ""),
+                }
+            if ref:
+                print(f"Adding RAG reference for index {idx}: {ref}")
+                rag_refs[str(idx)] = ref
+            formatted_chunks.append(chunk_text)
+
+        context_text = "\n\n".join(formatted_chunks)
+        result = generate_llm_response(text, mode, context_text, lang)
+        return {
+            "result": result,
+            "rag_refs": rag_refs,
+        }
     except Exception as e:
         logger.error(f"Error processing LLM request: {e}")
         raise HTTPException(status_code=500, detail=str(e))

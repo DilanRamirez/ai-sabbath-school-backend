@@ -359,7 +359,6 @@ def build_prompt(
         # Build the final prompt using the template
         prompt = template.format(context=truncated, question=question, lang=lang)
 
-        print(f"Prompt: {prompt}")
         return {"prompt": prompt, "refs": refs}
     except Exception as e:
         # Log the error and return a fallback prompt
