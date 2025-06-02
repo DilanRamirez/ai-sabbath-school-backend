@@ -78,7 +78,19 @@ def signup_user(payload: UserSignupRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    return {"status": "success", "user_id": user_id}
+    # Automatically create access token after signup
+    token = create_access_token(data={"sub": user_id, "role": payload.role})
+
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user": {
+            "id": user_id,
+            "name": payload.name,
+            "role": payload.role,
+            "email": payload.email,
+        },
+    }
 
 
 @router.post("/login")

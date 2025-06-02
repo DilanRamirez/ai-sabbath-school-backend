@@ -24,8 +24,8 @@ def test_signup_success(mock_scan, mock_put, user_payload):
     response = client.post("/api/v1/auth/signup", json=user_payload)
     assert response.status_code == 200
     data = response.json()
-    assert data["status"] == "success"
-    assert "user_id" in data
+    assert data["token_type"] == "bearer"
+    assert "user" in data
 
 
 @patch("app.api.v1.auth.table.put_item", return_value={})
