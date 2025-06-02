@@ -17,6 +17,7 @@ class StudyProgressUpdate(BaseModel):
     note: Optional[str] = None
     cohort_id: Optional[str] = None
     mark_studied: Optional[bool] = False
+    question_id: Optional[str] = None
 
 
 def compute_score(days_completed: List[str], notes: List[dict]) -> Decimal:
@@ -47,12 +48,25 @@ def update_study_progress(payload: StudyProgressUpdate):
 
         if payload.note:
             existing_note = next(
-                (n for n in item["notes"] if n["day"] == payload.day), None
+                (
+                    n
+                    for n in item["notes"]
+                    if n["day"] == payload.day
+                    and n.get("question_id") == payload.question_id
+                ),
+                None,
             )
             if existing_note:
                 existing_note["note"] = payload.note
             else:
-                item["notes"].append({"day": payload.day, "note": payload.note})
+                item["notes"].append(
+                    {
+                        "day": payload.day,
+                        "note": payload.note,
+                        "question_id": payload.question_id,
+                        "created_at": datetime.utcnow().isoformat(),
+                    }
+                )
 
         item["last_position"] = {
             "quarter": payload.quarter,
