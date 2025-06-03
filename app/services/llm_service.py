@@ -39,8 +39,6 @@ def generate_llm_response(
             logging.error("The prompt is empty or invalid.")
             return "[Error: Prompt generation failed]"
 
-        # Log first 100 chars for brevity
-        print(f"Generated prompt: {prompt}...")
         response = model.generate_content(prompt)
         if not response or not hasattr(response, "text") or not response.text.strip():
             logging.error("LLM returned an empty or invalid response.")

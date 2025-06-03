@@ -338,6 +338,8 @@ def build_prompt(
             lines = []
             for ref in refs:
                 fetched = fetch_bible_text(ref)
+                # Log first 100 chars
+                print(f"Fetched text for {ref}: {fetched[:100]}...")
                 if fetched:
                     lines.append(fetched)
                 else:

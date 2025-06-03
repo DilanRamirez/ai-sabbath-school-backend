@@ -18,6 +18,7 @@ class StudyProgressUpdate(BaseModel):
     cohort_id: Optional[str] = None
     mark_studied: Optional[bool] = False
     question_id: Optional[str] = None
+    content: Optional[str] = None
 
 
 def normalize_user_id(user_id: str) -> str:
@@ -64,6 +65,8 @@ def update_study_progress(payload: StudyProgressUpdate):
                 ),
                 None,
             )
+            print(f"Existing note found: {existing_note}")
+            print(f"content: {payload.content}")
             if existing_note:
                 existing_note["note"] = payload.note
             else:
@@ -72,6 +75,7 @@ def update_study_progress(payload: StudyProgressUpdate):
                         "day": payload.day,
                         "note": payload.note,
                         "question_id": payload.question_id,
+                        "content": payload.content,
                         "created_at": datetime.utcnow().isoformat(),
                     }
                 )
@@ -108,5 +112,26 @@ def get_study_progress(user_id: str, lesson_id: str):
         if not item:
             raise HTTPException(status_code=404, detail="Progress not found")
         return item
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# Route to get all study progress records for a user
+@router.get("/progress/{user_id}")
+def get_all_study_progress_for_user(user_id: str):
+    normalized_id = normalize_user_id(user_id)
+    print(f"Retrieving all progress for user: {normalized_id}")
+    pk = f"USER#{normalized_id}"
+    try:
+        response = table.query(
+            KeyConditionExpression="PK = :pk",
+            ExpressionAttributeValues={":pk": pk},
+        )
+        items = response.get("Items", [])
+        if not items:
+            raise HTTPException(
+                status_code=404, detail="No progress records found for user"
+            )
+        return items
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
