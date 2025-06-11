@@ -55,18 +55,18 @@ def update_study_progress(payload: StudyProgressUpdate):
         if payload.mark_studied and payload.day not in item["days_completed"]:
             item["days_completed"].append(payload.day)
 
-        if payload.note:
-            existing_note = next(
-                (
-                    n
-                    for n in item["notes"]
-                    if n["day"] == payload.day
-                    and n.get("question_id") == payload.question_id
-                ),
-                None,
-            )
-            print(f"Existing note found: {existing_note}")
-            print(f"content: {payload.content}")
+        # Update or delete note entry based on payload.note
+        existing_note = next(
+            (
+                n
+                for n in item["notes"]
+                if n["day"] == payload.day
+                and n.get("question_id") == payload.question_id
+            ),
+            None,
+        )
+        if payload.note and payload.note.strip():
+            # Add or update note
             if existing_note:
                 existing_note["note"] = payload.note
             else:
@@ -81,6 +81,17 @@ def update_study_progress(payload: StudyProgressUpdate):
                         "created_at": datetime.utcnow().isoformat(),
                     }
                 )
+        else:
+            # Delete existing note if present
+            if existing_note:
+                item["notes"] = [
+                    n
+                    for n in item["notes"]
+                    if not (
+                        n["day"] == payload.day
+                        and n.get("question_id") == payload.question_id
+                    )
+                ]
 
         item["last_position"] = {
             "quarter": payload.quarter,
@@ -102,8 +113,7 @@ def update_study_progress(payload: StudyProgressUpdate):
 @router.get("/progress/{user_id}/{lesson_id}")
 def get_study_progress(user_id: str, lesson_id: str):
     normalized_id = normalize_user_id(user_id)
-    print(
-        f"Retrieving progress for user: {normalized_id}, lesson: {lesson_id}")
+    print(f"Retrieving progress for user: {normalized_id}, lesson: {lesson_id}")
     pk = f"USER#{normalized_id}"
     sk = f"LESSON#{lesson_id}"
 
