@@ -75,6 +75,8 @@ def update_study_progress(payload: StudyProgressUpdate):
                         "day": payload.day,
                         "note": payload.note,
                         "question_id": payload.question_id,
+                        "lesson_id": payload.lesson_id,
+                        "quarter": payload.quarter,
                         "content": payload.content,
                         "created_at": datetime.utcnow().isoformat(),
                     }
@@ -100,7 +102,8 @@ def update_study_progress(payload: StudyProgressUpdate):
 @router.get("/progress/{user_id}/{lesson_id}")
 def get_study_progress(user_id: str, lesson_id: str):
     normalized_id = normalize_user_id(user_id)
-    print(f"Retrieving progress for user: {normalized_id}, lesson: {lesson_id}")
+    print(
+        f"Retrieving progress for user: {normalized_id}, lesson: {lesson_id}")
     pk = f"USER#{normalized_id}"
     sk = f"LESSON#{lesson_id}"
 
