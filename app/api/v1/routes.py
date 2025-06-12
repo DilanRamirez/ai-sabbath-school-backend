@@ -1,3 +1,4 @@
+from typing import Literal
 from fastapi import APIRouter, Body, HTTPException, Query, UploadFile, File
 import json
 from fastapi import Form
@@ -9,7 +10,7 @@ import logging
 from pydantic import BaseModel, Field
 from pathlib import Path
 from app.indexing.search_service import search_lessons, IndexStore
-from app.services.llm_service import generate_llm_response
+from app.services.llm_service import generate_llm_response, get_llm_response
 from app.services.cms_service import (
     load_metadata_by_path,
 )
@@ -406,6 +407,30 @@ def generate_answer(payload: QARequest):
         raise HTTPException(status_code=500, detail=f"Error interno: {str(e)}")
 
 
+# New endpoint: /prompt
+
+
+class PromptRequest(BaseModel):
+    prompt: str = Field(..., description="The text prompt to send to the LLM")
+    lang: Literal["en", "es"] = Field("es", description="Language of the response")
+
+
+@router.post("/prompt")
+def generate_from_prompt(payload: PromptRequest):
+    """
+    Receives a free-form prompt and returns an LLM-generated response.
+    """
+    if not payload.prompt.strip():
+        raise HTTPException(status_code=400, detail="Prompt cannot be empty.")
+    try:
+        llm_result = get_llm_response(payload.prompt)
+        # llm_result is a dict with key "answer"
+        return {"response": llm_result.get("answer", ""), "lang": payload.lang}
+    except Exception as e:
+        logger.error(f"Error generating prompt response: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Failed to generate LLM response")
+
+
 @router.post("/llm/parser")
 async def parse_pdf(file: UploadFile = File(...)):
     """
@@ -449,6 +474,7 @@ async def import_lesson(
     lesson_id: str,
     lesson_data: str = Form(..., description="Cleaned lesson JSON as string"),
     pdf: UploadFile = File(..., description="The lesson PDF file"),
+    metadata: str = Form(..., description="Lesson metadata JSON as string"),
 ):
     """
     Imports a cleaned lesson by saving lesson.json and PDF directly to S3 under {year}/{quarter}/{lesson_id}.
@@ -484,6 +510,25 @@ async def import_lesson(
         logger.error(f"Error uploading lesson JSON to S3: {e}")
         raise HTTPException(
             status_code=500, detail="Could not upload lesson JSON to S3"
+        )
+
+    # Parse and upload metadata JSON
+    try:
+        meta_data = json.loads(metadata)
+        meta_key = f"{year}/{quarter}/{lesson_id}/metadata.json"
+        s3.put_object(
+            Bucket=BUCKET,
+            Key=meta_key,
+            Body=json.dumps(meta_data, ensure_ascii=False, indent=2),
+            ContentType="application/json",
+        )
+    except json.JSONDecodeError as e:
+        logger.error(f"Invalid metadata JSON: {e}")
+        raise HTTPException(status_code=400, detail="Invalid metadata JSON payload")
+    except Exception as e:
+        logger.error(f"Error uploading metadata JSON to S3: {e}")
+        raise HTTPException(
+            status_code=500, detail="Could not upload metadata JSON to S3"
         )
 
     # Read and upload PDF directly to S3
