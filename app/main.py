@@ -29,8 +29,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3004",
         "https://ai-sabbath-school-frontend.vercel.app",
-        "https://gentle-meadow-08f54890f.6.azurestaticapps.net"
-        "https://ai-sabbath-school-frontend-production.up.railway.app",
+        "https://gentle-meadow-08f54890f.6.azurestaticapps.net",
     ],
     allow_credentials=True,
     allow_methods=["*"],
