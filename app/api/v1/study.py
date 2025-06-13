@@ -1,4 +1,5 @@
-from fastapi import APIRouter, HTTPException
+from datetime import datetime, timedelta
+from fastapi import APIRouter, HTTPException, Path
 from pydantic import BaseModel
 from typing import Optional, List
 from datetime import datetime
@@ -139,5 +140,101 @@ def get_all_study_progress_for_user(user_id: str):
                 status_code=404, detail="No progress records found for user"
             )
         return items
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# Endpoint to return a summary of the user's study progress
+
+
+def is_this_week(date_str: str) -> bool:
+    try:
+        today = datetime.utcnow()
+        date = datetime.fromisoformat(date_str)
+        start_of_week = today - timedelta(days=today.weekday())
+        end_of_week = start_of_week + timedelta(days=6)
+        return start_of_week.date() <= date.date() <= end_of_week.date()
+    except Exception:
+        return False
+
+
+@router.get("/progress-summary/{user_id}")
+def get_study_progress_summary(user_id: str):
+    normalized_id = normalize_user_id(user_id)
+    pk = f"USER#{normalized_id}"
+    try:
+        response = table.query(
+            KeyConditionExpression="PK = :pk",
+            ExpressionAttributeValues={":pk": pk},
+        )
+        items = response.get("Items", [])
+        if not items:
+            raise HTTPException(
+                status_code=404, detail="No progress records found for user"
+            )
+
+        total_lessons_in_quarter = 13  # Ideally dynamic based on current quarter
+        days_this_week = set()
+        notes_this_week = 0
+        lessons_completed = 0
+
+        for item in items:
+            days_completed = item.get("days_completed", [])
+            notes = item.get("notes", [])
+            if len(set(days_completed)) >= 7:
+                lessons_completed += 1
+            for note in notes:
+                if note.get("created_at") and is_this_week(note["created_at"]):
+                    notes_this_week += 1
+            if is_this_week(item.get("last_accessed", "")):
+                days_this_week.update(days_completed)
+
+        return {
+            "daysCompletedThisWeek": len(days_this_week),
+            "notesWrittenThisWeek": notes_this_week,
+            "lessonsCompleted": lessons_completed,
+            "totalLessonsInQuarter": total_lessons_in_quarter,
+        }
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# Endpoint to get the last viewed position of the user
+@router.get("/last-position/{user_id}")
+def get_last_position(user_id: str):
+    normalized_id = normalize_user_id(user_id)
+    pk = f"USER#{normalized_id}"
+    try:
+        response = table.query(
+            KeyConditionExpression="PK = :pk",
+            ExpressionAttributeValues={":pk": pk},
+        )
+        items = response.get("Items", [])
+        if not items:
+            raise HTTPException(
+                status_code=404, detail="No progress records found for user"
+            )
+
+        last_item = max(items, key=lambda x: x.get("last_accessed", ""))
+        return last_item.get("last_position", {})
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+# Endpoint to get progress for a specific lesson (with explicit Path params)
+@router.get("/progress/{user_id}/{lesson_id}")
+def get_lesson_progress(user_id: str = Path(...), lesson_id: str = Path(...)):
+    normalized_id = normalize_user_id(user_id)
+    pk = f"USER#{normalized_id}"
+    sk = f"LESSON#{lesson_id}"
+
+    try:
+        result = table.get_item(Key={"PK": pk, "SK": sk})
+        item = result.get("Item")
+        if not item:
+            raise HTTPException(status_code=404, detail="Progress not found")
+        return item
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
