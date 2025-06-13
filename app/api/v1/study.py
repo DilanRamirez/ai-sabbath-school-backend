@@ -1,3 +1,4 @@
+import json
 from datetime import datetime, timedelta
 from fastapi import APIRouter, HTTPException, Path
 from pydantic import BaseModel
@@ -5,6 +6,8 @@ from typing import Optional, List
 from datetime import datetime
 from decimal import Decimal
 from app.core.config import dynamodb
+from app.core.config import BUCKET, s3
+
 
 router = APIRouter()
 table = dynamodb.Table("SabbathSchoolApp")
@@ -15,6 +18,7 @@ class StudyProgressUpdate(BaseModel):
     lesson_id: str
     day: str
     quarter: str
+    year: str
     note: Optional[str] = None
     cohort_id: Optional[str] = None
     mark_studied: Optional[bool] = False
@@ -95,6 +99,7 @@ def update_study_progress(payload: StudyProgressUpdate):
             "quarter": payload.quarter,
             "lesson_id": payload.lesson_id,
             "day": payload.day,
+            "year": payload.year,
         }
         item["last_accessed"] = datetime.utcnow().isoformat()
         item["cohort_id"] = payload.cohort_id or item.get("cohort_id")
@@ -104,7 +109,10 @@ def update_study_progress(payload: StudyProgressUpdate):
         return {"status": "updated", "score": item["score"]}
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=f"Something went wrong on the server. Please try again. ({str(e)})",
+        )
 
 
 # New route to get study progress for a specific user and lesson
@@ -118,10 +126,16 @@ def get_study_progress(user_id: str, lesson_id: str):
         result = table.get_item(Key={"PK": pk, "SK": sk})
         item = result.get("Item")
         if not item:
-            raise HTTPException(status_code=404, detail="Progress not found")
+            raise HTTPException(
+                status_code=404,
+                detail="No progress found for this lesson. Start studying to see your progress here!",
+            )
         return item
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=f"Something went wrong on the server. Please try again. ({str(e)})",
+        )
 
 
 # Route to get all study progress records for a user
@@ -137,11 +151,15 @@ def get_all_study_progress_for_user(user_id: str):
         items = response.get("Items", [])
         if not items:
             raise HTTPException(
-                status_code=404, detail="No progress records found for user"
+                status_code=404,
+                detail="No study progress records were found for this user. Start your journey by selecting a lesson!",
             )
         return items
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=f"Something went wrong on the server. Please try again. ({str(e)})",
+        )
 
 
 # Endpoint to return a summary of the user's study progress
@@ -168,10 +186,15 @@ def get_study_progress_summary(user_id: str):
             ExpressionAttributeValues={":pk": pk},
         )
         items = response.get("Items", [])
+
+        # Guard clause: prevent processing logic on empty response
         if not items:
-            raise HTTPException(
-                status_code=404, detail="No progress records found for user"
-            )
+            return {
+                "daysCompletedThisWeek": 0,
+                "notesWrittenThisWeek": 0,
+                "lessonsCompleted": 0,
+                "totalLessonsInQuarter": 13,
+            }
 
         total_lessons_in_quarter = 13  # Ideally dynamic based on current quarter
         days_this_week = set()
@@ -197,30 +220,107 @@ def get_study_progress_summary(user_id: str):
         }
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=f"Something went wrong on the server. Please try again. ({str(e)})",
+        )
 
 
 # Endpoint to get the last viewed position of the user
+
+
 @router.get("/last-position/{user_id}")
-def get_last_position(user_id: str):
-    normalized_id = normalize_user_id(user_id)
-    pk = f"USER#{normalized_id}"
-    try:
-        response = table.query(
-            KeyConditionExpression="PK = :pk",
-            ExpressionAttributeValues={":pk": pk},
+def get_last_viewed_position(user_id: str):
+    """
+    Retrieves the user's last viewed position along with associated metadata and AI summary.
+    """
+    # Validate input
+    if not user_id.strip():
+        raise HTTPException(
+            status_code=400, detail="Missing user ID. Please log in again."
         )
-        items = response.get("Items", [])
-        if not items:
+
+    normalized_user_id = normalize_user_id(user_id)
+    primary_key = f"USER#{normalized_user_id}"
+
+    try:
+        # Query progress records for the user.
+        progress_query = table.query(
+            KeyConditionExpression="PK = :pk",
+            ExpressionAttributeValues={":pk": primary_key},
+        )
+        progress_records = progress_query.get("Items", [])
+        if not progress_records:
+            return None
+
+        # Select the record with the latest 'last_accessed' timestamp.
+        last_progress_record = max(
+            progress_records, key=lambda rec: rec.get("last_accessed") or ""
+        )
+        last_position = last_progress_record.get("last_position", {})
+        if not last_position:
             raise HTTPException(
-                status_code=404, detail="No progress records found for user"
+                status_code=404,
+                detail="We couldn't find the last position. Try opening a lesson to get started.",
             )
 
-        last_item = max(items, key=lambda x: x.get("last_accessed", ""))
-        return last_item.get("last_position", {})
+        # Validate that essential fields are present.
+        year = last_position.get("year")
+        lesson_id = last_position.get("lesson_id")
+        quarter = last_position.get("quarter")
+        current_day = last_position.get("day")
+        if not all([year, lesson_id, quarter, current_day]):
+            raise HTTPException(
+                status_code=400,
+                detail="Lesson navigation data is incomplete. Try reopening the lesson.",
+            )
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        # Construct S3 keys to fetch metadata and lesson summary.
+        metadata_key = f"{year}/{quarter}/{lesson_id}/metadata.json"
+        lesson_summary_key = f"{year}/{quarter}/{lesson_id}/lesson.json"
+
+        # Attempt to load metadata and lesson summary from S3.
+        try:
+            metadata_object = s3.get_object(Bucket=BUCKET, Key=metadata_key)
+            lesson_summary_object = s3.get_object(Bucket=BUCKET, Key=lesson_summary_key)
+            metadata = json.loads(metadata_object["Body"].read())
+            lesson_summary = json.loads(lesson_summary_object["Body"].read())
+        except Exception as s3_error:
+            raise HTTPException(
+                status_code=500,
+                detail=f"Error loading metadata files from S3: {str(s3_error)}",
+            )
+
+        # Extract today's AI summary from lesson summary
+        days_summary = lesson_summary.get("days")
+        if not days_summary or not isinstance(days_summary, list):
+            raise HTTPException(
+                status_code=404,
+                detail="We couldn't load the lesson summary. Please try again later.",
+            )
+
+        day_summary = next(
+            (day for day in days_summary if day.get("day") == current_day), None
+        )
+        if day_summary is None:
+            raise HTTPException(
+                status_code=404,
+                detail=f"No summary found for {current_day}. Start studying to generate insights!",
+            )
+
+        return {
+            "position": last_position,
+            "metadata": metadata,
+            "aiSummaryDay": day_summary.get("daySummary", ""),
+        }
+
+    except HTTPException as http_err:
+        raise http_err
+    except Exception as error:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Something went wrong on the server. Please try again. ({str(error)})",
+        )
 
 
 # Endpoint to get progress for a specific lesson (with explicit Path params)
@@ -234,7 +334,13 @@ def get_lesson_progress(user_id: str = Path(...), lesson_id: str = Path(...)):
         result = table.get_item(Key={"PK": pk, "SK": sk})
         item = result.get("Item")
         if not item:
-            raise HTTPException(status_code=404, detail="Progress not found")
+            raise HTTPException(
+                status_code=404,
+                detail="No progress found for this lesson. Start studying to see your progress here!",
+            )
         return item
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=f"Something went wrong on the server. Please try again. ({str(e)})",
+        )

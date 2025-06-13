@@ -69,17 +69,17 @@ def get_lesson_metadata(year: str, quarter: str, lesson_id: str):
     Returns the metadata.json file for a given year, quarter, and lesson ID.
     Example: /api/v1/lessons/2025/Q2/lesson_06/metadata
     """
+    key = f"{year}/{quarter}/{lesson_id}/metadata.json"
     try:
-        return load_metadata_by_path(year, quarter, lesson_id)
-    except FileNotFoundError:
-        logger.error(f"Metadata not found: {year}/{quarter}/{lesson_id}")
-        raise HTTPException(status_code=404, detail="Metadata not found")
-    except ValueError as ve:
-        logger.error(f"Validation error: {ve}")
-        raise HTTPException(status_code=400, detail=str(ve))
-    except Exception as e:
-        logger.error(f"Internal server error: {e}")
-        raise HTTPException(status_code=500, detail="Unexpected error loading metadata")
+        obj = s3.get_object(Bucket=BUCKET, Key=key)
+        body = obj["Body"].read().decode("utf-8")
+        return JSONResponse(content=json.loads(body))
+    except botocore.exceptions.ClientError as e:
+        if e.response["Error"]["Code"] in ("NoSuchKey", "404"):
+            logger.error(f"Metadata not found in S3: {key}")
+            raise HTTPException(status_code=404, detail="Metadata not found")
+        logger.error(f"Error retrieving metadata from S3: {e}")
+        raise HTTPException(status_code=500, detail="Error fetching metadata from S3")
 
 
 @router.get("/lessons/{year}/{quarter}/{lesson_id}/pdf")
