@@ -126,7 +126,6 @@ def parse_all_lessons_in_directory(base_dir="app/data/2025/Q2"):
         lesson_path = os.path.join(base_dir, folder)
         pdf_file = os.path.join(lesson_path, "lesson.pdf")
         if os.path.exists(pdf_file):
-            print(f"Parsing: {pdf_file}")
             global PDF_PATH, OUTPUT_DIR
             PDF_PATH = pdf_file
             OUTPUT_DIR = lesson_path

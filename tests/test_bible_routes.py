@@ -31,7 +31,6 @@ def test_get_chapter_valid(client, book, chapter, expected_first_verse):
     verses = data["verses"]
     assert isinstance(verses, dict)
     # check first verse text starts correctly
-    print(verses.get("1", ""))
     assert verses.get("1", "").startswith(expected_first_verse)
 
 

@@ -238,7 +238,6 @@ def parse_reference(ref: str) -> dict:
     num_prefix = ""
     book_name = book_part
     num_match = re.match(r"^(?P<num>\d+)\s*(?P<name>.+)$", book_part)
-    print(num_match)
     if num_match:
         num_prefix = num_match.group("num") + " "
         book_name = num_match.group("name")

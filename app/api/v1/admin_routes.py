@@ -39,7 +39,6 @@ def admin_status():
     """
     Returns current status of the FAISS index.
     """
-    print("Admin status check")
     return JSONResponse(
         content={
             "index_loaded": IndexStore.index is not None,

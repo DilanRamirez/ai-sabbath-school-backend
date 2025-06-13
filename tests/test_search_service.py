@@ -21,7 +21,6 @@ def test_search_valid_query_returns_results():
         response = client.get("/api/v1/search?q=gospel")
         assert response.status_code == 200
         data = response.json()
-        print(f"[DEBUG] Response data: {data['results']}")
         assert "results" in data
         assert isinstance(data["results"], list)
         assert "query" in data

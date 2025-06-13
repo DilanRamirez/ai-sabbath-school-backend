@@ -32,7 +32,6 @@ def normalize_paragraphs(text: str) -> str:
 
 def parse_toc_format_1(pdf_path):
     reader = PdfReader(pdf_path)
-    print(f"Number of pages: {len(reader.pages)}")
     # Extract first 15 pages for TOC
     text = "\n".join(
         reader.pages[i].extract_text() or "" for i in range(min(15, len(reader.pages)))
@@ -74,7 +73,6 @@ def parse_toc_auto(pdf_path):
     for i in range(total_pages):
         text = reader.pages[i].extract_text() or ""
         if "Índice general" in text:
-            print(f"Found 'Índice general' on page {i+1}")
             toc_start = i
             break
     if toc_start is None:
@@ -304,8 +302,6 @@ def generate_json(pdf_path, title, author, publication_year):
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-
-    print(f"JSON file created at {json_path}")
 
 
 if __name__ == "__main__":

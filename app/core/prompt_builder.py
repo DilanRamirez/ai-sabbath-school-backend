@@ -219,7 +219,6 @@ def fetch_bible_text(ref: str) -> str:
             print("Incomplete Bible reference.")
             return ""
         url = f"https://bible-api.com/{api_ref.replace(' ', '+')}"
-        print(f"Bible reference: {api_ref}")
         resp = requests.get(url, timeout=5)
         resp.raise_for_status()
         data = resp.json()
@@ -338,8 +337,6 @@ def build_prompt(
             lines = []
             for ref in refs:
                 fetched = fetch_bible_text(ref)
-                # Log first 100 chars
-                print(f"Fetched text for {ref}: {fetched[:100]}...")
                 if fetched:
                     lines.append(fetched)
                 else:

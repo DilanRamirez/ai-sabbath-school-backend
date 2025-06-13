@@ -33,9 +33,6 @@ def compute_score(days_completed: List[str], notes: List[dict]) -> Decimal:
 @router.post("/progress")
 def update_study_progress(payload: StudyProgressUpdate):
     normalized_id = normalize_user_id(payload.user_id)
-    print(
-        f"Updating progress for user: {normalized_id}, lesson: {payload.lesson_id}, day: {payload.day}"
-    )
     pk = f"USER#{normalized_id}"
     sk = f"LESSON#{payload.lesson_id}"
 
@@ -113,15 +110,12 @@ def update_study_progress(payload: StudyProgressUpdate):
 @router.get("/progress/{user_id}/{lesson_id}")
 def get_study_progress(user_id: str, lesson_id: str):
     normalized_id = normalize_user_id(user_id)
-    print(f"Retrieving progress for user: {normalized_id}, lesson: {lesson_id}")
     pk = f"USER#{normalized_id}"
     sk = f"LESSON#{lesson_id}"
 
     try:
         result = table.get_item(Key={"PK": pk, "SK": sk})
-        print(f"Result from DynamoDB: {result}")
         item = result.get("Item")
-        print(f"Retrieved item: {item}")
         if not item:
             raise HTTPException(status_code=404, detail="Progress not found")
         return item
@@ -133,7 +127,6 @@ def get_study_progress(user_id: str, lesson_id: str):
 @router.get("/progress/{user_id}")
 def get_all_study_progress_for_user(user_id: str):
     normalized_id = normalize_user_id(user_id)
-    print(f"Retrieving all progress for user: {normalized_id}")
     pk = f"USER#{normalized_id}"
     try:
         response = table.query(

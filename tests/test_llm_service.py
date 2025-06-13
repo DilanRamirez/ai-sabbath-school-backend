@@ -60,7 +60,6 @@ def test_build_prompt_ask_mode():
 def test_generate_llm_response_empty_input(mock_generate):
     mock_generate.return_value = MagicMock(text="I'm sorry, I need more context.")
     result = generate_llm_response("", "ask", "en")
-    print(result)
     answer = result["answer"] if isinstance(result, dict) else result
     # Empty input triggers the guard-clause error
     expected = "[error: empty or invalid input provided to llm]"

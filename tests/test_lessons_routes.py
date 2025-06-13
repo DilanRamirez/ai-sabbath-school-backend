@@ -49,7 +49,6 @@ def client():
 
 def test_list_all_lessons_success(client):
     response = client.get("/api/v1/lessons")
-    print(f"Response: {response.json()}")
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)

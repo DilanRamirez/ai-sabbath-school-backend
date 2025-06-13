@@ -123,7 +123,6 @@ def list_quarters():
         quarters_info = []
         for year in year_prefixes:
             prefix_y = f"{year}/"
-            print(f"Scanning year: {year}")
             resp_q = s3.list_objects_v2(Bucket=BUCKET, Delimiter="/", Prefix=prefix_y)
             for cp in resp_q.get("CommonPrefixes", []):
                 slug = cp["Prefix"][len(prefix_y) :].rstrip("/")
@@ -286,7 +285,6 @@ def process_llm(
                     "page_number": chunk.get("page_number", ""),
                 }
             if ref:
-                print(f"Adding RAG reference for index {idx}: {ref}")
                 rag_refs[str(idx)] = ref
             formatted_chunks.append(chunk_text)
 
