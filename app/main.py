@@ -23,13 +23,18 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-# Allow CORS from any origin
+# Allow CORS from specific origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # <- allow all origins
-    allow_credentials=True,  # if you need cookies/auth
-    allow_methods=["*"],  # allow GET, POST, PUT, DELETE, etc.
-    allow_headers=["*"],  # allow any headers
+    allow_origins=[
+        "http://localhost:3000",
+        "https://ai-sabbath-school-frontend.vercel.app",
+        "https://gentle-meadow-08f54890f.6.azurestaticapps.net"
+        "https://ai-sabbath-school-frontend-production.up.railway.app",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Public endpoints (search, LLM, lessons, etc.)
