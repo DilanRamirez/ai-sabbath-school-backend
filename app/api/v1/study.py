@@ -115,6 +115,61 @@ def update_study_progress(payload: StudyProgressUpdate):
         )
 
 
+# Endpoint to get a full lesson report for a user
+@router.get("/report/{year}/{quarter}/{lesson_id}/{user_id}")
+def get_full_lesson_report(year: str, quarter: str, lesson_id: str, user_id: str):
+    """
+    Retrieves a comprehensive report for a specific lesson and user,
+    including lesson metadata, AI-generated summaries, and the user's notes and progress.
+    """
+    # Validate inputs
+    if not user_id.strip():
+        raise HTTPException(status_code=400, detail="Missing user ID.")
+    if not all([year, quarter, lesson_id]):
+        raise HTTPException(status_code=400, detail="Missing report path parameters.")
+
+    # Normalize and build keys
+    normalized_user = normalize_user_id(user_id)
+    pk = f"USER#{normalized_user}"
+    sk = f"LESSON#{lesson_id}"
+
+    # Fetch user progress data
+    try:
+        db_result = table.get_item(Key={"PK": pk, "SK": sk})
+        item = db_result.get("Item", {"days_completed": [], "notes": []})
+    except Exception as db_err:
+        raise HTTPException(
+            status_code=500, detail=f"Error fetching user progress: {str(db_err)}"
+        )
+
+    # Fetch lesson metadata and AI summaries from S3
+    metadata_key = f"{year}/{quarter}/{lesson_id}/metadata.json"
+    summary_key = f"{year}/{quarter}/{lesson_id}/lesson.json"
+    try:
+        metadata_obj = s3.get_object(Bucket=BUCKET, Key=metadata_key)
+        summary_obj = s3.get_object(Bucket=BUCKET, Key=summary_key)
+        metadata = json.loads(metadata_obj["Body"].read())
+        lesson_summary = json.loads(summary_obj["Body"].read())
+    except Exception as s3_err:
+        raise HTTPException(
+            status_code=500, detail=f"Error loading lesson files from S3: {str(s3_err)}"
+        )
+
+    # Assemble report payload
+    report = {
+        "metadata": metadata,
+        "aiSummaries": lesson_summary.get("days", []),
+        "userProgress": {
+            "daysCompleted": item.get("days_completed", []),
+            "notes": item.get("notes", []),
+            "lastPosition": item.get("last_position", {}),
+            "score": item.get("score"),
+        },
+    }
+
+    return report
+
+
 # New route to get study progress for a specific user and lesson
 @router.get("/progress/{user_id}/{lesson_id}")
 def get_study_progress(user_id: str, lesson_id: str):

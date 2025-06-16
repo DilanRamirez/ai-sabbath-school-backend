@@ -112,4 +112,5 @@ update: push
 	az containerapp update \
 		--name $(IMAGE_NAME) \
 		--resource-group $(RESOURCE_GROUP) \
-		--image $(FULL_IMAGE_NAME)
+		--image $(FULL_IMAGE_NAME) \
+		--min-replicas 1
