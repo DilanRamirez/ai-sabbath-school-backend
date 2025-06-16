@@ -56,7 +56,7 @@ def test_list_all_lessons_success(client):
 
 def test_get_lesson_success(client):
     response = client.get(
-        "/api/v1/lessons/2025/alusiones-imagenes-y-simbolos-como-estudiar-la-profecia-biblica/lesson-9"
+        "/api/v1/lessons/2025/alusiones-imagenes-y-simbolos-como-estudiar-la-profecia-biblica/lesson-12"
     )
     assert response.status_code == 200
     data = response.json()
@@ -75,7 +75,7 @@ def test_get_lesson_metadata_not_found(client):
 
 def test_get_lesson_pdf_success(client):
     response = client.get(
-        "/api/v1/lessons/2025/alusiones-imagenes-y-simbolos-como-estudiar-la-profecia-biblica/lesson-9/pdf"
+        "/api/v1/lessons/2025/alusiones-imagenes-y-simbolos-como-estudiar-la-profecia-biblica/lesson-12/pdf"
     )
     assert response.status_code == 200
     assert response.headers["content-type"] == "application/pdf"
