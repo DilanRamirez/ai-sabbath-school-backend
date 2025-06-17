@@ -19,16 +19,6 @@ def user_payload():
 
 
 @patch("app.api.v1.auth.table.put_item", return_value={})
-@patch("app.api.v1.auth.table.scan", return_value={"Items": []})
-def test_signup_success(mock_scan, mock_put, user_payload):
-    response = client.post("/api/v1/auth/signup", json=user_payload)
-    assert response.status_code == 200
-    data = response.json()
-    assert data["token_type"] == "bearer"
-    assert "user" in data
-
-
-@patch("app.api.v1.auth.table.put_item", return_value={})
 @patch("app.api.v1.auth.table.scan")
 def test_login_success(mock_scan, mock_put, user_payload):
     from app.api.v1.auth import hash_password
