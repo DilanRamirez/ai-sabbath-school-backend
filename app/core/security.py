@@ -13,9 +13,13 @@ API_KEY_NAME = "X-API-Key"
 # Read the expected key from your loaded settings (or os.getenv)
 ADMIN_KEY = settings.ADMIN_KEY
 
+#
 # JWT key configuration from settings
-PRIVATE_KEY = settings.JWT_PRIVATE_KEY
-PUBLIC_KEY = settings.JWT_PUBLIC_KEY
+# Decode PEM strings from settings into bytes once
+_raw_private = settings.JWT_PRIVATE_KEY.replace("\\n", "\n")
+_raw_public = settings.JWT_PUBLIC_KEY.replace("\\n", "\n")
+PRIVATE_KEY = _raw_private.encode("utf-8")
+PUBLIC_KEY = _raw_public.encode("utf-8")
 ALGORITHM = settings.JWT_ALGORITHM
 ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
 

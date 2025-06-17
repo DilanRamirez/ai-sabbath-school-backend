@@ -15,18 +15,12 @@ class Settings:
     AWS_SECRET_ACCESS_KEY: str = os.getenv("AWS_SECRET_ACCESS_KEY", "")
     AWS_REGION: str = os.getenv("AWS_REGION", "")
     S3_BUCKET: str = os.getenv("S3_BUCKET", "")
+
     JWT_SECRET: str = os.getenv("JWT_SECRET", "secret-key")
-    PRIVATE_KEY_PATH = os.getenv("JWT_PRIVATE_KEY_PATH", "secrets/jwt_private.pem")
-    PUBLIC_KEY_PATH = os.getenv("JWT_PUBLIC_KEY_PATH", "secrets/jwt_public.pem")
     JWT_ALGORITHM: str = os.getenv("JWT_ALGORITHM", "RS256")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 60))
-    JWT_PRIVATE_KEY: bytes = b""
-    JWT_PUBLIC_KEY: bytes = b""
-
-    with open(PRIVATE_KEY_PATH, "rb") as f:
-        JWT_PRIVATE_KEY = f.read()
-    with open(PUBLIC_KEY_PATH, "rb") as f:
-        JWT_PUBLIC_KEY = f.read()
+    JWT_PRIVATE_KEY: str = os.getenv("JWT_PRIVATE_KEY", "")
+    JWT_PUBLIC_KEY: str = os.getenv("JWT_PUBLIC_KEY", "")
 
 
 settings = Settings()
