@@ -114,3 +114,30 @@ update: push
 		--resource-group $(RESOURCE_GROUP) \
 		--image $(FULL_IMAGE_NAME) \
 		--min-replicas 1
+
+folder:
+	cd $${PROJECT_PATH}
+	find . \
+	-path ./__pycache__ -prune -o \
+	-path ./.git -prune -o \
+	-path ./tests/__pycache__ -prune -o \
+	-path ./venv -prune -o \
+	-path ./app/api/v1/__pycache__ -prune -o \
+	-path ./app/api/v1/routers/__pycache__ -prune -o \
+	-path ./app/api/v1/schemas/__pycache__ -prune -o \
+	-path ./app/services/__pycache__ -prune -o \
+	-path ./app/services/prompts/__pycache__ -prune -o \
+	-path ./app/core/__pycache__ -prune -o \
+	-path ./app/services/prompts/__pycache__ -prune -o \
+	-path ./app/services/prompts/__pycache__ -prune -o \
+	-path ./app/indexing/__pycache__ -prune -o \
+	-path ./tests/.pytest_cache -prune -o \
+	-path ./app/__pycache__ -prune -o \
+	-path ./.DS_Store -prune -o \
+	-path ./app/.DS_Store -prune -o \
+	-path ./tests/.DS_Store -prune -o \
+	-path ./app/indexing/.DS_Store -prune -o \
+	-path ./app/services/prompts/.DS_Store -prune -o \
+	-path ./app/services/.DS_Store -prune -o \
+	-path ./app/api/v1/routers/.DS_Store -prune -o \
+	-print > structure.txt
