@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi import Depends
+from app.core.security import get_current_user, require_role
 import os
 import json
 from contextlib import asynccontextmanager
@@ -38,19 +40,27 @@ app.add_middleware(
 )
 
 # Public endpoints (search, LLM, lessons, etc.)
-app.include_router(api_router, prefix="/api/v1")
+app.include_router(
+    api_router, prefix="/api/v1", dependencies=[Depends(get_current_user)]
+)
 
-# Admin endpoints, protected by X-API-Key
-app.include_router(admin_router, prefix="/api/v1/admin")
+# Admin endpoints, protected by X-API-Key and admin role
+app.include_router(
+    admin_router, prefix="/api/v1/admin", dependencies=[Depends(require_role("admin"))]
+)
 
 # Auth endpoints
 app.include_router(auth_router, prefix="/api/v1/auth")
 
-# Study progress endpoints
-app.include_router(study_router, prefix="/api/v1/study")
+# Study progress endpoints, require authentication
+app.include_router(
+    study_router, prefix="/api/v1/study", dependencies=[Depends(get_current_user)]
+)
 
-# Bible API endpoints
-app.include_router(bible_router, prefix="/api/v1/bible")
+# Bible API endpoints, require authentication
+app.include_router(
+    bible_router, prefix="/api/v1/bible", dependencies=[Depends(get_current_user)]
+)
 
 
 @app.get("/")
