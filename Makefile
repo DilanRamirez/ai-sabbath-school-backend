@@ -1,7 +1,7 @@
 # Makefile
 
 # RUN GITHUB ACTIONS LOCALLY
-run-gha:
+gha:
 	act
 	
 # Run backend unit tests

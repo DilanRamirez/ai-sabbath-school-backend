@@ -47,7 +47,7 @@ jobs:
 
       - name: 🧪 Run tests
         run: |
-          pytest tests --maxfail=1 --disable-warnings -q
+          pytest tests --maxfail=3 --disable-warnings -q
 
       - name: 📈 Test Coverage Report (optional)
         run: |

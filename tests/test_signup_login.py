@@ -2,10 +2,16 @@
 import pytest
 from unittest.mock import patch, MagicMock
 from fastapi.testclient import TestClient
+import app.core.security as security
+
+# Bypass JWT signing in tests
 from app.main import app
 from uuid import uuid4
 
 client = TestClient(app)
+
+
+security.create_access_token = lambda data: "testtoken"
 
 
 @pytest.fixture
@@ -16,6 +22,16 @@ def user_payload():
         "password": "TestPass123!",
         "role": "student",
     }
+
+
+@patch("app.api.v1.auth.table.put_item", return_value={})
+@patch("app.api.v1.auth.table.scan", return_value={"Items": []})
+def test_signup_success(mock_scan, mock_put, user_payload):
+    response = client.post("/api/v1/auth/signup", json=user_payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["token_type"] == "bearer"
+    assert "user" in data
 
 
 @patch("app.api.v1.auth.table.put_item", return_value={})
