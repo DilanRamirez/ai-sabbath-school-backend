@@ -22,7 +22,7 @@ def test_list_books_returns_books_and_missing():
         ("S. Juan", "3", "Había un hombre de"),
     ],
 )
-def test_get_chapter_valid(client, book, chapter, expected_first_verse):
+def test_get_chapter_valid(book, chapter, expected_first_verse):
     response = client.get(f"/api/v1/bible/{book}/{chapter}")
     assert response.status_code == 200
     data = response.json()
@@ -41,7 +41,7 @@ def test_get_chapter_valid(client, book, chapter, expected_first_verse):
         ("S. Juan", "3", "16", "Porque de tal manera amó Dios al mundo,"),  # example
     ],
 )
-def test_get_verse_valid(client, book, chapter, verse, expected_text):
+def test_get_verse_valid(book, chapter, verse, expected_text):
     response = client.get(f"/api/v1/bible/{book}/{chapter}/{verse}")
     assert response.status_code == 200
     data = response.json()
@@ -59,7 +59,7 @@ def test_get_verse_valid(client, book, chapter, verse, expected_text):
         ("2 Tim. 1:7", "text", "text"),
     ],
 )
-def test_reference_endpoint(client, ref, expect_type, expect_key):
+def test_reference_endpoint(ref, expect_type, expect_key):
     response = client.get("/api/v1/bible/reference", params={"ref": ref})
     assert response.status_code == 200
     data = response.json()
@@ -81,6 +81,6 @@ def test_reference_endpoint(client, ref, expect_type, expect_key):
         ("/api/v1/bible/Génesis/1/999", None, 404),
     ],
 )
-def test_invalid_requests(client, endpoint, params, status):
+def test_invalid_requests(endpoint, params, status):
     response = client.get(endpoint, params=params)
     assert response.status_code == status
