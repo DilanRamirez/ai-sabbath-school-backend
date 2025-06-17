@@ -60,7 +60,7 @@ RESOURCE_GROUP=ai-sabbath-school
 REGISTRY_NAME=aisabbathschool
 AZURE_ENVIRONMENT_NAME=ai-sabbath-school-env
 HUB=$(REGISTRY_NAME).azurecr.io
-FULL_IMAGE_NAME=$(HUB)/$(IMAGE_NAME):latest
+FULL_IMAGE_NAME=$(HUB)/$(IMAGE_NAME):0.0.2
 
 # Login to Azure CLI
 login-azure:
@@ -114,6 +114,20 @@ update: push
 		--resource-group $(RESOURCE_GROUP) \
 		--image $(FULL_IMAGE_NAME) \
 		--min-replicas 1
+
+check: 
+	az containerapp revision show \
+  --name $(IMAGE_NAME) \
+  --resource-group $(RESOURCE_GROUP) \
+  --revision latest
+
+# List images in the Azure Container Registry (ACR)
+list-images:
+	az acr repository list --name $(REGISTRY_NAME) --output table
+
+# Remove an image from the Azure Container Registry (ACR)
+remove-image:
+	az acr repository delete --name $(REGISTRY_NAME) --image ai-sabbath-school-backend --yes
 
 folder:
 	cd $${PROJECT_PATH}

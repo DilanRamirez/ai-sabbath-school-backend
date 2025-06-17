@@ -90,12 +90,9 @@ def convert_md_files_to_json(directory):
         if fname.endswith(".md"):
             md_path = os.path.join(directory, fname)
             json_path = os.path.join(directory, fname.replace(".md", ".json"))
-            print(f"Parsing {md_path}")
             data = parse_markdown_file(md_path)
             with open(json_path, "w", encoding="utf-8") as jf:
                 json.dump(data, jf, ensure_ascii=False, indent=2)
-            if md_path == "app/data/2025/Q2/lesson-08/8_viernes_23_de_mayo.md":
-                print(json.dumps(data, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

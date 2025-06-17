@@ -18,8 +18,8 @@ ADMIN_KEY = settings.ADMIN_KEY
 # Decode PEM strings from settings into bytes once
 _raw_private = settings.JWT_PRIVATE_KEY.replace("\\n", "\n")
 _raw_public = settings.JWT_PUBLIC_KEY.replace("\\n", "\n")
-PRIVATE_KEY = _raw_private.encode("utf-8")
-PUBLIC_KEY = _raw_public.encode("utf-8")
+PRIVATE_KEY = _raw_private
+PUBLIC_KEY = _raw_public
 ALGORITHM = settings.JWT_ALGORITHM
 ACCESS_TOKEN_EXPIRE_MINUTES = settings.ACCESS_TOKEN_EXPIRE_MINUTES
 

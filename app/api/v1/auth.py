@@ -85,7 +85,6 @@ def signup_user(payload: UserSignupRequest):
 
 @router.post("/login")
 def login_user(payload: UserLoginRequest):
-    print("Login attempt for:", payload)
     response = table.scan(
         FilterExpression="email = :email",
         ExpressionAttributeValues={":email": payload.email},
